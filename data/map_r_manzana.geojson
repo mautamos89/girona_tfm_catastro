@@ -1,0 +1,27 @@
+{
+"type": "FeatureCollection",
+"name": "map_r_manzana",
+"crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:EPSG::6249" } },
+"features": [
+{ "type": "Feature", "properties": { "OBJECTID": 60, "CE": "Traslape propio", "CT": "", "ESTAMPA_CC": "2026-05-25 14:18:45" }, "geometry": { "type": "Point", "coordinates": [ 1051984.66359279747121, 876974.727350000059232 ] } },
+{ "type": "Feature", "properties": { "OBJECTID": 81, "CE": "Traslape propio", "CT": "", "ESTAMPA_CC": "2026-05-25 14:18:45" }, "geometry": { "type": "Point", "coordinates": [ 1059089.768336866050959, 878074.173650000011548 ] } },
+{ "type": "Feature", "properties": { "OBJECTID": 85, "CE": "Traslape propio", "CT": "", "ESTAMPA_CC": "2026-05-25 14:18:45" }, "geometry": { "type": "Point", "coordinates": [ 1051857.062683860305697, 876214.461050000041723 ] } },
+{ "type": "Feature", "properties": { "OBJECTID": 86, "CE": "Traslape propio", "CT": "", "ESTAMPA_CC": "2026-05-25 14:18:45" }, "geometry": { "type": "Point", "coordinates": [ 1057820.499736937461421, 878808.20519999996759 ] } },
+{ "type": "Feature", "properties": { "OBJECTID": 89, "CE": "Traslape propio", "CT": "", "ESTAMPA_CC": "2026-05-25 14:18:45" }, "geometry": { "type": "Point", "coordinates": [ 1067419.664627017453313, 864073.540649999980815 ] } },
+{ "type": "Feature", "properties": { "OBJECTID": 115, "CE": "Traslape propio", "CT": "", "ESTAMPA_CC": "2026-05-25 14:18:45" }, "geometry": { "type": "Point", "coordinates": [ 1048954.322634276468307, 876316.871550000039861 ] } },
+{ "type": "Feature", "properties": { "OBJECTID": 134, "CE": "Traslape propio", "CT": "", "ESTAMPA_CC": "2026-05-25 14:18:45" }, "geometry": { "type": "Point", "coordinates": [ 1052626.778998248977587, 873335.22505 ] } },
+{ "type": "Feature", "properties": { "OBJECTID": 167, "CE": "Traslape propio", "CT": "", "ESTAMPA_CC": "2026-05-25 14:18:45" }, "geometry": { "type": "Point", "coordinates": [ 1050024.360176140442491, 876319.77015 ] } },
+{ "type": "Feature", "properties": { "OBJECTID": 179, "CE": "Traslape propio", "CT": "", "ESTAMPA_CC": "2026-05-25 14:18:45" }, "geometry": { "type": "Point", "coordinates": [ 1048892.711395636433735, 873491.037599999923259 ] } },
+{ "type": "Feature", "properties": { "OBJECTID": 195, "CE": "Traslape propio", "CT": "", "ESTAMPA_CC": "2026-05-25 14:18:45" }, "geometry": { "type": "Point", "coordinates": [ 1056980.027781299315393, 872786.577950000064448 ] } },
+{ "type": "Feature", "properties": { "OBJECTID": 197, "CE": "Traslape propio", "CT": "", "ESTAMPA_CC": "2026-05-25 14:18:45" }, "geometry": { "type": "Point", "coordinates": [ 1057705.489933427423239, 858047.634499999927357 ] } },
+{ "type": "Feature", "properties": { "OBJECTID": 233, "CE": "Traslape propio", "CT": "", "ESTAMPA_CC": "2026-05-25 14:18:45" }, "geometry": { "type": "Point", "coordinates": [ 1051265.620945401024073, 873884.626149999909103 ] } },
+{ "type": "Feature", "properties": { "OBJECTID": 237, "CE": "Traslape propio", "CT": "", "ESTAMPA_CC": "2026-05-25 14:18:45" }, "geometry": { "type": "Point", "coordinates": [ 1049973.169774981215596, 873695.306300000054762 ] } },
+{ "type": "Feature", "properties": { "OBJECTID": 255, "CE": "Traslape propio", "CT": "", "ESTAMPA_CC": "2026-05-25 14:18:45" }, "geometry": { "type": "Point", "coordinates": [ 1057555.84820362390019, 879636.380850000074133 ] } },
+{ "type": "Feature", "properties": { "OBJECTID": 259, "CE": "Traslape propio", "CT": "", "ESTAMPA_CC": "2026-05-25 14:18:45" }, "geometry": { "type": "Point", "coordinates": [ 1049581.972890216391534, 872287.684949999907985 ] } },
+{ "type": "Feature", "properties": { "OBJECTID": 320, "CE": "Traslape propio", "CT": "", "ESTAMPA_CC": "2026-05-25 14:18:45" }, "geometry": { "type": "Point", "coordinates": [ 1055805.234302469994873, 871551.002700000070035 ] } },
+{ "type": "Feature", "properties": { "OBJECTID": 325, "CE": "Traslape propio", "CT": "", "ESTAMPA_CC": "2026-05-25 14:18:45" }, "geometry": { "type": "Point", "coordinates": [ 1054423.43556981231086, 857942.511399999959394 ] } },
+{ "type": "Feature", "properties": { "OBJECTID": 332, "CE": "Traslape propio", "CT": "", "ESTAMPA_CC": "2026-05-25 14:18:45" }, "geometry": { "type": "Point", "coordinates": [ 1052886.245296073611826, 875429.405649999971502 ] } },
+{ "type": "Feature", "properties": { "OBJECTID": 341, "CE": "Traslape propio", "CT": "", "ESTAMPA_CC": "2026-05-25 14:18:45" }, "geometry": { "type": "Point", "coordinates": [ 1066957.020209108944982, 862399.580850000027567 ] } },
+{ "type": "Feature", "properties": { "OBJECTID": 342, "CE": "Traslape propio", "CT": "", "ESTAMPA_CC": "2026-05-25 14:18:45" }, "geometry": { "type": "Point", "coordinates": [ 1058426.097139644436538, 877595.3136 ] } }
+]
+}
