@@ -1,0 +1,27 @@
+{
+"type": "FeatureCollection",
+"name": "map_r_manzana",
+"crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:OGC:1.3:CRS84" } },
+"features": [
+{ "type": "Feature", "properties": { "OBJECTID": 60, "CE": "Traslape propio", "CT": "", "ESTAMPA_CC": "2026-05-26 14:46:01" }, "geometry": { "type": "Point", "coordinates": [ -76.609784894528815, 3.483563367380213 ] } },
+{ "type": "Feature", "properties": { "OBJECTID": 81, "CE": "Traslape propio", "CT": "", "ESTAMPA_CC": "2026-05-26 14:46:01" }, "geometry": { "type": "Point", "coordinates": [ -76.545851580618148, 3.493508349220671 ] } },
+{ "type": "Feature", "properties": { "OBJECTID": 85, "CE": "Traslape propio", "CT": "", "ESTAMPA_CC": "2026-05-26 14:46:01" }, "geometry": { "type": "Point", "coordinates": [ -76.61093242568748, 3.476688976365285 ] } },
+{ "type": "Feature", "properties": { "OBJECTID": 86, "CE": "Traslape propio", "CT": "", "ESTAMPA_CC": "2026-05-26 14:46:01" }, "geometry": { "type": "Point", "coordinates": [ -76.557273167628452, 3.500145045870494 ] } },
+{ "type": "Feature", "properties": { "OBJECTID": 89, "CE": "Traslape propio", "CT": "", "ESTAMPA_CC": "2026-05-26 14:46:01" }, "geometry": { "type": "Point", "coordinates": [ -76.470902753632942, 3.366914500249882 ] } },
+{ "type": "Feature", "properties": { "OBJECTID": 115, "CE": "Traslape propio", "CT": "", "ESTAMPA_CC": "2026-05-26 14:46:01" }, "geometry": { "type": "Point", "coordinates": [ -76.637051959296471, 3.47761212159826 ] } },
+{ "type": "Feature", "properties": { "OBJECTID": 134, "CE": "Traslape propio", "CT": "", "ESTAMPA_CC": "2026-05-26 14:46:01" }, "geometry": { "type": "Point", "coordinates": [ -76.604004088917762, 3.450655730233358 ] } },
+{ "type": "Feature", "properties": { "OBJECTID": 167, "CE": "Traslape propio", "CT": "", "ESTAMPA_CC": "2026-05-26 14:46:01" }, "geometry": { "type": "Point", "coordinates": [ -76.627423546800713, 3.477639462683578 ] } },
+{ "type": "Feature", "properties": { "OBJECTID": 179, "CE": "Traslape propio", "CT": "", "ESTAMPA_CC": "2026-05-26 14:46:01" }, "geometry": { "type": "Point", "coordinates": [ -76.637603210603558, 3.452061031700052 ] } },
+{ "type": "Feature", "properties": { "OBJECTID": 195, "CE": "Traslape propio", "CT": "", "ESTAMPA_CC": "2026-05-26 14:46:01" }, "geometry": { "type": "Point", "coordinates": [ -76.564833549247268, 3.445697529632805 ] } },
+{ "type": "Feature", "properties": { "OBJECTID": 197, "CE": "Traslape propio", "CT": "", "ESTAMPA_CC": "2026-05-26 14:46:01" }, "geometry": { "type": "Point", "coordinates": [ -76.558300763066541, 3.31242916542118 ] } },
+{ "type": "Feature", "properties": { "OBJECTID": 233, "CE": "Traslape propio", "CT": "", "ESTAMPA_CC": "2026-05-26 14:46:01" }, "geometry": { "type": "Point", "coordinates": [ -76.616252216774086, 3.455622227115565 ] } },
+{ "type": "Feature", "properties": { "OBJECTID": 237, "CE": "Traslape propio", "CT": "", "ESTAMPA_CC": "2026-05-26 14:46:01" }, "geometry": { "type": "Point", "coordinates": [ -76.627881494446655, 3.453909165418706 ] } },
+{ "type": "Feature", "properties": { "OBJECTID": 255, "CE": "Traslape propio", "CT": "", "ESTAMPA_CC": "2026-05-26 14:46:01" }, "geometry": { "type": "Point", "coordinates": [ -76.559654923454417, 3.507633265588054 ] } },
+{ "type": "Feature", "properties": { "OBJECTID": 259, "CE": "Traslape propio", "CT": "", "ESTAMPA_CC": "2026-05-26 14:46:01" }, "geometry": { "type": "Point", "coordinates": [ -76.631400002583476, 3.441181132992783 ] } },
+{ "type": "Feature", "properties": { "OBJECTID": 320, "CE": "Traslape propio", "CT": "", "ESTAMPA_CC": "2026-05-26 14:46:01" }, "geometry": { "type": "Point", "coordinates": [ -76.57540358769684, 3.434524980460913 ] } },
+{ "type": "Feature", "properties": { "OBJECTID": 325, "CE": "Traslape propio", "CT": "", "ESTAMPA_CC": "2026-05-26 14:46:01" }, "geometry": { "type": "Point", "coordinates": [ -76.587828275104926, 3.311477015838152 ] } },
+{ "type": "Feature", "properties": { "OBJECTID": 332, "CE": "Traslape propio", "CT": "", "ESTAMPA_CC": "2026-05-26 14:46:01" }, "geometry": { "type": "Point", "coordinates": [ -76.601671034357025, 3.469591388349345 ] } },
+{ "type": "Feature", "properties": { "OBJECTID": 341, "CE": "Traslape propio", "CT": "", "ESTAMPA_CC": "2026-05-26 14:46:01" }, "geometry": { "type": "Point", "coordinates": [ -76.475065945300372, 3.351778864318413 ] } },
+{ "type": "Feature", "properties": { "OBJECTID": 342, "CE": "Traslape propio", "CT": "", "ESTAMPA_CC": "2026-05-26 14:46:01" }, "geometry": { "type": "Point", "coordinates": [ -76.55182338618954, 3.489178347478354 ] } }
+]
+}
