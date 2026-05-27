@@ -17,7 +17,7 @@
             <meta name="viewport" content="width=device-width,
                 initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
             <style>
-                #map_1d8bf2a3dc0752bb5005eeaae1dbbb09 {
+                #map_bfd2c6b7cf4de8322800f11f53c9ec3e {
                     position: relative;
                     width: 100.0%;
                     height: 100.0%;
@@ -68,7 +68,7 @@
 <body>
     
     
-            <div class="folium-map" id="map_1d8bf2a3dc0752bb5005eeaae1dbbb09" ></div>
+            <div class="folium-map" id="map_bfd2c6b7cf4de8322800f11f53c9ec3e" ></div>
         
     
 
@@ -202,8 +202,8 @@ La metodología implementa un código modular en Python que sistematiza las regl
 <script>
     
     
-            var map_1d8bf2a3dc0752bb5005eeaae1dbbb09 = L.map(
-                "map_1d8bf2a3dc0752bb5005eeaae1dbbb09",
+            var map_bfd2c6b7cf4de8322800f11f53c9ec3e = L.map(
+                "map_bfd2c6b7cf4de8322800f11f53c9ec3e",
                 {
                     center: [3.4, -76.5],
                     crs: L.CRS.EPSG3857,
@@ -215,13 +215,13 @@ La metodología implementa un código modular en Python que sistematiza las regl
 
                 }
             );
-            L.control.scale().addTo(map_1d8bf2a3dc0752bb5005eeaae1dbbb09);
+            L.control.scale().addTo(map_bfd2c6b7cf4de8322800f11f53c9ec3e);
 
             
 
         
     
-            var tile_layer_5829efe9353b23691befcca7df69f723 = L.tileLayer(
+            var tile_layer_7399211b8f0ec004d0f25777eb3acaa0 = L.tileLayer(
                 "https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png",
                 {
   "minZoom": 11,
@@ -238,10 +238,10 @@ La metodología implementa un código modular en Python que sistematiza las regl
             );
         
     
-            tile_layer_5829efe9353b23691befcca7df69f723.addTo(map_1d8bf2a3dc0752bb5005eeaae1dbbb09);
+            tile_layer_7399211b8f0ec004d0f25777eb3acaa0.addTo(map_bfd2c6b7cf4de8322800f11f53c9ec3e);
         
     
-            var tile_layer_0b4ac87b1c389776a3c6bd40edcbb23b = L.tileLayer(
+            var tile_layer_1c59ed2ff8950442bc18afbb61ca932d = L.tileLayer(
                 "https://mt1.google.com/vt/lyrs=y\u0026x={x}\u0026y={y}\u0026z={z}",
                 {
   "minZoom": 11,
@@ -258,16 +258,16 @@ La metodología implementa un código modular en Python que sistematiza las regl
             );
         
     
-            var feature_group_c28b4e48e602df90dbb156e00eec0e84 = L.featureGroup(
+            var feature_group_1ef9ba947a3d3b49dcae77cecd431a32 = L.featureGroup(
                 {
 }
             );
         
     
-            feature_group_c28b4e48e602df90dbb156e00eec0e84.addTo(map_1d8bf2a3dc0752bb5005eeaae1dbbb09);
+            feature_group_1ef9ba947a3d3b49dcae77cecd431a32.addTo(map_bfd2c6b7cf4de8322800f11f53c9ec3e);
         
     
-            var marker_cluster_945032f6023b1e805ee004ad3f7c4bac = L.markerClusterGroup(
+            var marker_cluster_04e6ed7b432c3a93732efa730da48a47 = L.markerClusterGroup(
                 {
   "showCoverageOnHover": false,
   "maxClusterRadius": 80,
@@ -275,7 +275,7 @@ La metodología implementa un código modular en Python que sistematiza las regl
             );
         
     
-        function geo_json_4500d577470910bcac0b31e0f11a42c2_pointToLayer(feature, latlng) {
+        function geo_json_d455f4f70f93a4405739d56acdbc3a5c_pointToLayer(feature, latlng) {
             var opts = {
   "stroke": true,
   "color": "orange",
@@ -296,15 +296,15 @@ La metodología implementa un código modular en Python que sistematiza las regl
             return new L.CircleMarker(latlng, opts)
         }
 
-        function geo_json_4500d577470910bcac0b31e0f11a42c2_onEachFeature(feature, layer) {
+        function geo_json_d455f4f70f93a4405739d56acdbc3a5c_onEachFeature(feature, layer) {
             (
     function onEachFeature(feature, layer) {
         if (feature.properties) {
             var popupContent = '<div style="font-family: Segoe UI; font-size: 11px;">' +
                                '<b>Capa:</b> R. Anexo<br>' +
                                '<b>ID Predio:</b> ' + feature.properties.OBJECTID + '<br>' +
-                               '<b>Error espacial:</b> ' + feature.properties.CE + '<br>' +
-                               '<b>Error temático:</b> ' + feature.properties.CT + '</div>';
+                               '<b>Control espacial:</b> ' + feature.properties.CE + '<br>' +
+                               '<b>Control temático:</b> ' + feature.properties.CT + '</div>';
             layer.bindPopup(popupContent);
             layer.bindTooltip('<b>ID Predio:</b> ' + feature.properties.OBJECTID, {sticky: true});
         }
@@ -314,31 +314,31 @@ La metodología implementa un código modular en Python que sistematiza las regl
             layer.on({
             });
         };
-        var geo_json_4500d577470910bcac0b31e0f11a42c2 = L.geoJson(null, {
-                onEachFeature: geo_json_4500d577470910bcac0b31e0f11a42c2_onEachFeature,
+        var geo_json_d455f4f70f93a4405739d56acdbc3a5c = L.geoJson(null, {
+                onEachFeature: geo_json_d455f4f70f93a4405739d56acdbc3a5c_onEachFeature,
             
-                pointToLayer: geo_json_4500d577470910bcac0b31e0f11a42c2_pointToLayer,
+                pointToLayer: geo_json_d455f4f70f93a4405739d56acdbc3a5c_pointToLayer,
             ...{
 }
         });
 
-        function geo_json_4500d577470910bcac0b31e0f11a42c2_add (data) {
-            geo_json_4500d577470910bcac0b31e0f11a42c2
+        function geo_json_d455f4f70f93a4405739d56acdbc3a5c_add (data) {
+            geo_json_d455f4f70f93a4405739d56acdbc3a5c
                 .addData(data);
         }
             $.ajax("https://raw.githubusercontent.com/mautamos89/girona_tfm/main/data/map_r_anexo.geojson", {dataType: 'json', async: false})
-                .done(geo_json_4500d577470910bcac0b31e0f11a42c2_add);
-        geo_json_4500d577470910bcac0b31e0f11a42c2.setStyle(function(feature) {return feature.properties.style;});
+                .done(geo_json_d455f4f70f93a4405739d56acdbc3a5c_add);
+        geo_json_d455f4f70f93a4405739d56acdbc3a5c.setStyle(function(feature) {return feature.properties.style;});
 
         
     
-            geo_json_4500d577470910bcac0b31e0f11a42c2.addTo(marker_cluster_945032f6023b1e805ee004ad3f7c4bac);
+            geo_json_d455f4f70f93a4405739d56acdbc3a5c.addTo(marker_cluster_04e6ed7b432c3a93732efa730da48a47);
         
     
-            marker_cluster_945032f6023b1e805ee004ad3f7c4bac.addTo(map_1d8bf2a3dc0752bb5005eeaae1dbbb09);
+            marker_cluster_04e6ed7b432c3a93732efa730da48a47.addTo(map_bfd2c6b7cf4de8322800f11f53c9ec3e);
         
     
-            var marker_cluster_c2c7503834c30d9d0a05d93c41849b82 = L.markerClusterGroup(
+            var marker_cluster_bd2f804d8c1730f51e056c95eb5029f5 = L.markerClusterGroup(
                 {
   "showCoverageOnHover": false,
   "maxClusterRadius": 80,
@@ -346,7 +346,7 @@ La metodología implementa un código modular en Python que sistematiza las regl
             );
         
     
-        function geo_json_fae112a5ac58938776ae891af54ed934_pointToLayer(feature, latlng) {
+        function geo_json_616a6c5dc4b70e10bb14b31fd42b4f95_pointToLayer(feature, latlng) {
             var opts = {
   "stroke": true,
   "color": "grey",
@@ -367,15 +367,15 @@ La metodología implementa un código modular en Python que sistematiza las regl
             return new L.CircleMarker(latlng, opts)
         }
 
-        function geo_json_fae112a5ac58938776ae891af54ed934_onEachFeature(feature, layer) {
+        function geo_json_616a6c5dc4b70e10bb14b31fd42b4f95_onEachFeature(feature, layer) {
             (
     function onEachFeature(feature, layer) {
         if (feature.properties) {
             var popupContent = '<div style="font-family: Segoe UI; font-size: 11px;">' +
                                '<b>Capa:</b> R. Construcción<br>' +
                                '<b>ID Predio:</b> ' + feature.properties.OBJECTID + '<br>' +
-                               '<b>Error espacial:</b> ' + feature.properties.CE + '<br>' +
-                               '<b>Error temático:</b> ' + feature.properties.CT + '</div>';
+                               '<b>Control espacial:</b> ' + feature.properties.CE + '<br>' +
+                               '<b>Control temático:</b> ' + feature.properties.CT + '</div>';
             layer.bindPopup(popupContent);
             layer.bindTooltip('<b>ID Predio:</b> ' + feature.properties.OBJECTID, {sticky: true});
         }
@@ -385,28 +385,28 @@ La metodología implementa un código modular en Python que sistematiza las regl
             layer.on({
             });
         };
-        var geo_json_fae112a5ac58938776ae891af54ed934 = L.geoJson(null, {
-                onEachFeature: geo_json_fae112a5ac58938776ae891af54ed934_onEachFeature,
+        var geo_json_616a6c5dc4b70e10bb14b31fd42b4f95 = L.geoJson(null, {
+                onEachFeature: geo_json_616a6c5dc4b70e10bb14b31fd42b4f95_onEachFeature,
             
-                pointToLayer: geo_json_fae112a5ac58938776ae891af54ed934_pointToLayer,
+                pointToLayer: geo_json_616a6c5dc4b70e10bb14b31fd42b4f95_pointToLayer,
             ...{
 }
         });
 
-        function geo_json_fae112a5ac58938776ae891af54ed934_add (data) {
-            geo_json_fae112a5ac58938776ae891af54ed934
+        function geo_json_616a6c5dc4b70e10bb14b31fd42b4f95_add (data) {
+            geo_json_616a6c5dc4b70e10bb14b31fd42b4f95
                 .addData(data);
         }
             $.ajax("https://raw.githubusercontent.com/mautamos89/girona_tfm/main/data/map_r_construccion.geojson", {dataType: 'json', async: false})
-                .done(geo_json_fae112a5ac58938776ae891af54ed934_add);
-        geo_json_fae112a5ac58938776ae891af54ed934.setStyle(function(feature) {return feature.properties.style;});
+                .done(geo_json_616a6c5dc4b70e10bb14b31fd42b4f95_add);
+        geo_json_616a6c5dc4b70e10bb14b31fd42b4f95.setStyle(function(feature) {return feature.properties.style;});
 
         
     
-            geo_json_fae112a5ac58938776ae891af54ed934.addTo(marker_cluster_c2c7503834c30d9d0a05d93c41849b82);
+            geo_json_616a6c5dc4b70e10bb14b31fd42b4f95.addTo(marker_cluster_bd2f804d8c1730f51e056c95eb5029f5);
         
     
-            var marker_cluster_6cdfc57461c968e02944007c9ec9d764 = L.markerClusterGroup(
+            var marker_cluster_e9b6a06d03547b7157c043834a25e69e = L.markerClusterGroup(
                 {
   "showCoverageOnHover": false,
   "maxClusterRadius": 80,
@@ -414,7 +414,7 @@ La metodología implementa un código modular en Python que sistematiza las regl
             );
         
     
-        function geo_json_9e345ad41f70138a1701ebb8d5f07e60_pointToLayer(feature, latlng) {
+        function geo_json_3b9947df73a26f0f3ff8d96ba9f09feb_pointToLayer(feature, latlng) {
             var opts = {
   "stroke": true,
   "color": "brown",
@@ -435,15 +435,15 @@ La metodología implementa un código modular en Python que sistematiza las regl
             return new L.CircleMarker(latlng, opts)
         }
 
-        function geo_json_9e345ad41f70138a1701ebb8d5f07e60_onEachFeature(feature, layer) {
+        function geo_json_3b9947df73a26f0f3ff8d96ba9f09feb_onEachFeature(feature, layer) {
             (
     function onEachFeature(feature, layer) {
         if (feature.properties) {
             var popupContent = '<div style="font-family: Segoe UI; font-size: 11px;">' +
                                '<b>Capa:</b> R. Manzana<br>' +
                                '<b>ID Predio:</b> ' + feature.properties.OBJECTID + '<br>' +
-                               '<b>Error espacial:</b> ' + feature.properties.CE + '<br>' +
-                               '<b>Error temático:</b> ' + feature.properties.CT + '</div>';
+                               '<b>Control espacial:</b> ' + feature.properties.CE + '<br>' +
+                               '<b>Control temático:</b> ' + feature.properties.CT + '</div>';
             layer.bindPopup(popupContent);
             layer.bindTooltip('<b>ID Predio:</b> ' + feature.properties.OBJECTID, {sticky: true});
         }
@@ -453,28 +453,28 @@ La metodología implementa un código modular en Python que sistematiza las regl
             layer.on({
             });
         };
-        var geo_json_9e345ad41f70138a1701ebb8d5f07e60 = L.geoJson(null, {
-                onEachFeature: geo_json_9e345ad41f70138a1701ebb8d5f07e60_onEachFeature,
+        var geo_json_3b9947df73a26f0f3ff8d96ba9f09feb = L.geoJson(null, {
+                onEachFeature: geo_json_3b9947df73a26f0f3ff8d96ba9f09feb_onEachFeature,
             
-                pointToLayer: geo_json_9e345ad41f70138a1701ebb8d5f07e60_pointToLayer,
+                pointToLayer: geo_json_3b9947df73a26f0f3ff8d96ba9f09feb_pointToLayer,
             ...{
 }
         });
 
-        function geo_json_9e345ad41f70138a1701ebb8d5f07e60_add (data) {
-            geo_json_9e345ad41f70138a1701ebb8d5f07e60
+        function geo_json_3b9947df73a26f0f3ff8d96ba9f09feb_add (data) {
+            geo_json_3b9947df73a26f0f3ff8d96ba9f09feb
                 .addData(data);
         }
             $.ajax("https://raw.githubusercontent.com/mautamos89/girona_tfm/main/data/map_r_manzana.geojson", {dataType: 'json', async: false})
-                .done(geo_json_9e345ad41f70138a1701ebb8d5f07e60_add);
-        geo_json_9e345ad41f70138a1701ebb8d5f07e60.setStyle(function(feature) {return feature.properties.style;});
+                .done(geo_json_3b9947df73a26f0f3ff8d96ba9f09feb_add);
+        geo_json_3b9947df73a26f0f3ff8d96ba9f09feb.setStyle(function(feature) {return feature.properties.style;});
 
         
     
-            geo_json_9e345ad41f70138a1701ebb8d5f07e60.addTo(marker_cluster_6cdfc57461c968e02944007c9ec9d764);
+            geo_json_3b9947df73a26f0f3ff8d96ba9f09feb.addTo(marker_cluster_e9b6a06d03547b7157c043834a25e69e);
         
     
-            var marker_cluster_8434b61575a9986d9f2b42ea36617037 = L.markerClusterGroup(
+            var marker_cluster_cd8c6bfaee2604b2dfaad28f2be38567 = L.markerClusterGroup(
                 {
   "showCoverageOnHover": false,
   "maxClusterRadius": 80,
@@ -482,7 +482,7 @@ La metodología implementa un código modular en Python que sistematiza las regl
             );
         
     
-        function geo_json_5589164a7679f8a4e177479280858926_pointToLayer(feature, latlng) {
+        function geo_json_31276061599db74a18d30734d4e4e929_pointToLayer(feature, latlng) {
             var opts = {
   "stroke": true,
   "color": "green",
@@ -503,15 +503,15 @@ La metodología implementa un código modular en Python que sistematiza las regl
             return new L.CircleMarker(latlng, opts)
         }
 
-        function geo_json_5589164a7679f8a4e177479280858926_onEachFeature(feature, layer) {
+        function geo_json_31276061599db74a18d30734d4e4e929_onEachFeature(feature, layer) {
             (
     function onEachFeature(feature, layer) {
         if (feature.properties) {
             var popupContent = '<div style="font-family: Segoe UI; font-size: 11px;">' +
                                '<b>Capa:</b> R. Terreno<br>' +
                                '<b>ID Predio:</b> ' + feature.properties.OBJECTID + '<br>' +
-                               '<b>Error espacial:</b> ' + feature.properties.CE + '<br>' +
-                               '<b>Error temático:</b> ' + feature.properties.CT + '</div>';
+                               '<b>Control espacial:</b> ' + feature.properties.CE + '<br>' +
+                               '<b>Control temático:</b> ' + feature.properties.CT + '</div>';
             layer.bindPopup(popupContent);
             layer.bindTooltip('<b>ID Predio:</b> ' + feature.properties.OBJECTID, {sticky: true});
         }
@@ -521,28 +521,28 @@ La metodología implementa un código modular en Python que sistematiza las regl
             layer.on({
             });
         };
-        var geo_json_5589164a7679f8a4e177479280858926 = L.geoJson(null, {
-                onEachFeature: geo_json_5589164a7679f8a4e177479280858926_onEachFeature,
+        var geo_json_31276061599db74a18d30734d4e4e929 = L.geoJson(null, {
+                onEachFeature: geo_json_31276061599db74a18d30734d4e4e929_onEachFeature,
             
-                pointToLayer: geo_json_5589164a7679f8a4e177479280858926_pointToLayer,
+                pointToLayer: geo_json_31276061599db74a18d30734d4e4e929_pointToLayer,
             ...{
 }
         });
 
-        function geo_json_5589164a7679f8a4e177479280858926_add (data) {
-            geo_json_5589164a7679f8a4e177479280858926
+        function geo_json_31276061599db74a18d30734d4e4e929_add (data) {
+            geo_json_31276061599db74a18d30734d4e4e929
                 .addData(data);
         }
             $.ajax("https://raw.githubusercontent.com/mautamos89/girona_tfm/main/data/map_r_terreno.geojson", {dataType: 'json', async: false})
-                .done(geo_json_5589164a7679f8a4e177479280858926_add);
-        geo_json_5589164a7679f8a4e177479280858926.setStyle(function(feature) {return feature.properties.style;});
+                .done(geo_json_31276061599db74a18d30734d4e4e929_add);
+        geo_json_31276061599db74a18d30734d4e4e929.setStyle(function(feature) {return feature.properties.style;});
 
         
     
-            geo_json_5589164a7679f8a4e177479280858926.addTo(marker_cluster_8434b61575a9986d9f2b42ea36617037);
+            geo_json_31276061599db74a18d30734d4e4e929.addTo(marker_cluster_cd8c6bfaee2604b2dfaad28f2be38567);
         
     
-            var marker_cluster_68c86d175b16cfe8198b9947afbabe9c = L.markerClusterGroup(
+            var marker_cluster_3a2f84b110238f5fa19fcb8992e8fa6d = L.markerClusterGroup(
                 {
   "showCoverageOnHover": false,
   "maxClusterRadius": 80,
@@ -550,7 +550,7 @@ La metodología implementa un código modular en Python que sistematiza las regl
             );
         
     
-        function geo_json_1ec4aec29c73b176e8d9fde202dc5194_pointToLayer(feature, latlng) {
+        function geo_json_741033c5b12fb371f6f0a2cdd04dc79c_pointToLayer(feature, latlng) {
             var opts = {
   "stroke": true,
   "color": "purple",
@@ -571,15 +571,15 @@ La metodología implementa un código modular en Python que sistematiza las regl
             return new L.CircleMarker(latlng, opts)
         }
 
-        function geo_json_1ec4aec29c73b176e8d9fde202dc5194_onEachFeature(feature, layer) {
+        function geo_json_741033c5b12fb371f6f0a2cdd04dc79c_onEachFeature(feature, layer) {
             (
     function onEachFeature(feature, layer) {
         if (feature.properties) {
             var popupContent = '<div style="font-family: Segoe UI; font-size: 11px;">' +
                                '<b>Capa:</b> R. Unidad<br>' +
                                '<b>ID Predio:</b> ' + feature.properties.OBJECTID + '<br>' +
-                               '<b>Error espacial:</b> ' + feature.properties.CE + '<br>' +
-                               '<b>Error temático:</b> ' + feature.properties.CT + '</div>';
+                               '<b>Control espacial:</b> ' + feature.properties.CE + '<br>' +
+                               '<b>Control temático:</b> ' + feature.properties.CT + '</div>';
             layer.bindPopup(popupContent);
             layer.bindTooltip('<b>ID Predio:</b> ' + feature.properties.OBJECTID, {sticky: true});
         }
@@ -589,28 +589,28 @@ La metodología implementa un código modular en Python que sistematiza las regl
             layer.on({
             });
         };
-        var geo_json_1ec4aec29c73b176e8d9fde202dc5194 = L.geoJson(null, {
-                onEachFeature: geo_json_1ec4aec29c73b176e8d9fde202dc5194_onEachFeature,
+        var geo_json_741033c5b12fb371f6f0a2cdd04dc79c = L.geoJson(null, {
+                onEachFeature: geo_json_741033c5b12fb371f6f0a2cdd04dc79c_onEachFeature,
             
-                pointToLayer: geo_json_1ec4aec29c73b176e8d9fde202dc5194_pointToLayer,
+                pointToLayer: geo_json_741033c5b12fb371f6f0a2cdd04dc79c_pointToLayer,
             ...{
 }
         });
 
-        function geo_json_1ec4aec29c73b176e8d9fde202dc5194_add (data) {
-            geo_json_1ec4aec29c73b176e8d9fde202dc5194
+        function geo_json_741033c5b12fb371f6f0a2cdd04dc79c_add (data) {
+            geo_json_741033c5b12fb371f6f0a2cdd04dc79c
                 .addData(data);
         }
             $.ajax("https://raw.githubusercontent.com/mautamos89/girona_tfm/main/data/map_r_unidad.geojson", {dataType: 'json', async: false})
-                .done(geo_json_1ec4aec29c73b176e8d9fde202dc5194_add);
-        geo_json_1ec4aec29c73b176e8d9fde202dc5194.setStyle(function(feature) {return feature.properties.style;});
+                .done(geo_json_741033c5b12fb371f6f0a2cdd04dc79c_add);
+        geo_json_741033c5b12fb371f6f0a2cdd04dc79c.setStyle(function(feature) {return feature.properties.style;});
 
         
     
-            geo_json_1ec4aec29c73b176e8d9fde202dc5194.addTo(marker_cluster_68c86d175b16cfe8198b9947afbabe9c);
+            geo_json_741033c5b12fb371f6f0a2cdd04dc79c.addTo(marker_cluster_3a2f84b110238f5fa19fcb8992e8fa6d);
         
     
-            var marker_cluster_cc3abd01ea12a544c47510de529339ac = L.markerClusterGroup(
+            var marker_cluster_9128dab6263db6882e08b7cdf3c62ff2 = L.markerClusterGroup(
                 {
   "showCoverageOnHover": false,
   "maxClusterRadius": 80,
@@ -618,7 +618,7 @@ La metodología implementa un código modular en Python que sistematiza las regl
             );
         
     
-        function geo_json_b8a827c946c2c42eb475e8407ce76117_pointToLayer(feature, latlng) {
+        function geo_json_bee267d98b0c406f2c023b231d4b1635_pointToLayer(feature, latlng) {
             var opts = {
   "stroke": true,
   "color": "orange",
@@ -639,15 +639,15 @@ La metodología implementa un código modular en Python que sistematiza las regl
             return new L.CircleMarker(latlng, opts)
         }
 
-        function geo_json_b8a827c946c2c42eb475e8407ce76117_onEachFeature(feature, layer) {
+        function geo_json_bee267d98b0c406f2c023b231d4b1635_onEachFeature(feature, layer) {
             (
     function onEachFeature(feature, layer) {
         if (feature.properties) {
             var popupContent = '<div style="font-family: Segoe UI; font-size: 11px;">' +
                                '<b>Capa:</b> U. Anexo<br>' +
                                '<b>ID Predio:</b> ' + feature.properties.OBJECTID + '<br>' +
-                               '<b>Error espacial:</b> ' + feature.properties.CE + '<br>' +
-                               '<b>Error temático:</b> ' + feature.properties.CT + '</div>';
+                               '<b>Control espacial:</b> ' + feature.properties.CE + '<br>' +
+                               '<b>Control temático:</b> ' + feature.properties.CT + '</div>';
             layer.bindPopup(popupContent);
             layer.bindTooltip('<b>ID Predio:</b> ' + feature.properties.OBJECTID, {sticky: true});
         }
@@ -657,28 +657,28 @@ La metodología implementa un código modular en Python que sistematiza las regl
             layer.on({
             });
         };
-        var geo_json_b8a827c946c2c42eb475e8407ce76117 = L.geoJson(null, {
-                onEachFeature: geo_json_b8a827c946c2c42eb475e8407ce76117_onEachFeature,
+        var geo_json_bee267d98b0c406f2c023b231d4b1635 = L.geoJson(null, {
+                onEachFeature: geo_json_bee267d98b0c406f2c023b231d4b1635_onEachFeature,
             
-                pointToLayer: geo_json_b8a827c946c2c42eb475e8407ce76117_pointToLayer,
+                pointToLayer: geo_json_bee267d98b0c406f2c023b231d4b1635_pointToLayer,
             ...{
 }
         });
 
-        function geo_json_b8a827c946c2c42eb475e8407ce76117_add (data) {
-            geo_json_b8a827c946c2c42eb475e8407ce76117
+        function geo_json_bee267d98b0c406f2c023b231d4b1635_add (data) {
+            geo_json_bee267d98b0c406f2c023b231d4b1635
                 .addData(data);
         }
             $.ajax("https://raw.githubusercontent.com/mautamos89/girona_tfm/main/data/map_u_anexo.geojson", {dataType: 'json', async: false})
-                .done(geo_json_b8a827c946c2c42eb475e8407ce76117_add);
-        geo_json_b8a827c946c2c42eb475e8407ce76117.setStyle(function(feature) {return feature.properties.style;});
+                .done(geo_json_bee267d98b0c406f2c023b231d4b1635_add);
+        geo_json_bee267d98b0c406f2c023b231d4b1635.setStyle(function(feature) {return feature.properties.style;});
 
         
     
-            geo_json_b8a827c946c2c42eb475e8407ce76117.addTo(marker_cluster_cc3abd01ea12a544c47510de529339ac);
+            geo_json_bee267d98b0c406f2c023b231d4b1635.addTo(marker_cluster_9128dab6263db6882e08b7cdf3c62ff2);
         
     
-            var marker_cluster_386e14448450b1cdfce0e5795730cd64 = L.markerClusterGroup(
+            var marker_cluster_668fddb0a2f5df9d6213b63e7ff97cb9 = L.markerClusterGroup(
                 {
   "showCoverageOnHover": false,
   "maxClusterRadius": 80,
@@ -686,7 +686,7 @@ La metodología implementa un código modular en Python que sistematiza las regl
             );
         
     
-        function geo_json_02d543afcc2dcb8df6f69594e496b4b9_pointToLayer(feature, latlng) {
+        function geo_json_294849ec2bd3a7b61a3f068d0b7e66d6_pointToLayer(feature, latlng) {
             var opts = {
   "stroke": true,
   "color": "grey",
@@ -707,15 +707,15 @@ La metodología implementa un código modular en Python que sistematiza las regl
             return new L.CircleMarker(latlng, opts)
         }
 
-        function geo_json_02d543afcc2dcb8df6f69594e496b4b9_onEachFeature(feature, layer) {
+        function geo_json_294849ec2bd3a7b61a3f068d0b7e66d6_onEachFeature(feature, layer) {
             (
     function onEachFeature(feature, layer) {
         if (feature.properties) {
             var popupContent = '<div style="font-family: Segoe UI; font-size: 11px;">' +
                                '<b>Capa:</b> U. Construcción<br>' +
                                '<b>ID Predio:</b> ' + feature.properties.OBJECTID + '<br>' +
-                               '<b>Error espacial:</b> ' + feature.properties.CE + '<br>' +
-                               '<b>Error temático:</b> ' + feature.properties.CT + '</div>';
+                               '<b>Control espacial:</b> ' + feature.properties.CE + '<br>' +
+                               '<b>Control temático:</b> ' + feature.properties.CT + '</div>';
             layer.bindPopup(popupContent);
             layer.bindTooltip('<b>ID Predio:</b> ' + feature.properties.OBJECTID, {sticky: true});
         }
@@ -725,28 +725,28 @@ La metodología implementa un código modular en Python que sistematiza las regl
             layer.on({
             });
         };
-        var geo_json_02d543afcc2dcb8df6f69594e496b4b9 = L.geoJson(null, {
-                onEachFeature: geo_json_02d543afcc2dcb8df6f69594e496b4b9_onEachFeature,
+        var geo_json_294849ec2bd3a7b61a3f068d0b7e66d6 = L.geoJson(null, {
+                onEachFeature: geo_json_294849ec2bd3a7b61a3f068d0b7e66d6_onEachFeature,
             
-                pointToLayer: geo_json_02d543afcc2dcb8df6f69594e496b4b9_pointToLayer,
+                pointToLayer: geo_json_294849ec2bd3a7b61a3f068d0b7e66d6_pointToLayer,
             ...{
 }
         });
 
-        function geo_json_02d543afcc2dcb8df6f69594e496b4b9_add (data) {
-            geo_json_02d543afcc2dcb8df6f69594e496b4b9
+        function geo_json_294849ec2bd3a7b61a3f068d0b7e66d6_add (data) {
+            geo_json_294849ec2bd3a7b61a3f068d0b7e66d6
                 .addData(data);
         }
             $.ajax("https://raw.githubusercontent.com/mautamos89/girona_tfm/main/data/map_u_construccion.geojson", {dataType: 'json', async: false})
-                .done(geo_json_02d543afcc2dcb8df6f69594e496b4b9_add);
-        geo_json_02d543afcc2dcb8df6f69594e496b4b9.setStyle(function(feature) {return feature.properties.style;});
+                .done(geo_json_294849ec2bd3a7b61a3f068d0b7e66d6_add);
+        geo_json_294849ec2bd3a7b61a3f068d0b7e66d6.setStyle(function(feature) {return feature.properties.style;});
 
         
     
-            geo_json_02d543afcc2dcb8df6f69594e496b4b9.addTo(marker_cluster_386e14448450b1cdfce0e5795730cd64);
+            geo_json_294849ec2bd3a7b61a3f068d0b7e66d6.addTo(marker_cluster_668fddb0a2f5df9d6213b63e7ff97cb9);
         
     
-            var marker_cluster_b1a1388df8d20b328d5cd4b23e7a5470 = L.markerClusterGroup(
+            var marker_cluster_b3f36fae14bb577a965d18a1934383d3 = L.markerClusterGroup(
                 {
   "showCoverageOnHover": false,
   "maxClusterRadius": 80,
@@ -754,7 +754,7 @@ La metodología implementa un código modular en Python que sistematiza las regl
             );
         
     
-        function geo_json_41aeeb5cb2d5e9db6f07b0dc7a53ec61_pointToLayer(feature, latlng) {
+        function geo_json_929eef872b1d4023f3388484fc2dd4c9_pointToLayer(feature, latlng) {
             var opts = {
   "stroke": true,
   "color": "brown",
@@ -775,15 +775,15 @@ La metodología implementa un código modular en Python que sistematiza las regl
             return new L.CircleMarker(latlng, opts)
         }
 
-        function geo_json_41aeeb5cb2d5e9db6f07b0dc7a53ec61_onEachFeature(feature, layer) {
+        function geo_json_929eef872b1d4023f3388484fc2dd4c9_onEachFeature(feature, layer) {
             (
     function onEachFeature(feature, layer) {
         if (feature.properties) {
             var popupContent = '<div style="font-family: Segoe UI; font-size: 11px;">' +
                                '<b>Capa:</b> U. Manzana<br>' +
                                '<b>ID Predio:</b> ' + feature.properties.OBJECTID + '<br>' +
-                               '<b>Error espacial:</b> ' + feature.properties.CE + '<br>' +
-                               '<b>Error temático:</b> ' + feature.properties.CT + '</div>';
+                               '<b>Control espacial:</b> ' + feature.properties.CE + '<br>' +
+                               '<b>Control temático:</b> ' + feature.properties.CT + '</div>';
             layer.bindPopup(popupContent);
             layer.bindTooltip('<b>ID Predio:</b> ' + feature.properties.OBJECTID, {sticky: true});
         }
@@ -793,28 +793,28 @@ La metodología implementa un código modular en Python que sistematiza las regl
             layer.on({
             });
         };
-        var geo_json_41aeeb5cb2d5e9db6f07b0dc7a53ec61 = L.geoJson(null, {
-                onEachFeature: geo_json_41aeeb5cb2d5e9db6f07b0dc7a53ec61_onEachFeature,
+        var geo_json_929eef872b1d4023f3388484fc2dd4c9 = L.geoJson(null, {
+                onEachFeature: geo_json_929eef872b1d4023f3388484fc2dd4c9_onEachFeature,
             
-                pointToLayer: geo_json_41aeeb5cb2d5e9db6f07b0dc7a53ec61_pointToLayer,
+                pointToLayer: geo_json_929eef872b1d4023f3388484fc2dd4c9_pointToLayer,
             ...{
 }
         });
 
-        function geo_json_41aeeb5cb2d5e9db6f07b0dc7a53ec61_add (data) {
-            geo_json_41aeeb5cb2d5e9db6f07b0dc7a53ec61
+        function geo_json_929eef872b1d4023f3388484fc2dd4c9_add (data) {
+            geo_json_929eef872b1d4023f3388484fc2dd4c9
                 .addData(data);
         }
             $.ajax("https://raw.githubusercontent.com/mautamos89/girona_tfm/main/data/map_u_manzana.geojson", {dataType: 'json', async: false})
-                .done(geo_json_41aeeb5cb2d5e9db6f07b0dc7a53ec61_add);
-        geo_json_41aeeb5cb2d5e9db6f07b0dc7a53ec61.setStyle(function(feature) {return feature.properties.style;});
+                .done(geo_json_929eef872b1d4023f3388484fc2dd4c9_add);
+        geo_json_929eef872b1d4023f3388484fc2dd4c9.setStyle(function(feature) {return feature.properties.style;});
 
         
     
-            geo_json_41aeeb5cb2d5e9db6f07b0dc7a53ec61.addTo(marker_cluster_b1a1388df8d20b328d5cd4b23e7a5470);
+            geo_json_929eef872b1d4023f3388484fc2dd4c9.addTo(marker_cluster_b3f36fae14bb577a965d18a1934383d3);
         
     
-            var marker_cluster_18fbce9e0af30a25082acd865f295317 = L.markerClusterGroup(
+            var marker_cluster_1ab0da6f02e2c5e95a272a944faef0ce = L.markerClusterGroup(
                 {
   "showCoverageOnHover": false,
   "maxClusterRadius": 80,
@@ -822,7 +822,7 @@ La metodología implementa un código modular en Python que sistematiza las regl
             );
         
     
-        function geo_json_f96b97cf3ab5397670d1037784d9bc6d_pointToLayer(feature, latlng) {
+        function geo_json_4752d9ef439bdcfcb35bc46034990b47_pointToLayer(feature, latlng) {
             var opts = {
   "stroke": true,
   "color": "green",
@@ -843,15 +843,15 @@ La metodología implementa un código modular en Python que sistematiza las regl
             return new L.CircleMarker(latlng, opts)
         }
 
-        function geo_json_f96b97cf3ab5397670d1037784d9bc6d_onEachFeature(feature, layer) {
+        function geo_json_4752d9ef439bdcfcb35bc46034990b47_onEachFeature(feature, layer) {
             (
     function onEachFeature(feature, layer) {
         if (feature.properties) {
             var popupContent = '<div style="font-family: Segoe UI; font-size: 11px;">' +
                                '<b>Capa:</b> U. Terreno<br>' +
                                '<b>ID Predio:</b> ' + feature.properties.OBJECTID + '<br>' +
-                               '<b>Error espacial:</b> ' + feature.properties.CE + '<br>' +
-                               '<b>Error temático:</b> ' + feature.properties.CT + '</div>';
+                               '<b>Control espacial:</b> ' + feature.properties.CE + '<br>' +
+                               '<b>Control temático:</b> ' + feature.properties.CT + '</div>';
             layer.bindPopup(popupContent);
             layer.bindTooltip('<b>ID Predio:</b> ' + feature.properties.OBJECTID, {sticky: true});
         }
@@ -861,28 +861,28 @@ La metodología implementa un código modular en Python que sistematiza las regl
             layer.on({
             });
         };
-        var geo_json_f96b97cf3ab5397670d1037784d9bc6d = L.geoJson(null, {
-                onEachFeature: geo_json_f96b97cf3ab5397670d1037784d9bc6d_onEachFeature,
+        var geo_json_4752d9ef439bdcfcb35bc46034990b47 = L.geoJson(null, {
+                onEachFeature: geo_json_4752d9ef439bdcfcb35bc46034990b47_onEachFeature,
             
-                pointToLayer: geo_json_f96b97cf3ab5397670d1037784d9bc6d_pointToLayer,
+                pointToLayer: geo_json_4752d9ef439bdcfcb35bc46034990b47_pointToLayer,
             ...{
 }
         });
 
-        function geo_json_f96b97cf3ab5397670d1037784d9bc6d_add (data) {
-            geo_json_f96b97cf3ab5397670d1037784d9bc6d
+        function geo_json_4752d9ef439bdcfcb35bc46034990b47_add (data) {
+            geo_json_4752d9ef439bdcfcb35bc46034990b47
                 .addData(data);
         }
             $.ajax("https://raw.githubusercontent.com/mautamos89/girona_tfm/main/data/map_u_terreno.geojson", {dataType: 'json', async: false})
-                .done(geo_json_f96b97cf3ab5397670d1037784d9bc6d_add);
-        geo_json_f96b97cf3ab5397670d1037784d9bc6d.setStyle(function(feature) {return feature.properties.style;});
+                .done(geo_json_4752d9ef439bdcfcb35bc46034990b47_add);
+        geo_json_4752d9ef439bdcfcb35bc46034990b47.setStyle(function(feature) {return feature.properties.style;});
 
         
     
-            geo_json_f96b97cf3ab5397670d1037784d9bc6d.addTo(marker_cluster_18fbce9e0af30a25082acd865f295317);
+            geo_json_4752d9ef439bdcfcb35bc46034990b47.addTo(marker_cluster_1ab0da6f02e2c5e95a272a944faef0ce);
         
     
-            var marker_cluster_2c4d325520c74a393ae79390359a5544 = L.markerClusterGroup(
+            var marker_cluster_0e3d8be7b2d37d37555d001de18b56f2 = L.markerClusterGroup(
                 {
   "showCoverageOnHover": false,
   "maxClusterRadius": 80,
@@ -890,7 +890,7 @@ La metodología implementa un código modular en Python que sistematiza las regl
             );
         
     
-        function geo_json_0b4d3bb3c2c6b28373c6658733e6fa72_pointToLayer(feature, latlng) {
+        function geo_json_3d10fd832172b6002fd39e5dcdac884c_pointToLayer(feature, latlng) {
             var opts = {
   "stroke": true,
   "color": "purple",
@@ -911,15 +911,15 @@ La metodología implementa un código modular en Python que sistematiza las regl
             return new L.CircleMarker(latlng, opts)
         }
 
-        function geo_json_0b4d3bb3c2c6b28373c6658733e6fa72_onEachFeature(feature, layer) {
+        function geo_json_3d10fd832172b6002fd39e5dcdac884c_onEachFeature(feature, layer) {
             (
     function onEachFeature(feature, layer) {
         if (feature.properties) {
             var popupContent = '<div style="font-family: Segoe UI; font-size: 11px;">' +
                                '<b>Capa:</b> U. Unidad<br>' +
                                '<b>ID Predio:</b> ' + feature.properties.OBJECTID + '<br>' +
-                               '<b>Error espacial:</b> ' + feature.properties.CE + '<br>' +
-                               '<b>Error temático:</b> ' + feature.properties.CT + '</div>';
+                               '<b>Control espacial:</b> ' + feature.properties.CE + '<br>' +
+                               '<b>Control temático:</b> ' + feature.properties.CT + '</div>';
             layer.bindPopup(popupContent);
             layer.bindTooltip('<b>ID Predio:</b> ' + feature.properties.OBJECTID, {sticky: true});
         }
@@ -929,29 +929,29 @@ La metodología implementa un código modular en Python que sistematiza las regl
             layer.on({
             });
         };
-        var geo_json_0b4d3bb3c2c6b28373c6658733e6fa72 = L.geoJson(null, {
-                onEachFeature: geo_json_0b4d3bb3c2c6b28373c6658733e6fa72_onEachFeature,
+        var geo_json_3d10fd832172b6002fd39e5dcdac884c = L.geoJson(null, {
+                onEachFeature: geo_json_3d10fd832172b6002fd39e5dcdac884c_onEachFeature,
             
-                pointToLayer: geo_json_0b4d3bb3c2c6b28373c6658733e6fa72_pointToLayer,
+                pointToLayer: geo_json_3d10fd832172b6002fd39e5dcdac884c_pointToLayer,
             ...{
 }
         });
 
-        function geo_json_0b4d3bb3c2c6b28373c6658733e6fa72_add (data) {
-            geo_json_0b4d3bb3c2c6b28373c6658733e6fa72
+        function geo_json_3d10fd832172b6002fd39e5dcdac884c_add (data) {
+            geo_json_3d10fd832172b6002fd39e5dcdac884c
                 .addData(data);
         }
             $.ajax("https://raw.githubusercontent.com/mautamos89/girona_tfm/main/data/map_u_unidad.geojson", {dataType: 'json', async: false})
-                .done(geo_json_0b4d3bb3c2c6b28373c6658733e6fa72_add);
-        geo_json_0b4d3bb3c2c6b28373c6658733e6fa72.setStyle(function(feature) {return feature.properties.style;});
+                .done(geo_json_3d10fd832172b6002fd39e5dcdac884c_add);
+        geo_json_3d10fd832172b6002fd39e5dcdac884c.setStyle(function(feature) {return feature.properties.style;});
 
         
     
-            geo_json_0b4d3bb3c2c6b28373c6658733e6fa72.addTo(marker_cluster_2c4d325520c74a393ae79390359a5544);
+            geo_json_3d10fd832172b6002fd39e5dcdac884c.addTo(marker_cluster_0e3d8be7b2d37d37555d001de18b56f2);
         
     
-            var feature_group_c28b4e48e602df90dbb156e00eec0e84searchControl = new L.Control.Search({
-                layer: feature_group_c28b4e48e602df90dbb156e00eec0e84,
+            var feature_group_1ef9ba947a3d3b49dcae77cecd431a32searchControl = new L.Control.Search({
+                layer: feature_group_1ef9ba947a3d3b49dcae77cecd431a32,
                 
                 propertyName: 'OBJECTID',
                 
@@ -964,8 +964,8 @@ La metodología implementa un código modular en Python que sistematiza las regl
                 hideMarkerOnCollapse: true
             
                 });
-                feature_group_c28b4e48e602df90dbb156e00eec0e84searchControl.on('search:locationfound', function(e) {
-                    feature_group_c28b4e48e602df90dbb156e00eec0e84.setStyle(function(feature){
+                feature_group_1ef9ba947a3d3b49dcae77cecd431a32searchControl.on('search:locationfound', function(e) {
+                    feature_group_1ef9ba947a3d3b49dcae77cecd431a32.setStyle(function(feature){
                         return feature.properties.style
                     })
                     
@@ -976,16 +976,16 @@ La metodología implementa un código modular en Python que sistematiza las regl
                     if(e.layer._popup)
                         e.layer.openPopup();
                 })
-                feature_group_c28b4e48e602df90dbb156e00eec0e84searchControl.on('search:collapsed', function(e) {
-                        feature_group_c28b4e48e602df90dbb156e00eec0e84.setStyle(function(feature){
+                feature_group_1ef9ba947a3d3b49dcae77cecd431a32searchControl.on('search:collapsed', function(e) {
+                        feature_group_1ef9ba947a3d3b49dcae77cecd431a32.setStyle(function(feature){
                             return feature.properties.style
                     });
                 });
-            map_1d8bf2a3dc0752bb5005eeaae1dbbb09.addControl( feature_group_c28b4e48e602df90dbb156e00eec0e84searchControl );
+            map_bfd2c6b7cf4de8322800f11f53c9ec3e.addControl( feature_group_1ef9ba947a3d3b49dcae77cecd431a32searchControl );
 
         
     
-            var mouse_position_60846ccf96cba2c861ff755706cf7af7 = new L.Control.MousePosition(
+            var mouse_position_f97ea5c0616a9007657a2a22fc180222 = new L.Control.MousePosition(
                 {
   "position": "bottomright",
   "separator": " | Longitud: ",
@@ -995,19 +995,19 @@ La metodología implementa un código modular en Python que sistematiza las regl
   "prefix": "Latitud:",
 }
             );
-            mouse_position_60846ccf96cba2c861ff755706cf7af7.options["latFormatter"] =
+            mouse_position_f97ea5c0616a9007657a2a22fc180222.options["latFormatter"] =
                 function(num) {return L.Util.formatNum(num, 3) + 'º ';};;
-            mouse_position_60846ccf96cba2c861ff755706cf7af7.options["lngFormatter"] =
+            mouse_position_f97ea5c0616a9007657a2a22fc180222.options["lngFormatter"] =
                 function(num) {return L.Util.formatNum(num, 3) + 'º ';};;
-            map_1d8bf2a3dc0752bb5005eeaae1dbbb09.addControl(mouse_position_60846ccf96cba2c861ff755706cf7af7);
+            map_bfd2c6b7cf4de8322800f11f53c9ec3e.addControl(mouse_position_f97ea5c0616a9007657a2a22fc180222);
         
     
-            var tile_layer_b186f4df33197ed19ef1465c39f92496 = L.tileLayer(
+            var tile_layer_e936b62a07a5cdf55956a39758e5293d = L.tileLayer(
                 "https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png",
                 {"attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors \u0026copy; \u003ca href=\"https://carto.com/attributions\"\u003eCARTO\u003c/a\u003e", "detect_retina": false, "max_native_zoom": 20, "max_zoom": 20, "min_zoom": 0, "no_wrap": false, "opacity": 1, "subdomains": "abcd", "tms": false}
             );
-            var mini_map_2f113fd47fda2fa1a6e6a883b7a04964 = new L.Control.MiniMap(
-                tile_layer_b186f4df33197ed19ef1465c39f92496,
+            var mini_map_0b0dcfae29f8f53765d1a57d8635329c = new L.Control.MiniMap(
+                tile_layer_e936b62a07a5cdf55956a39758e5293d,
                 {
   "position": "bottomright",
   "width": 150,
@@ -1022,7 +1022,7 @@ La metodología implementa un código modular en Python que sistematiza las regl
   "minimized": false,
 }
             );
-            map_1d8bf2a3dc0752bb5005eeaae1dbbb09.addControl(mini_map_2f113fd47fda2fa1a6e6a883b7a04964);
+            map_bfd2c6b7cf4de8322800f11f53c9ec3e.addControl(mini_map_0b0dcfae29f8f53765d1a57d8635329c);
         
     
         L.easyButton(
@@ -1037,7 +1037,7 @@ La metodología implementa un código modular en Python que sistematiza las regl
         }
     }
     
-        ).addTo(map_1d8bf2a3dc0752bb5005eeaae1dbbb09);
+        ).addTo(map_bfd2c6b7cf4de8322800f11f53c9ec3e);
         
     
 
@@ -1045,22 +1045,22 @@ La metodología implementa un código modular en Python que sistematiza las regl
                 null,
                 {
                     "Capa Rural" : {
-                        "Anexo" : marker_cluster_945032f6023b1e805ee004ad3f7c4bac,
-                        "Construcci\u00f3n" : marker_cluster_c2c7503834c30d9d0a05d93c41849b82,
-                        "Manzana" : marker_cluster_6cdfc57461c968e02944007c9ec9d764,
-                        "Terreno" : marker_cluster_8434b61575a9986d9f2b42ea36617037,
-                        "Unidad" : marker_cluster_68c86d175b16cfe8198b9947afbabe9c,
+                        "Anexo" : marker_cluster_04e6ed7b432c3a93732efa730da48a47,
+                        "Construcci\u00f3n" : marker_cluster_bd2f804d8c1730f51e056c95eb5029f5,
+                        "Manzana" : marker_cluster_e9b6a06d03547b7157c043834a25e69e,
+                        "Terreno" : marker_cluster_cd8c6bfaee2604b2dfaad28f2be38567,
+                        "Unidad" : marker_cluster_3a2f84b110238f5fa19fcb8992e8fa6d,
                     },
                     "Capa Urbano" : {
-                        "Anexo" : marker_cluster_cc3abd01ea12a544c47510de529339ac,
-                        "Construcci\u00f3n" : marker_cluster_386e14448450b1cdfce0e5795730cd64,
-                        "Manzana" : marker_cluster_b1a1388df8d20b328d5cd4b23e7a5470,
-                        "Terreno" : marker_cluster_18fbce9e0af30a25082acd865f295317,
-                        "Unidad" : marker_cluster_2c4d325520c74a393ae79390359a5544,
+                        "Anexo" : marker_cluster_9128dab6263db6882e08b7cdf3c62ff2,
+                        "Construcci\u00f3n" : marker_cluster_668fddb0a2f5df9d6213b63e7ff97cb9,
+                        "Manzana" : marker_cluster_b3f36fae14bb577a965d18a1934383d3,
+                        "Terreno" : marker_cluster_1ab0da6f02e2c5e95a272a944faef0ce,
+                        "Unidad" : marker_cluster_0e3d8be7b2d37d37555d001de18b56f2,
                     },
                     "Mapa base" : {
-                        "CartoDB Positron" : tile_layer_5829efe9353b23691befcca7df69f723,
-                        "Google H\u00edbrido" : tile_layer_0b4ac87b1c389776a3c6bd40edcbb23b,
+                        "CartoDB Positron" : tile_layer_7399211b8f0ec004d0f25777eb3acaa0,
+                        "Google H\u00edbrido" : tile_layer_1c59ed2ff8950442bc18afbb61ca932d,
                     },
                 },
                 {
@@ -1068,57 +1068,57 @@ La metodología implementa un código modular en Python que sistematiza las regl
   "autoZIndex": true,
   "draggable": true,
 },
-            ).addTo(map_1d8bf2a3dc0752bb5005eeaae1dbbb09);
-            marker_cluster_cc3abd01ea12a544c47510de529339ac.remove();
-            marker_cluster_6cdfc57461c968e02944007c9ec9d764.remove();
-            marker_cluster_8434b61575a9986d9f2b42ea36617037.remove();
-            marker_cluster_2c4d325520c74a393ae79390359a5544.remove();
-            marker_cluster_18fbce9e0af30a25082acd865f295317.remove();
-            marker_cluster_b1a1388df8d20b328d5cd4b23e7a5470.remove();
-            marker_cluster_386e14448450b1cdfce0e5795730cd64.remove();
-            marker_cluster_68c86d175b16cfe8198b9947afbabe9c.remove();
-            marker_cluster_c2c7503834c30d9d0a05d93c41849b82.remove();
-            tile_layer_0b4ac87b1c389776a3c6bd40edcbb23b.remove();
+            ).addTo(map_bfd2c6b7cf4de8322800f11f53c9ec3e);
+            marker_cluster_b3f36fae14bb577a965d18a1934383d3.remove();
+            tile_layer_1c59ed2ff8950442bc18afbb61ca932d.remove();
+            marker_cluster_668fddb0a2f5df9d6213b63e7ff97cb9.remove();
+            marker_cluster_cd8c6bfaee2604b2dfaad28f2be38567.remove();
+            marker_cluster_9128dab6263db6882e08b7cdf3c62ff2.remove();
+            marker_cluster_3a2f84b110238f5fa19fcb8992e8fa6d.remove();
+            marker_cluster_0e3d8be7b2d37d37555d001de18b56f2.remove();
+            marker_cluster_bd2f804d8c1730f51e056c95eb5029f5.remove();
+            marker_cluster_1ab0da6f02e2c5e95a272a944faef0ce.remove();
+            marker_cluster_e9b6a06d03547b7157c043834a25e69e.remove();
 
         
     
-            tile_layer_5829efe9353b23691befcca7df69f723.addTo(map_1d8bf2a3dc0752bb5005eeaae1dbbb09);
+            tile_layer_7399211b8f0ec004d0f25777eb3acaa0.addTo(map_bfd2c6b7cf4de8322800f11f53c9ec3e);
         
     
-            feature_group_c28b4e48e602df90dbb156e00eec0e84.addTo(map_1d8bf2a3dc0752bb5005eeaae1dbbb09);
+            feature_group_1ef9ba947a3d3b49dcae77cecd431a32.addTo(map_bfd2c6b7cf4de8322800f11f53c9ec3e);
         
     
-            geo_json_4500d577470910bcac0b31e0f11a42c2.addTo(marker_cluster_945032f6023b1e805ee004ad3f7c4bac);
+            geo_json_d455f4f70f93a4405739d56acdbc3a5c.addTo(marker_cluster_04e6ed7b432c3a93732efa730da48a47);
         
     
-            marker_cluster_945032f6023b1e805ee004ad3f7c4bac.addTo(map_1d8bf2a3dc0752bb5005eeaae1dbbb09);
+            marker_cluster_04e6ed7b432c3a93732efa730da48a47.addTo(map_bfd2c6b7cf4de8322800f11f53c9ec3e);
         
     
-            geo_json_fae112a5ac58938776ae891af54ed934.addTo(marker_cluster_c2c7503834c30d9d0a05d93c41849b82);
+            geo_json_616a6c5dc4b70e10bb14b31fd42b4f95.addTo(marker_cluster_bd2f804d8c1730f51e056c95eb5029f5);
         
     
-            geo_json_9e345ad41f70138a1701ebb8d5f07e60.addTo(marker_cluster_6cdfc57461c968e02944007c9ec9d764);
+            geo_json_3b9947df73a26f0f3ff8d96ba9f09feb.addTo(marker_cluster_e9b6a06d03547b7157c043834a25e69e);
         
     
-            geo_json_5589164a7679f8a4e177479280858926.addTo(marker_cluster_8434b61575a9986d9f2b42ea36617037);
+            geo_json_31276061599db74a18d30734d4e4e929.addTo(marker_cluster_cd8c6bfaee2604b2dfaad28f2be38567);
         
     
-            geo_json_1ec4aec29c73b176e8d9fde202dc5194.addTo(marker_cluster_68c86d175b16cfe8198b9947afbabe9c);
+            geo_json_741033c5b12fb371f6f0a2cdd04dc79c.addTo(marker_cluster_3a2f84b110238f5fa19fcb8992e8fa6d);
         
     
-            geo_json_b8a827c946c2c42eb475e8407ce76117.addTo(marker_cluster_cc3abd01ea12a544c47510de529339ac);
+            geo_json_bee267d98b0c406f2c023b231d4b1635.addTo(marker_cluster_9128dab6263db6882e08b7cdf3c62ff2);
         
     
-            geo_json_02d543afcc2dcb8df6f69594e496b4b9.addTo(marker_cluster_386e14448450b1cdfce0e5795730cd64);
+            geo_json_294849ec2bd3a7b61a3f068d0b7e66d6.addTo(marker_cluster_668fddb0a2f5df9d6213b63e7ff97cb9);
         
     
-            geo_json_41aeeb5cb2d5e9db6f07b0dc7a53ec61.addTo(marker_cluster_b1a1388df8d20b328d5cd4b23e7a5470);
+            geo_json_929eef872b1d4023f3388484fc2dd4c9.addTo(marker_cluster_b3f36fae14bb577a965d18a1934383d3);
         
     
-            geo_json_f96b97cf3ab5397670d1037784d9bc6d.addTo(marker_cluster_18fbce9e0af30a25082acd865f295317);
+            geo_json_4752d9ef439bdcfcb35bc46034990b47.addTo(marker_cluster_1ab0da6f02e2c5e95a272a944faef0ce);
         
     
-            geo_json_0b4d3bb3c2c6b28373c6658733e6fa72.addTo(marker_cluster_2c4d325520c74a393ae79390359a5544);
+            geo_json_3d10fd832172b6002fd39e5dcdac884c.addTo(marker_cluster_0e3d8be7b2d37d37555d001de18b56f2);
         
 </script>
 </html>
