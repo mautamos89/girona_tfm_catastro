@@ -17,7 +17,7 @@
             <meta name="viewport" content="width=device-width,
                 initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
             <style>
-                #map_8f8d43bdb250effbcf9a4f93d1e980b4 {
+                #map_e1a1c636c1ef3b4ebd3a3a18d0a47625 {
                     position: relative;
                     width: 100.0%;
                     height: 100.0%;
@@ -50,6 +50,9 @@
             </script>
 
         
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.1.0/leaflet.markercluster.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.1.0/MarkerCluster.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.1.0/MarkerCluster.Default.css"/>
     
                     <style>
                         .foliumpopup {
@@ -66,9 +69,6 @@
                         }
                     </style>
             
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.1.0/leaflet.markercluster.js"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.1.0/MarkerCluster.css"/>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.1.0/MarkerCluster.Default.css"/>
     <script src="https://cdn.jsdelivr.net/npm/leaflet-search@2.9.7/dist/leaflet-search.min.js"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet-search@2.9.7/dist/leaflet-search.min.css"/>
     <script src="https://cdn.jsdelivr.net/gh/ardhi/Leaflet.MousePosition/src/L.Control.MousePosition.min.js"></script>
@@ -84,142 +84,144 @@
 <body>
     
     
-            <div class="folium-map" id="map_8f8d43bdb250effbcf9a4f93d1e980b4" ></div>
+            <div class="folium-map" id="map_e1a1c636c1ef3b4ebd3a3a18d0a47625" ></div>
         
     
 
-<!doctype html>
-<html lang="es">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Mapa CC Catastral</title>
-  <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <!doctype html>
+    <html lang="es">
+    <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Mapa CCA Catastral</title>
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
 
-  <style type='text/css'>
-    .my-legend1 {
-      display: flex; /* Agregar display flex */
-      flex-wrap: wrap; /* Permitir que los elementos se ajusten en varias líneas */
-      align-items: center; /* Centrar verticalmente */
-    }
-    .map-logo {
-      width: 145px; /* ajustar el ancho de la imagen */
-      height: 31.886px; /* ajustar el alto de la imagen */
-      margin-right: 2px; /* agregar espacio entre la imagen y el título */
-      margin-left: 0px;
-    }
-    .map-title {
-      font-weight: bold;
-      font-size: 90%;
-    }
-    .map-header {
-      font-size: 70%;
-    }
-  </style>
+    <style type='text/css'>
+        .my-legend1 {
+        display: flex; /* Agregar display flex */
+        flex-wrap: wrap; /* Permitir que los elementos se ajusten en varias líneas */
+        align-items: center; /* Centrar verticalmente */
+        }
+        .map-logo {
+        width: 145px; /* ajustar el ancho de la imagen */
+        height: 31.886px; /* ajustar el alto de la imagen */
+        margin-right: 2px; /* agregar espacio entre la imagen y el título */
+        margin-left: 0px;
+        }
+        .map-title {
+        font-weight: bold;
+        font-size: 90%;
+        }
+        .map-header {
+        font-size: 70%;
+        }
+    </style>
 
-  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
-  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
 
-  <script>
-  $( function() {
-    $( "#maptitle1" ).draggable({
-      start: function (event, ui) {
-        $(this).css({
-          right: "auto",
-          top: "auto",
-          bottom: "auto"
+    <script>
+    $( function() {
+        $( "#maptitle1" ).draggable({
+        start: function (event, ui) {
+            $(this).css({
+            right: "auto",
+            top: "auto",
+            bottom: "auto"
+            });
+        }
         });
-      }
+
     });
+    </script>
+    </head>
+    <body>
 
-  });
-  </script>
-</head>
-<body>
-
-<div id='maptitle1' class='maptitle1'
-    style='position: absolute; z-index:9999; background-color:rgba(255, 255, 255, 0.75);
-     border-radius:2px; padding: 4px; font-size:14px; font-family: Segoe UI; left: 50px; top: 10px;'>
-  <div class='my-legend1'>
-    <img src='https://raw.githubusercontent.com/mautamos89/girona_tfm_catastro/main/img/logo_udg_unigis_vector.svg' class='map-logo' />
-    <div style='display: flex; flex-direction: column;'>
-      <div class='map-title'>Control de Calidad Automatizado en Catastro</div>
-      <div class='map-header'>PROYECTO PILOTO | UNIGIS-UDG | MAURICIO TABARES-2026</div>
+    <div id='maptitle1' class='maptitle1'
+        style='position: absolute; z-index:9999; background-color:rgba(255, 255, 255, 0.75);
+        border-radius:2px; padding: 4px; font-size:14px; font-family: Segoe UI; left: 50px; top: 10px;'>
+    <div class='my-legend1'>
+        <img src='https://raw.githubusercontent.com/mautamos89/girona_tfm_catastro/main/img/logo_udg_unigis_vector.svg' class='map-logo' />
+        <div style='display: flex; flex-direction: column;'>
+        <div class='map-title'>Control de Calidad Automatizado en Catastro</div>
+        <div class='map-header'>PROYECTO PILOTO | UNIGIS-UDG | MAURICIO TABARES-2026</div>
+        </div>
     </div>
-  </div>
-</div>
+    </div>
 
     
+    
 
-<!doctype html>
-<html lang="es">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>jQuery UI Draggable - Default functionality</title>
-  <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
-  <style type='text/css'>
-    .my-legend1 {
-      display: flex; /* Agregar display flex */
-      flex-wrap: wrap; /* Permitir que los elementos se ajusten en varias líneas */
-      align-items: center; /* Centrar verticalmente */
-    }
-    .map-info-title {
-      font-weight: bold;
-      font-size: 95%;
-      text-align: center; /* Centrar texto */
-    }
-    .map-info-text {
-      font-size: 93%;
-      max-width: 375px; /* Establecer ancho máximo */
-      max-height: 150px;
-      text-align: justify; /* Justificar texto */
-      white-space: pre-wrap;
-      overflow-y: auto; /* Agregar barra de scrolling vertical */
-    }
-  </style>
+    <!doctype html>
+    <html lang="es">
+    <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>jQuery UI Draggable - Default functionality</title>
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <style type='text/css'>
+        .my-legend1 {
+        display: flex; /* Agregar display flex */
+        flex-wrap: wrap; /* Permitir que los elementos se ajusten en varias líneas */
+        align-items: center; /* Centrar verticalmente */
+        }
+        .map-info-title {
+        font-weight: bold;
+        font-size: 95%;
+        text-align: center; /* Centrar texto */
+        }
+        .map-info-text {
+        font-size: 93%;
+        max-width: 375px; /* Establecer ancho máximo */
+        max-height: 150px;
+        text-align: justify; /* Justificar texto */
+        white-space: pre-wrap;
+        overflow-y: auto; /* Agregar barra de scrolling vertical */
+        }
+    </style>
 
-  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
-  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
 
-  <script>
-  $( function() {
-    $( "#mapinfo" ).draggable({
-      start: function (event, ui) {
-        $(this).css({
-          right: "auto",
-          top: "auto",
-          bottom: "auto"
+    <script>
+    $( function() {
+        $( "#mapinfo" ).draggable({
+        start: function (event, ui) {
+            $(this).css({
+            right: "auto",
+            top: "auto",
+            bottom: "auto"
+            });
+        }
         });
-      }
+        $( "#mapinfo" ).hide();
     });
-    $( "#mapinfo" ).hide();
-  });
-  </script>
-</head>
-<body>
+    </script>
+    </head>
+    <body>
 
-<div id='mapinfo' class='mapinfo'
-    style='position: absolute; z-index:9999; background-color:rgba(255, 255, 255, 0.75);
-     border-radius:0px; padding: 6px; font-size:14px; font-family: Segoe UI;left: 10px; top: 175px;'>
-  <div class='my-legend1'>
-    <div style='display: flex; flex-direction: column;'>
-      <div class='map-info-title'>Información del mapa</div>
-      <div class='map-info-text'>Esta herramienta tiene como objetivo visualizar el diagnóstico y las inconsistencias identificadas en los datos catastrales del municipio de Cali (datos a diciembre de 2025), automatizando la validación técnica bajo los estándares de la Resolución 1149/2021 del IGAC. El visualizador busca agilizar la verificación del Número Predial Nacional (NPN) y garantizar la integridad de la información geoespacial para la toma de decisiones.
+    <div id='mapinfo' class='mapinfo'
+        style='position: absolute; z-index:9999; background-color:rgba(255, 255, 255, 0.75);
+        border-radius:0px; padding: 6px; font-size:14px; font-family: Segoe UI;left: 10px; top: 175px;'>
+    <div class='my-legend1'>
+        <div style='display: flex; flex-direction: column;'>
+        <div class='map-info-title'>Información del mapa</div>
+        <div class='map-info-text'>Esta herramienta tiene como objetivo visualizar las inconsistencias identificadas en los datos catastrales del municipio de Cali (datos a diciembre de 2025), automatizando la validación técnica bajo los estándares de la Resolución 1149/2021 del IGAC. El visualizador busca agilizar la verificación del Número Predial Nacional (NPN) y garantizar la integridad de la información geoespacial para la toma de decisiones.
 
 Las inconsistencias están representadas mediante una simbología de clúster de puntos sobre un mapa base, acompañada de la capa oficial político-administrativa. Al hacer clic en los elementos del mapa, se pueden consultar los atributos específicos de los errores detectados. La herramienta evalúa fallas geométricas de cobertura, jerarquía y duplicidad, además de la coherencia lógica-temática en la estructura del NPN.
 
 La metodología implementa un código modular en Python que sistematiza las reglas de validación de la normativa colombiana vigente. El estudio se diseñó como una prueba piloto para el municipio de Cali; sin embargo, al tratarse de un desarrollo basado en estándares nacionales, el algoritmo es replicable y escalable a otros municipios del país realizando los ajustes pertinentes. Este proyecto se desarrolló como Trabajo final de Máster de UniGIS-Girona.</div>
+        </div>
     </div>
-  </div>
-</div>
+    </div>
 
+    
 </body>
 <script>
     
     
-            var map_8f8d43bdb250effbcf9a4f93d1e980b4 = L.map(
-                "map_8f8d43bdb250effbcf9a4f93d1e980b4",
+            var map_e1a1c636c1ef3b4ebd3a3a18d0a47625 = L.map(
+                "map_e1a1c636c1ef3b4ebd3a3a18d0a47625",
                 {
                     center: [0.0, 0.0],
                     crs: L.CRS.EPSG3857,
@@ -231,13 +233,13 @@ La metodología implementa un código modular en Python que sistematiza las regl
 
                 }
             );
-            L.control.scale().addTo(map_8f8d43bdb250effbcf9a4f93d1e980b4);
+            L.control.scale().addTo(map_e1a1c636c1ef3b4ebd3a3a18d0a47625);
 
             
 
         
     
-            var tile_layer_986f77bbbdae615b21700dab62ef0a17 = L.tileLayer(
+            var tile_layer_94ee6d8022d87b84304c78fb6efd6380 = L.tileLayer(
                 "https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png",
                 {
   "minZoom": 11,
@@ -254,10 +256,10 @@ La metodología implementa un código modular en Python que sistematiza las regl
             );
         
     
-            tile_layer_986f77bbbdae615b21700dab62ef0a17.addTo(map_8f8d43bdb250effbcf9a4f93d1e980b4);
+            tile_layer_94ee6d8022d87b84304c78fb6efd6380.addTo(map_e1a1c636c1ef3b4ebd3a3a18d0a47625);
         
     
-            var tile_layer_780ac41ee3b4481a3a077daeb1f0f902 = L.tileLayer(
+            var tile_layer_0a7314e29f0e75a9d3f6984280a1bc67 = L.tileLayer(
                 "https://mt1.google.com/vt/lyrs=y\u0026x={x}\u0026y={y}\u0026z={z}",
                 {
   "minZoom": 11,
@@ -274,13 +276,696 @@ La metodología implementa un código modular en Python que sistematiza las regl
             );
         
     
-            var feature_group_e4df903198ba8bba5b483b395c4e96ec = L.featureGroup(
+            var marker_cluster_04f054050fdf8cf9353462c8c5ee9177 = L.markerClusterGroup(
+                {
+  "showCoverageOnHover": false,
+  "maxClusterRadius": 80,
+}
+            );
+        
+    
+        function geo_json_dd41430434827132c04ff3b940b04225_pointToLayer(feature, latlng) {
+            var opts = {
+  "stroke": true,
+  "color": "orange",
+  "weight": 3,
+  "opacity": 1.0,
+  "lineCap": "round",
+  "lineJoin": "round",
+  "dashArray": null,
+  "dashOffset": null,
+  "fill": true,
+  "fillColor": "black",
+  "fillOpacity": 0.8,
+  "fillRule": "evenodd",
+  "bubblingMouseEvents": true,
+  "radius": 6,
+};
+            
+            return new L.CircleMarker(latlng, opts)
+        }
+
+        function geo_json_dd41430434827132c04ff3b940b04225_onEachFeature(feature, layer) {
+            (
+        function onEachFeature(feature, layer) {
+            if (feature.properties) {
+                var popupContent = '<div style="font-family: Segoe UI; font-size: 11px;">' +
+                                '<b>Capa:</b> R. Anexo<br>' +
+                                '<b>ID Predio:</b> ' + feature.properties.OBJECTID + '<br>' +
+                                '<b>Control espacial:</b> ' + feature.properties.CE + '<br>' +
+                                '<b>Control temático:</b> ' + feature.properties.CT + '</div>';
+                layer.bindPopup(popupContent);
+                layer.bindTooltip('<b>ID Predio:</b> ' + feature.properties.OBJECTID, {sticky: true});
+            }
+        }
+        )(feature, layer);
+
+            layer.on({
+            });
+        };
+        var geo_json_dd41430434827132c04ff3b940b04225 = L.geoJson(null, {
+                onEachFeature: geo_json_dd41430434827132c04ff3b940b04225_onEachFeature,
+            
+                pointToLayer: geo_json_dd41430434827132c04ff3b940b04225_pointToLayer,
+            ...{
+}
+        });
+
+        function geo_json_dd41430434827132c04ff3b940b04225_add (data) {
+            geo_json_dd41430434827132c04ff3b940b04225
+                .addData(data);
+        }
+            $.ajax("https://raw.githubusercontent.com/mautamos89/girona_tfm_catastro/main/data/map_r_anexo.geojson", {dataType: 'json', async: false})
+                .done(geo_json_dd41430434827132c04ff3b940b04225_add);
+        geo_json_dd41430434827132c04ff3b940b04225.setStyle(function(feature) {return feature.properties.style;});
+
+        
+    
+            geo_json_dd41430434827132c04ff3b940b04225.addTo(marker_cluster_04f054050fdf8cf9353462c8c5ee9177);
+        
+    
+            marker_cluster_04f054050fdf8cf9353462c8c5ee9177.addTo(map_e1a1c636c1ef3b4ebd3a3a18d0a47625);
+        
+    
+            var marker_cluster_52b96e506d32abccad7da8dce092c734 = L.markerClusterGroup(
+                {
+  "showCoverageOnHover": false,
+  "maxClusterRadius": 80,
+}
+            );
+        
+    
+        function geo_json_4a80cf8ce0a19c8a4286ba0fcbd73ef2_pointToLayer(feature, latlng) {
+            var opts = {
+  "stroke": true,
+  "color": "grey",
+  "weight": 3,
+  "opacity": 1.0,
+  "lineCap": "round",
+  "lineJoin": "round",
+  "dashArray": null,
+  "dashOffset": null,
+  "fill": true,
+  "fillColor": "black",
+  "fillOpacity": 0.8,
+  "fillRule": "evenodd",
+  "bubblingMouseEvents": true,
+  "radius": 6,
+};
+            
+            return new L.CircleMarker(latlng, opts)
+        }
+
+        function geo_json_4a80cf8ce0a19c8a4286ba0fcbd73ef2_onEachFeature(feature, layer) {
+            (
+        function onEachFeature(feature, layer) {
+            if (feature.properties) {
+                var popupContent = '<div style="font-family: Segoe UI; font-size: 11px;">' +
+                                '<b>Capa:</b> R. Construcción<br>' +
+                                '<b>ID Predio:</b> ' + feature.properties.OBJECTID + '<br>' +
+                                '<b>Control espacial:</b> ' + feature.properties.CE + '<br>' +
+                                '<b>Control temático:</b> ' + feature.properties.CT + '</div>';
+                layer.bindPopup(popupContent);
+                layer.bindTooltip('<b>ID Predio:</b> ' + feature.properties.OBJECTID, {sticky: true});
+            }
+        }
+        )(feature, layer);
+
+            layer.on({
+            });
+        };
+        var geo_json_4a80cf8ce0a19c8a4286ba0fcbd73ef2 = L.geoJson(null, {
+                onEachFeature: geo_json_4a80cf8ce0a19c8a4286ba0fcbd73ef2_onEachFeature,
+            
+                pointToLayer: geo_json_4a80cf8ce0a19c8a4286ba0fcbd73ef2_pointToLayer,
+            ...{
+}
+        });
+
+        function geo_json_4a80cf8ce0a19c8a4286ba0fcbd73ef2_add (data) {
+            geo_json_4a80cf8ce0a19c8a4286ba0fcbd73ef2
+                .addData(data);
+        }
+            $.ajax("https://raw.githubusercontent.com/mautamos89/girona_tfm_catastro/main/data/map_r_construccion.geojson", {dataType: 'json', async: false})
+                .done(geo_json_4a80cf8ce0a19c8a4286ba0fcbd73ef2_add);
+        geo_json_4a80cf8ce0a19c8a4286ba0fcbd73ef2.setStyle(function(feature) {return feature.properties.style;});
+
+        
+    
+            geo_json_4a80cf8ce0a19c8a4286ba0fcbd73ef2.addTo(marker_cluster_52b96e506d32abccad7da8dce092c734);
+        
+    
+            var marker_cluster_c587adb40c8467a20deca922ab74f82b = L.markerClusterGroup(
+                {
+  "showCoverageOnHover": false,
+  "maxClusterRadius": 80,
+}
+            );
+        
+    
+        function geo_json_a3338894079078280c6ec8336b414586_pointToLayer(feature, latlng) {
+            var opts = {
+  "stroke": true,
+  "color": "brown",
+  "weight": 3,
+  "opacity": 1.0,
+  "lineCap": "round",
+  "lineJoin": "round",
+  "dashArray": null,
+  "dashOffset": null,
+  "fill": true,
+  "fillColor": "black",
+  "fillOpacity": 0.8,
+  "fillRule": "evenodd",
+  "bubblingMouseEvents": true,
+  "radius": 6,
+};
+            
+            return new L.CircleMarker(latlng, opts)
+        }
+
+        function geo_json_a3338894079078280c6ec8336b414586_onEachFeature(feature, layer) {
+            (
+        function onEachFeature(feature, layer) {
+            if (feature.properties) {
+                var popupContent = '<div style="font-family: Segoe UI; font-size: 11px;">' +
+                                '<b>Capa:</b> R. Manzana<br>' +
+                                '<b>ID Predio:</b> ' + feature.properties.OBJECTID + '<br>' +
+                                '<b>Control espacial:</b> ' + feature.properties.CE + '<br>' +
+                                '<b>Control temático:</b> ' + feature.properties.CT + '</div>';
+                layer.bindPopup(popupContent);
+                layer.bindTooltip('<b>ID Predio:</b> ' + feature.properties.OBJECTID, {sticky: true});
+            }
+        }
+        )(feature, layer);
+
+            layer.on({
+            });
+        };
+        var geo_json_a3338894079078280c6ec8336b414586 = L.geoJson(null, {
+                onEachFeature: geo_json_a3338894079078280c6ec8336b414586_onEachFeature,
+            
+                pointToLayer: geo_json_a3338894079078280c6ec8336b414586_pointToLayer,
+            ...{
+}
+        });
+
+        function geo_json_a3338894079078280c6ec8336b414586_add (data) {
+            geo_json_a3338894079078280c6ec8336b414586
+                .addData(data);
+        }
+            $.ajax("https://raw.githubusercontent.com/mautamos89/girona_tfm_catastro/main/data/map_r_manzana.geojson", {dataType: 'json', async: false})
+                .done(geo_json_a3338894079078280c6ec8336b414586_add);
+        geo_json_a3338894079078280c6ec8336b414586.setStyle(function(feature) {return feature.properties.style;});
+
+        
+    
+            geo_json_a3338894079078280c6ec8336b414586.addTo(marker_cluster_c587adb40c8467a20deca922ab74f82b);
+        
+    
+            var marker_cluster_7626a7f5b52b3310a962a858cdb8147c = L.markerClusterGroup(
+                {
+  "showCoverageOnHover": false,
+  "maxClusterRadius": 80,
+}
+            );
+        
+    
+        function geo_json_6195e9890a1b7e474264f38ef57b2c33_pointToLayer(feature, latlng) {
+            var opts = {
+  "stroke": true,
+  "color": "green",
+  "weight": 3,
+  "opacity": 1.0,
+  "lineCap": "round",
+  "lineJoin": "round",
+  "dashArray": null,
+  "dashOffset": null,
+  "fill": true,
+  "fillColor": "black",
+  "fillOpacity": 0.8,
+  "fillRule": "evenodd",
+  "bubblingMouseEvents": true,
+  "radius": 6,
+};
+            
+            return new L.CircleMarker(latlng, opts)
+        }
+
+        function geo_json_6195e9890a1b7e474264f38ef57b2c33_onEachFeature(feature, layer) {
+            (
+        function onEachFeature(feature, layer) {
+            if (feature.properties) {
+                var popupContent = '<div style="font-family: Segoe UI; font-size: 11px;">' +
+                                '<b>Capa:</b> R. Terreno<br>' +
+                                '<b>ID Predio:</b> ' + feature.properties.OBJECTID + '<br>' +
+                                '<b>Control espacial:</b> ' + feature.properties.CE + '<br>' +
+                                '<b>Control temático:</b> ' + feature.properties.CT + '</div>';
+                layer.bindPopup(popupContent);
+                layer.bindTooltip('<b>ID Predio:</b> ' + feature.properties.OBJECTID, {sticky: true});
+            }
+        }
+        )(feature, layer);
+
+            layer.on({
+            });
+        };
+        var geo_json_6195e9890a1b7e474264f38ef57b2c33 = L.geoJson(null, {
+                onEachFeature: geo_json_6195e9890a1b7e474264f38ef57b2c33_onEachFeature,
+            
+                pointToLayer: geo_json_6195e9890a1b7e474264f38ef57b2c33_pointToLayer,
+            ...{
+}
+        });
+
+        function geo_json_6195e9890a1b7e474264f38ef57b2c33_add (data) {
+            geo_json_6195e9890a1b7e474264f38ef57b2c33
+                .addData(data);
+        }
+            $.ajax("https://raw.githubusercontent.com/mautamos89/girona_tfm_catastro/main/data/map_r_terreno.geojson", {dataType: 'json', async: false})
+                .done(geo_json_6195e9890a1b7e474264f38ef57b2c33_add);
+        geo_json_6195e9890a1b7e474264f38ef57b2c33.setStyle(function(feature) {return feature.properties.style;});
+
+        
+    
+            geo_json_6195e9890a1b7e474264f38ef57b2c33.addTo(marker_cluster_7626a7f5b52b3310a962a858cdb8147c);
+        
+    
+            var marker_cluster_98385ed66bb4f9645a876f7b1f527755 = L.markerClusterGroup(
+                {
+  "showCoverageOnHover": false,
+  "maxClusterRadius": 80,
+}
+            );
+        
+    
+        function geo_json_31eaaaed2b36c8e203a3e760387cc268_pointToLayer(feature, latlng) {
+            var opts = {
+  "stroke": true,
+  "color": "purple",
+  "weight": 3,
+  "opacity": 1.0,
+  "lineCap": "round",
+  "lineJoin": "round",
+  "dashArray": null,
+  "dashOffset": null,
+  "fill": true,
+  "fillColor": "black",
+  "fillOpacity": 0.8,
+  "fillRule": "evenodd",
+  "bubblingMouseEvents": true,
+  "radius": 6,
+};
+            
+            return new L.CircleMarker(latlng, opts)
+        }
+
+        function geo_json_31eaaaed2b36c8e203a3e760387cc268_onEachFeature(feature, layer) {
+            (
+        function onEachFeature(feature, layer) {
+            if (feature.properties) {
+                var popupContent = '<div style="font-family: Segoe UI; font-size: 11px;">' +
+                                '<b>Capa:</b> R. Unidad<br>' +
+                                '<b>ID Predio:</b> ' + feature.properties.OBJECTID + '<br>' +
+                                '<b>Control espacial:</b> ' + feature.properties.CE + '<br>' +
+                                '<b>Control temático:</b> ' + feature.properties.CT + '</div>';
+                layer.bindPopup(popupContent);
+                layer.bindTooltip('<b>ID Predio:</b> ' + feature.properties.OBJECTID, {sticky: true});
+            }
+        }
+        )(feature, layer);
+
+            layer.on({
+            });
+        };
+        var geo_json_31eaaaed2b36c8e203a3e760387cc268 = L.geoJson(null, {
+                onEachFeature: geo_json_31eaaaed2b36c8e203a3e760387cc268_onEachFeature,
+            
+                pointToLayer: geo_json_31eaaaed2b36c8e203a3e760387cc268_pointToLayer,
+            ...{
+}
+        });
+
+        function geo_json_31eaaaed2b36c8e203a3e760387cc268_add (data) {
+            geo_json_31eaaaed2b36c8e203a3e760387cc268
+                .addData(data);
+        }
+            $.ajax("https://raw.githubusercontent.com/mautamos89/girona_tfm_catastro/main/data/map_r_unidad.geojson", {dataType: 'json', async: false})
+                .done(geo_json_31eaaaed2b36c8e203a3e760387cc268_add);
+        geo_json_31eaaaed2b36c8e203a3e760387cc268.setStyle(function(feature) {return feature.properties.style;});
+
+        
+    
+            geo_json_31eaaaed2b36c8e203a3e760387cc268.addTo(marker_cluster_98385ed66bb4f9645a876f7b1f527755);
+        
+    
+            var marker_cluster_64a57439953fefd3c8c7ecd9d6ce7305 = L.markerClusterGroup(
+                {
+  "showCoverageOnHover": false,
+  "maxClusterRadius": 80,
+}
+            );
+        
+    
+        function geo_json_17460c0f12821fe994924297353e2450_pointToLayer(feature, latlng) {
+            var opts = {
+  "stroke": true,
+  "color": "orange",
+  "weight": 3,
+  "opacity": 1.0,
+  "lineCap": "round",
+  "lineJoin": "round",
+  "dashArray": null,
+  "dashOffset": null,
+  "fill": true,
+  "fillColor": "black",
+  "fillOpacity": 0.8,
+  "fillRule": "evenodd",
+  "bubblingMouseEvents": true,
+  "radius": 6,
+};
+            
+            return new L.CircleMarker(latlng, opts)
+        }
+
+        function geo_json_17460c0f12821fe994924297353e2450_onEachFeature(feature, layer) {
+            (
+        function onEachFeature(feature, layer) {
+            if (feature.properties) {
+                var popupContent = '<div style="font-family: Segoe UI; font-size: 11px;">' +
+                                '<b>Capa:</b> U. Anexo<br>' +
+                                '<b>ID Predio:</b> ' + feature.properties.OBJECTID + '<br>' +
+                                '<b>Control espacial:</b> ' + feature.properties.CE + '<br>' +
+                                '<b>Control temático:</b> ' + feature.properties.CT + '</div>';
+                layer.bindPopup(popupContent);
+                layer.bindTooltip('<b>ID Predio:</b> ' + feature.properties.OBJECTID, {sticky: true});
+            }
+        }
+        )(feature, layer);
+
+            layer.on({
+            });
+        };
+        var geo_json_17460c0f12821fe994924297353e2450 = L.geoJson(null, {
+                onEachFeature: geo_json_17460c0f12821fe994924297353e2450_onEachFeature,
+            
+                pointToLayer: geo_json_17460c0f12821fe994924297353e2450_pointToLayer,
+            ...{
+}
+        });
+
+        function geo_json_17460c0f12821fe994924297353e2450_add (data) {
+            geo_json_17460c0f12821fe994924297353e2450
+                .addData(data);
+        }
+            $.ajax("https://raw.githubusercontent.com/mautamos89/girona_tfm_catastro/main/data/map_u_anexo.geojson", {dataType: 'json', async: false})
+                .done(geo_json_17460c0f12821fe994924297353e2450_add);
+        geo_json_17460c0f12821fe994924297353e2450.setStyle(function(feature) {return feature.properties.style;});
+
+        
+    
+            geo_json_17460c0f12821fe994924297353e2450.addTo(marker_cluster_64a57439953fefd3c8c7ecd9d6ce7305);
+        
+    
+            var marker_cluster_a69673d4ec949ff981e7e9ed76189b57 = L.markerClusterGroup(
+                {
+  "showCoverageOnHover": false,
+  "maxClusterRadius": 80,
+}
+            );
+        
+    
+        function geo_json_7676fe061f7ec97f21f0404d2b73d272_pointToLayer(feature, latlng) {
+            var opts = {
+  "stroke": true,
+  "color": "grey",
+  "weight": 3,
+  "opacity": 1.0,
+  "lineCap": "round",
+  "lineJoin": "round",
+  "dashArray": null,
+  "dashOffset": null,
+  "fill": true,
+  "fillColor": "black",
+  "fillOpacity": 0.8,
+  "fillRule": "evenodd",
+  "bubblingMouseEvents": true,
+  "radius": 6,
+};
+            
+            return new L.CircleMarker(latlng, opts)
+        }
+
+        function geo_json_7676fe061f7ec97f21f0404d2b73d272_onEachFeature(feature, layer) {
+            (
+        function onEachFeature(feature, layer) {
+            if (feature.properties) {
+                var popupContent = '<div style="font-family: Segoe UI; font-size: 11px;">' +
+                                '<b>Capa:</b> U. Construcción<br>' +
+                                '<b>ID Predio:</b> ' + feature.properties.OBJECTID + '<br>' +
+                                '<b>Control espacial:</b> ' + feature.properties.CE + '<br>' +
+                                '<b>Control temático:</b> ' + feature.properties.CT + '</div>';
+                layer.bindPopup(popupContent);
+                layer.bindTooltip('<b>ID Predio:</b> ' + feature.properties.OBJECTID, {sticky: true});
+            }
+        }
+        )(feature, layer);
+
+            layer.on({
+            });
+        };
+        var geo_json_7676fe061f7ec97f21f0404d2b73d272 = L.geoJson(null, {
+                onEachFeature: geo_json_7676fe061f7ec97f21f0404d2b73d272_onEachFeature,
+            
+                pointToLayer: geo_json_7676fe061f7ec97f21f0404d2b73d272_pointToLayer,
+            ...{
+}
+        });
+
+        function geo_json_7676fe061f7ec97f21f0404d2b73d272_add (data) {
+            geo_json_7676fe061f7ec97f21f0404d2b73d272
+                .addData(data);
+        }
+            $.ajax("https://raw.githubusercontent.com/mautamos89/girona_tfm_catastro/main/data/map_u_construccion.geojson", {dataType: 'json', async: false})
+                .done(geo_json_7676fe061f7ec97f21f0404d2b73d272_add);
+        geo_json_7676fe061f7ec97f21f0404d2b73d272.setStyle(function(feature) {return feature.properties.style;});
+
+        
+    
+            geo_json_7676fe061f7ec97f21f0404d2b73d272.addTo(marker_cluster_a69673d4ec949ff981e7e9ed76189b57);
+        
+    
+            var marker_cluster_4d34accebb9f7b75187d70e2623922bf = L.markerClusterGroup(
+                {
+  "showCoverageOnHover": false,
+  "maxClusterRadius": 80,
+}
+            );
+        
+    
+        function geo_json_19834c9379b13e1fe773488bc7aeaf12_pointToLayer(feature, latlng) {
+            var opts = {
+  "stroke": true,
+  "color": "brown",
+  "weight": 3,
+  "opacity": 1.0,
+  "lineCap": "round",
+  "lineJoin": "round",
+  "dashArray": null,
+  "dashOffset": null,
+  "fill": true,
+  "fillColor": "black",
+  "fillOpacity": 0.8,
+  "fillRule": "evenodd",
+  "bubblingMouseEvents": true,
+  "radius": 6,
+};
+            
+            return new L.CircleMarker(latlng, opts)
+        }
+
+        function geo_json_19834c9379b13e1fe773488bc7aeaf12_onEachFeature(feature, layer) {
+            (
+        function onEachFeature(feature, layer) {
+            if (feature.properties) {
+                var popupContent = '<div style="font-family: Segoe UI; font-size: 11px;">' +
+                                '<b>Capa:</b> U. Manzana<br>' +
+                                '<b>ID Predio:</b> ' + feature.properties.OBJECTID + '<br>' +
+                                '<b>Control espacial:</b> ' + feature.properties.CE + '<br>' +
+                                '<b>Control temático:</b> ' + feature.properties.CT + '</div>';
+                layer.bindPopup(popupContent);
+                layer.bindTooltip('<b>ID Predio:</b> ' + feature.properties.OBJECTID, {sticky: true});
+            }
+        }
+        )(feature, layer);
+
+            layer.on({
+            });
+        };
+        var geo_json_19834c9379b13e1fe773488bc7aeaf12 = L.geoJson(null, {
+                onEachFeature: geo_json_19834c9379b13e1fe773488bc7aeaf12_onEachFeature,
+            
+                pointToLayer: geo_json_19834c9379b13e1fe773488bc7aeaf12_pointToLayer,
+            ...{
+}
+        });
+
+        function geo_json_19834c9379b13e1fe773488bc7aeaf12_add (data) {
+            geo_json_19834c9379b13e1fe773488bc7aeaf12
+                .addData(data);
+        }
+            $.ajax("https://raw.githubusercontent.com/mautamos89/girona_tfm_catastro/main/data/map_u_manzana.geojson", {dataType: 'json', async: false})
+                .done(geo_json_19834c9379b13e1fe773488bc7aeaf12_add);
+        geo_json_19834c9379b13e1fe773488bc7aeaf12.setStyle(function(feature) {return feature.properties.style;});
+
+        
+    
+            geo_json_19834c9379b13e1fe773488bc7aeaf12.addTo(marker_cluster_4d34accebb9f7b75187d70e2623922bf);
+        
+    
+            var marker_cluster_80f7443ba1cfa68f8c93f71342132e9e = L.markerClusterGroup(
+                {
+  "showCoverageOnHover": false,
+  "maxClusterRadius": 80,
+}
+            );
+        
+    
+        function geo_json_fafda9323f716c7e91d676610a43851c_pointToLayer(feature, latlng) {
+            var opts = {
+  "stroke": true,
+  "color": "green",
+  "weight": 3,
+  "opacity": 1.0,
+  "lineCap": "round",
+  "lineJoin": "round",
+  "dashArray": null,
+  "dashOffset": null,
+  "fill": true,
+  "fillColor": "black",
+  "fillOpacity": 0.8,
+  "fillRule": "evenodd",
+  "bubblingMouseEvents": true,
+  "radius": 6,
+};
+            
+            return new L.CircleMarker(latlng, opts)
+        }
+
+        function geo_json_fafda9323f716c7e91d676610a43851c_onEachFeature(feature, layer) {
+            (
+        function onEachFeature(feature, layer) {
+            if (feature.properties) {
+                var popupContent = '<div style="font-family: Segoe UI; font-size: 11px;">' +
+                                '<b>Capa:</b> U. Terreno<br>' +
+                                '<b>ID Predio:</b> ' + feature.properties.OBJECTID + '<br>' +
+                                '<b>Control espacial:</b> ' + feature.properties.CE + '<br>' +
+                                '<b>Control temático:</b> ' + feature.properties.CT + '</div>';
+                layer.bindPopup(popupContent);
+                layer.bindTooltip('<b>ID Predio:</b> ' + feature.properties.OBJECTID, {sticky: true});
+            }
+        }
+        )(feature, layer);
+
+            layer.on({
+            });
+        };
+        var geo_json_fafda9323f716c7e91d676610a43851c = L.geoJson(null, {
+                onEachFeature: geo_json_fafda9323f716c7e91d676610a43851c_onEachFeature,
+            
+                pointToLayer: geo_json_fafda9323f716c7e91d676610a43851c_pointToLayer,
+            ...{
+}
+        });
+
+        function geo_json_fafda9323f716c7e91d676610a43851c_add (data) {
+            geo_json_fafda9323f716c7e91d676610a43851c
+                .addData(data);
+        }
+            $.ajax("https://raw.githubusercontent.com/mautamos89/girona_tfm_catastro/main/data/map_u_terreno.geojson", {dataType: 'json', async: false})
+                .done(geo_json_fafda9323f716c7e91d676610a43851c_add);
+        geo_json_fafda9323f716c7e91d676610a43851c.setStyle(function(feature) {return feature.properties.style;});
+
+        
+    
+            geo_json_fafda9323f716c7e91d676610a43851c.addTo(marker_cluster_80f7443ba1cfa68f8c93f71342132e9e);
+        
+    
+            var marker_cluster_ecf0abf5760a2ee7f98e40bbc3cdd498 = L.markerClusterGroup(
+                {
+  "showCoverageOnHover": false,
+  "maxClusterRadius": 80,
+}
+            );
+        
+    
+        function geo_json_b49cdceb9dbbe1e37ebf4fe70c3207e8_pointToLayer(feature, latlng) {
+            var opts = {
+  "stroke": true,
+  "color": "purple",
+  "weight": 3,
+  "opacity": 1.0,
+  "lineCap": "round",
+  "lineJoin": "round",
+  "dashArray": null,
+  "dashOffset": null,
+  "fill": true,
+  "fillColor": "black",
+  "fillOpacity": 0.8,
+  "fillRule": "evenodd",
+  "bubblingMouseEvents": true,
+  "radius": 6,
+};
+            
+            return new L.CircleMarker(latlng, opts)
+        }
+
+        function geo_json_b49cdceb9dbbe1e37ebf4fe70c3207e8_onEachFeature(feature, layer) {
+            (
+        function onEachFeature(feature, layer) {
+            if (feature.properties) {
+                var popupContent = '<div style="font-family: Segoe UI; font-size: 11px;">' +
+                                '<b>Capa:</b> U. Unidad<br>' +
+                                '<b>ID Predio:</b> ' + feature.properties.OBJECTID + '<br>' +
+                                '<b>Control espacial:</b> ' + feature.properties.CE + '<br>' +
+                                '<b>Control temático:</b> ' + feature.properties.CT + '</div>';
+                layer.bindPopup(popupContent);
+                layer.bindTooltip('<b>ID Predio:</b> ' + feature.properties.OBJECTID, {sticky: true});
+            }
+        }
+        )(feature, layer);
+
+            layer.on({
+            });
+        };
+        var geo_json_b49cdceb9dbbe1e37ebf4fe70c3207e8 = L.geoJson(null, {
+                onEachFeature: geo_json_b49cdceb9dbbe1e37ebf4fe70c3207e8_onEachFeature,
+            
+                pointToLayer: geo_json_b49cdceb9dbbe1e37ebf4fe70c3207e8_pointToLayer,
+            ...{
+}
+        });
+
+        function geo_json_b49cdceb9dbbe1e37ebf4fe70c3207e8_add (data) {
+            geo_json_b49cdceb9dbbe1e37ebf4fe70c3207e8
+                .addData(data);
+        }
+            $.ajax("https://raw.githubusercontent.com/mautamos89/girona_tfm_catastro/main/data/map_u_unidad.geojson", {dataType: 'json', async: false})
+                .done(geo_json_b49cdceb9dbbe1e37ebf4fe70c3207e8_add);
+        geo_json_b49cdceb9dbbe1e37ebf4fe70c3207e8.setStyle(function(feature) {return feature.properties.style;});
+
+        
+    
+            geo_json_b49cdceb9dbbe1e37ebf4fe70c3207e8.addTo(marker_cluster_ecf0abf5760a2ee7f98e40bbc3cdd498);
+        
+    
+            var feature_group_71839adf8f6a10c6965c1379d28ed143 = L.featureGroup(
                 {
 }
             );
         
     
-        function geo_json_e8fe83b34c4eee322b593fb11df92439_styler(feature) {
+        function geo_json_3c566d20ea41491e9b72fa75460164de_styler(feature) {
             switch(feature.properties.OBJECTID) {
                 case 1: case 2: case 3: case 4: case 5: case 6: case 7: case 8: case 9: case 10: case 11: case 12: case 13: case 14: case 15: case 16: case 17: case 18: case 19: case 20: case 21: case 22: case 23: case 24: case 25: case 26: case 27: case 28: case 29: case 30: case 31: case 32: case 33: case 34: case 35: case 36: case 37: case 38: case 39: case 40: case 41: case 42: case 43: case 44: case 45: case 46: case 47: case 48: case 49: case 50: case 51: case 52: case 53: case 54: case 55: case 56: case 57: case 58: case 59: case 60: case 61: case 62: case 63: case 64: case 65: case 66: case 67: case 68: case 69: case 70: case 71: case 72: case 73: case 74: case 75: case 76: case 77: case 78: case 79: case 80: case 81: case 82: case 83: case 84: case 85: case 86: case 87: case 88: case 89: case 90: case 91: case 92: case 93: case 94: case 95: case 96: case 97: case 98: case 99: case 100: case 101: case 102: case 103: case 104: case 105: case 106: case 107: case 108: case 109: case 110: case 111: case 112: case 113: case 114: case 115: case 116: case 117: case 118: case 119: case 120: case 121: case 122: case 123: case 124: case 125: case 126: case 127: case 128: case 129: case 130: case 131: case 132: case 133: case 134: case 135: case 136: case 137: case 138: case 139: case 140: case 141: case 142: case 143: case 144: case 145: case 146: case 147: case 148: case 149: case 150: case 151: case 152: case 153: case 154: case 155: case 156: case 157: case 158: case 159: case 160: case 161: case 162: case 163: case 164: case 165: case 166: case 167: case 168: case 169: case 170: case 171: case 172: case 173: case 174: case 175: case 176: case 177: case 178: case 179: case 180: case 181: case 182: case 183: case 184: case 185: case 186: case 187: case 188: case 189: case 190: case 191: case 192: case 193: case 194: case 195: case 196: case 197: case 198: case 199: case 200: case 201: case 202: case 203: case 204: case 205: case 206: case 207: case 208: case 209: case 210: case 211: case 212: case 213: case 214: case 215: case 216: case 217: case 218: case 219: case 220: case 221: case 222: case 223: case 224: case 225: case 226: case 227: case 228: case 229: case 230: case 231: case 232: case 233: case 234: case 235: case 236: case 237: case 238: case 239: case 240: case 241: case 242: case 243: case 244: case 245: case 246: case 247: case 248: case 249: case 250: case 251: case 252: case 253: case 254: case 255: case 256: case 257: case 258: case 259: case 260: case 261: case 262: case 263: case 264: case 265: case 266: case 267: case 268: case 269: case 270: case 271: case 272: case 273: case 274: case 275: case 276: case 277: case 278: case 279: case 280: case 281: case 282: case 283: case 284: case 285: case 286: case 287: case 288: case 289: case 290: case 291: case 292: case 293: case 294: case 295: case 296: case 297: case 298: case 299: case 300: case 301: case 302: case 303: case 304: case 305: case 306: case 307: case 308: case 309: case 310: case 311: case 312: case 313: case 315: case 316: case 317: case 318: case 319: case 320: case 321: case 322: case 323: case 324: case 325: case 326: case 327: case 328: case 329: case 330: case 331: case 332: case 333: case 334: case 335: case 336: case 337: 
                     return {"color": "black", "fill": true, "fillColor": "#bdd7e7", "fillOpacity": 0.5, "weight": 0.2};
@@ -288,62 +973,62 @@ La metodología implementa un código modular en Python que sistematiza las regl
                     return {"color": "black", "fill": true, "fillColor": "#6baed6", "fillOpacity": 0.5, "weight": 0.2};
             }
         }
-        function geo_json_e8fe83b34c4eee322b593fb11df92439_highlighter(feature) {
+        function geo_json_3c566d20ea41491e9b72fa75460164de_highlighter(feature) {
             switch(feature.properties.OBJECTID) {
                 default:
                     return {"fillColor": "#fff998"};
             }
         }
 
-        function geo_json_e8fe83b34c4eee322b593fb11df92439_onEachFeature(feature, layer) {
+        function geo_json_3c566d20ea41491e9b72fa75460164de_onEachFeature(feature, layer) {
 
             layer.on({
                 mouseout: function(e) {
                     if(typeof e.target.setStyle === "function"){
                         if (!e.target.isPopupOpen())
-                            geo_json_e8fe83b34c4eee322b593fb11df92439.resetStyle(e.target);
+                            geo_json_3c566d20ea41491e9b72fa75460164de.resetStyle(e.target);
                     }
                 },
                 mouseover: function(e) {
                     if(typeof e.target.setStyle === "function"){
-                        const highlightStyle = geo_json_e8fe83b34c4eee322b593fb11df92439_highlighter(e.target.feature)
+                        const highlightStyle = geo_json_3c566d20ea41491e9b72fa75460164de_highlighter(e.target.feature)
                         e.target.setStyle(highlightStyle);
                     }
                 },
                 popupopen: function(e) {
                     if(typeof e.target.setStyle === "function"){
-                        const highlightStyle = geo_json_e8fe83b34c4eee322b593fb11df92439_highlighter(e.target.feature)
+                        const highlightStyle = geo_json_3c566d20ea41491e9b72fa75460164de_highlighter(e.target.feature)
                         e.target.setStyle(highlightStyle);
                         e.target.bindPopup(e.popup)
                     }
                 },
                 popupclose: function(e) {
                     if(typeof e.target.setStyle === "function"){
-                        geo_json_e8fe83b34c4eee322b593fb11df92439.resetStyle(e.target);
+                        geo_json_3c566d20ea41491e9b72fa75460164de.resetStyle(e.target);
                         e.target.unbindPopup()
                     }
                 },
             });
         };
-        var geo_json_e8fe83b34c4eee322b593fb11df92439 = L.geoJson(null, {
+        var geo_json_3c566d20ea41491e9b72fa75460164de = L.geoJson(null, {
                 smoothFactor: 1,
-                onEachFeature: geo_json_e8fe83b34c4eee322b593fb11df92439_onEachFeature,
+                onEachFeature: geo_json_3c566d20ea41491e9b72fa75460164de_onEachFeature,
             
-                style: geo_json_e8fe83b34c4eee322b593fb11df92439_styler,
+                style: geo_json_3c566d20ea41491e9b72fa75460164de_styler,
             ...{
 }
         });
 
-        function geo_json_e8fe83b34c4eee322b593fb11df92439_add (data) {
-            geo_json_e8fe83b34c4eee322b593fb11df92439
+        function geo_json_3c566d20ea41491e9b72fa75460164de_add (data) {
+            geo_json_3c566d20ea41491e9b72fa75460164de
                 .addData(data);
         }
             $.ajax("https://raw.githubusercontent.com/mautamos89/girona_tfm_catastro/main/data/cali_div_poli_admin_sf.geojson", {dataType: 'json', async: false})
-                .done(geo_json_e8fe83b34c4eee322b593fb11df92439_add);
+                .done(geo_json_3c566d20ea41491e9b72fa75460164de_add);
 
         
     
-    geo_json_e8fe83b34c4eee322b593fb11df92439.bindPopup(
+    geo_json_3c566d20ea41491e9b72fa75460164de.bindPopup(
     function(layer){
     let div = L.DomUtil.create('div');
     
@@ -378,700 +1063,17 @@ La metodología implementa un código modular en Python que sistematiza las regl
 });
                      
     
-            geo_json_e8fe83b34c4eee322b593fb11df92439.addTo(feature_group_e4df903198ba8bba5b483b395c4e96ec);
+            geo_json_3c566d20ea41491e9b72fa75460164de.addTo(feature_group_71839adf8f6a10c6965c1379d28ed143);
         
     
-            feature_group_e4df903198ba8bba5b483b395c4e96ec.addTo(map_8f8d43bdb250effbcf9a4f93d1e980b4);
+            feature_group_71839adf8f6a10c6965c1379d28ed143.addTo(map_e1a1c636c1ef3b4ebd3a3a18d0a47625);
         
     
-            var marker_cluster_d2acb59f059db6f2e6e83e60cce3a18e = L.markerClusterGroup(
-                {
-  "showCoverageOnHover": false,
-  "maxClusterRadius": 80,
-}
-            );
+            geo_json_3c566d20ea41491e9b72fa75460164de.addTo(feature_group_71839adf8f6a10c6965c1379d28ed143);
         
     
-        function geo_json_f7d186781c4cfd05af52af030cf0879c_pointToLayer(feature, latlng) {
-            var opts = {
-  "stroke": true,
-  "color": "orange",
-  "weight": 3,
-  "opacity": 1.0,
-  "lineCap": "round",
-  "lineJoin": "round",
-  "dashArray": null,
-  "dashOffset": null,
-  "fill": true,
-  "fillColor": "black",
-  "fillOpacity": 0.8,
-  "fillRule": "evenodd",
-  "bubblingMouseEvents": true,
-  "radius": 6,
-};
-            
-            return new L.CircleMarker(latlng, opts)
-        }
-
-        function geo_json_f7d186781c4cfd05af52af030cf0879c_onEachFeature(feature, layer) {
-            (
-    function onEachFeature(feature, layer) {
-        if (feature.properties) {
-            var popupContent = '<div style="font-family: Segoe UI; font-size: 11px;">' +
-                               '<b>Capa:</b> R. Anexo<br>' +
-                               '<b>ID Predio:</b> ' + feature.properties.OBJECTID + '<br>' +
-                               '<b>Control espacial:</b> ' + feature.properties.CE + '<br>' +
-                               '<b>Control temático:</b> ' + feature.properties.CT + '</div>';
-            layer.bindPopup(popupContent);
-            layer.bindTooltip('<b>ID Predio:</b> ' + feature.properties.OBJECTID, {sticky: true});
-        }
-    }
-    )(feature, layer);
-
-            layer.on({
-            });
-        };
-        var geo_json_f7d186781c4cfd05af52af030cf0879c = L.geoJson(null, {
-                onEachFeature: geo_json_f7d186781c4cfd05af52af030cf0879c_onEachFeature,
-            
-                pointToLayer: geo_json_f7d186781c4cfd05af52af030cf0879c_pointToLayer,
-            ...{
-}
-        });
-
-        function geo_json_f7d186781c4cfd05af52af030cf0879c_add (data) {
-            geo_json_f7d186781c4cfd05af52af030cf0879c
-                .addData(data);
-        }
-            $.ajax("https://raw.githubusercontent.com/mautamos89/girona_tfm_catastro/main/data/map_r_anexo.geojson", {dataType: 'json', async: false})
-                .done(geo_json_f7d186781c4cfd05af52af030cf0879c_add);
-        geo_json_f7d186781c4cfd05af52af030cf0879c.setStyle(function(feature) {return feature.properties.style;});
-
-        
-    
-            geo_json_f7d186781c4cfd05af52af030cf0879c.addTo(marker_cluster_d2acb59f059db6f2e6e83e60cce3a18e);
-        
-    
-            marker_cluster_d2acb59f059db6f2e6e83e60cce3a18e.addTo(map_8f8d43bdb250effbcf9a4f93d1e980b4);
-        
-    
-            var marker_cluster_d40bb07ff3676dffc4d0e352ff12b519 = L.markerClusterGroup(
-                {
-  "showCoverageOnHover": false,
-  "maxClusterRadius": 80,
-}
-            );
-        
-    
-        function geo_json_05eb62574151e5a0b1175ea1219ecab6_pointToLayer(feature, latlng) {
-            var opts = {
-  "stroke": true,
-  "color": "grey",
-  "weight": 3,
-  "opacity": 1.0,
-  "lineCap": "round",
-  "lineJoin": "round",
-  "dashArray": null,
-  "dashOffset": null,
-  "fill": true,
-  "fillColor": "black",
-  "fillOpacity": 0.8,
-  "fillRule": "evenodd",
-  "bubblingMouseEvents": true,
-  "radius": 6,
-};
-            
-            return new L.CircleMarker(latlng, opts)
-        }
-
-        function geo_json_05eb62574151e5a0b1175ea1219ecab6_onEachFeature(feature, layer) {
-            (
-    function onEachFeature(feature, layer) {
-        if (feature.properties) {
-            var popupContent = '<div style="font-family: Segoe UI; font-size: 11px;">' +
-                               '<b>Capa:</b> R. Construcción<br>' +
-                               '<b>ID Predio:</b> ' + feature.properties.OBJECTID + '<br>' +
-                               '<b>Control espacial:</b> ' + feature.properties.CE + '<br>' +
-                               '<b>Control temático:</b> ' + feature.properties.CT + '</div>';
-            layer.bindPopup(popupContent);
-            layer.bindTooltip('<b>ID Predio:</b> ' + feature.properties.OBJECTID, {sticky: true});
-        }
-    }
-    )(feature, layer);
-
-            layer.on({
-            });
-        };
-        var geo_json_05eb62574151e5a0b1175ea1219ecab6 = L.geoJson(null, {
-                onEachFeature: geo_json_05eb62574151e5a0b1175ea1219ecab6_onEachFeature,
-            
-                pointToLayer: geo_json_05eb62574151e5a0b1175ea1219ecab6_pointToLayer,
-            ...{
-}
-        });
-
-        function geo_json_05eb62574151e5a0b1175ea1219ecab6_add (data) {
-            geo_json_05eb62574151e5a0b1175ea1219ecab6
-                .addData(data);
-        }
-            $.ajax("https://raw.githubusercontent.com/mautamos89/girona_tfm_catastro/main/data/map_r_construccion.geojson", {dataType: 'json', async: false})
-                .done(geo_json_05eb62574151e5a0b1175ea1219ecab6_add);
-        geo_json_05eb62574151e5a0b1175ea1219ecab6.setStyle(function(feature) {return feature.properties.style;});
-
-        
-    
-            geo_json_05eb62574151e5a0b1175ea1219ecab6.addTo(marker_cluster_d40bb07ff3676dffc4d0e352ff12b519);
-        
-    
-            var marker_cluster_366b78b7f6c8f17dd5039be4b6458646 = L.markerClusterGroup(
-                {
-  "showCoverageOnHover": false,
-  "maxClusterRadius": 80,
-}
-            );
-        
-    
-        function geo_json_a6a020712d18dcf138cb56f573711ac7_pointToLayer(feature, latlng) {
-            var opts = {
-  "stroke": true,
-  "color": "brown",
-  "weight": 3,
-  "opacity": 1.0,
-  "lineCap": "round",
-  "lineJoin": "round",
-  "dashArray": null,
-  "dashOffset": null,
-  "fill": true,
-  "fillColor": "black",
-  "fillOpacity": 0.8,
-  "fillRule": "evenodd",
-  "bubblingMouseEvents": true,
-  "radius": 6,
-};
-            
-            return new L.CircleMarker(latlng, opts)
-        }
-
-        function geo_json_a6a020712d18dcf138cb56f573711ac7_onEachFeature(feature, layer) {
-            (
-    function onEachFeature(feature, layer) {
-        if (feature.properties) {
-            var popupContent = '<div style="font-family: Segoe UI; font-size: 11px;">' +
-                               '<b>Capa:</b> R. Manzana<br>' +
-                               '<b>ID Predio:</b> ' + feature.properties.OBJECTID + '<br>' +
-                               '<b>Control espacial:</b> ' + feature.properties.CE + '<br>' +
-                               '<b>Control temático:</b> ' + feature.properties.CT + '</div>';
-            layer.bindPopup(popupContent);
-            layer.bindTooltip('<b>ID Predio:</b> ' + feature.properties.OBJECTID, {sticky: true});
-        }
-    }
-    )(feature, layer);
-
-            layer.on({
-            });
-        };
-        var geo_json_a6a020712d18dcf138cb56f573711ac7 = L.geoJson(null, {
-                onEachFeature: geo_json_a6a020712d18dcf138cb56f573711ac7_onEachFeature,
-            
-                pointToLayer: geo_json_a6a020712d18dcf138cb56f573711ac7_pointToLayer,
-            ...{
-}
-        });
-
-        function geo_json_a6a020712d18dcf138cb56f573711ac7_add (data) {
-            geo_json_a6a020712d18dcf138cb56f573711ac7
-                .addData(data);
-        }
-            $.ajax("https://raw.githubusercontent.com/mautamos89/girona_tfm_catastro/main/data/map_r_manzana.geojson", {dataType: 'json', async: false})
-                .done(geo_json_a6a020712d18dcf138cb56f573711ac7_add);
-        geo_json_a6a020712d18dcf138cb56f573711ac7.setStyle(function(feature) {return feature.properties.style;});
-
-        
-    
-            geo_json_a6a020712d18dcf138cb56f573711ac7.addTo(marker_cluster_366b78b7f6c8f17dd5039be4b6458646);
-        
-    
-            var marker_cluster_025f0896dc069bb1c23adb4caa755f07 = L.markerClusterGroup(
-                {
-  "showCoverageOnHover": false,
-  "maxClusterRadius": 80,
-}
-            );
-        
-    
-        function geo_json_027d8786d86a64eab821e319a488867b_pointToLayer(feature, latlng) {
-            var opts = {
-  "stroke": true,
-  "color": "green",
-  "weight": 3,
-  "opacity": 1.0,
-  "lineCap": "round",
-  "lineJoin": "round",
-  "dashArray": null,
-  "dashOffset": null,
-  "fill": true,
-  "fillColor": "black",
-  "fillOpacity": 0.8,
-  "fillRule": "evenodd",
-  "bubblingMouseEvents": true,
-  "radius": 6,
-};
-            
-            return new L.CircleMarker(latlng, opts)
-        }
-
-        function geo_json_027d8786d86a64eab821e319a488867b_onEachFeature(feature, layer) {
-            (
-    function onEachFeature(feature, layer) {
-        if (feature.properties) {
-            var popupContent = '<div style="font-family: Segoe UI; font-size: 11px;">' +
-                               '<b>Capa:</b> R. Terreno<br>' +
-                               '<b>ID Predio:</b> ' + feature.properties.OBJECTID + '<br>' +
-                               '<b>Control espacial:</b> ' + feature.properties.CE + '<br>' +
-                               '<b>Control temático:</b> ' + feature.properties.CT + '</div>';
-            layer.bindPopup(popupContent);
-            layer.bindTooltip('<b>ID Predio:</b> ' + feature.properties.OBJECTID, {sticky: true});
-        }
-    }
-    )(feature, layer);
-
-            layer.on({
-            });
-        };
-        var geo_json_027d8786d86a64eab821e319a488867b = L.geoJson(null, {
-                onEachFeature: geo_json_027d8786d86a64eab821e319a488867b_onEachFeature,
-            
-                pointToLayer: geo_json_027d8786d86a64eab821e319a488867b_pointToLayer,
-            ...{
-}
-        });
-
-        function geo_json_027d8786d86a64eab821e319a488867b_add (data) {
-            geo_json_027d8786d86a64eab821e319a488867b
-                .addData(data);
-        }
-            $.ajax("https://raw.githubusercontent.com/mautamos89/girona_tfm_catastro/main/data/map_r_terreno.geojson", {dataType: 'json', async: false})
-                .done(geo_json_027d8786d86a64eab821e319a488867b_add);
-        geo_json_027d8786d86a64eab821e319a488867b.setStyle(function(feature) {return feature.properties.style;});
-
-        
-    
-            geo_json_027d8786d86a64eab821e319a488867b.addTo(marker_cluster_025f0896dc069bb1c23adb4caa755f07);
-        
-    
-            var marker_cluster_d428f2c4fb35a5282bbf001c2f5c3d33 = L.markerClusterGroup(
-                {
-  "showCoverageOnHover": false,
-  "maxClusterRadius": 80,
-}
-            );
-        
-    
-        function geo_json_ff1e1dc7b465efb8aebfa303d913f420_pointToLayer(feature, latlng) {
-            var opts = {
-  "stroke": true,
-  "color": "purple",
-  "weight": 3,
-  "opacity": 1.0,
-  "lineCap": "round",
-  "lineJoin": "round",
-  "dashArray": null,
-  "dashOffset": null,
-  "fill": true,
-  "fillColor": "black",
-  "fillOpacity": 0.8,
-  "fillRule": "evenodd",
-  "bubblingMouseEvents": true,
-  "radius": 6,
-};
-            
-            return new L.CircleMarker(latlng, opts)
-        }
-
-        function geo_json_ff1e1dc7b465efb8aebfa303d913f420_onEachFeature(feature, layer) {
-            (
-    function onEachFeature(feature, layer) {
-        if (feature.properties) {
-            var popupContent = '<div style="font-family: Segoe UI; font-size: 11px;">' +
-                               '<b>Capa:</b> R. Unidad<br>' +
-                               '<b>ID Predio:</b> ' + feature.properties.OBJECTID + '<br>' +
-                               '<b>Control espacial:</b> ' + feature.properties.CE + '<br>' +
-                               '<b>Control temático:</b> ' + feature.properties.CT + '</div>';
-            layer.bindPopup(popupContent);
-            layer.bindTooltip('<b>ID Predio:</b> ' + feature.properties.OBJECTID, {sticky: true});
-        }
-    }
-    )(feature, layer);
-
-            layer.on({
-            });
-        };
-        var geo_json_ff1e1dc7b465efb8aebfa303d913f420 = L.geoJson(null, {
-                onEachFeature: geo_json_ff1e1dc7b465efb8aebfa303d913f420_onEachFeature,
-            
-                pointToLayer: geo_json_ff1e1dc7b465efb8aebfa303d913f420_pointToLayer,
-            ...{
-}
-        });
-
-        function geo_json_ff1e1dc7b465efb8aebfa303d913f420_add (data) {
-            geo_json_ff1e1dc7b465efb8aebfa303d913f420
-                .addData(data);
-        }
-            $.ajax("https://raw.githubusercontent.com/mautamos89/girona_tfm_catastro/main/data/map_r_unidad.geojson", {dataType: 'json', async: false})
-                .done(geo_json_ff1e1dc7b465efb8aebfa303d913f420_add);
-        geo_json_ff1e1dc7b465efb8aebfa303d913f420.setStyle(function(feature) {return feature.properties.style;});
-
-        
-    
-            geo_json_ff1e1dc7b465efb8aebfa303d913f420.addTo(marker_cluster_d428f2c4fb35a5282bbf001c2f5c3d33);
-        
-    
-            var marker_cluster_48c14b15de2779b73991926022d7a2a9 = L.markerClusterGroup(
-                {
-  "showCoverageOnHover": false,
-  "maxClusterRadius": 80,
-}
-            );
-        
-    
-        function geo_json_241fbe99646dd6b814777f859c0cd5a2_pointToLayer(feature, latlng) {
-            var opts = {
-  "stroke": true,
-  "color": "orange",
-  "weight": 3,
-  "opacity": 1.0,
-  "lineCap": "round",
-  "lineJoin": "round",
-  "dashArray": null,
-  "dashOffset": null,
-  "fill": true,
-  "fillColor": "black",
-  "fillOpacity": 0.8,
-  "fillRule": "evenodd",
-  "bubblingMouseEvents": true,
-  "radius": 6,
-};
-            
-            return new L.CircleMarker(latlng, opts)
-        }
-
-        function geo_json_241fbe99646dd6b814777f859c0cd5a2_onEachFeature(feature, layer) {
-            (
-    function onEachFeature(feature, layer) {
-        if (feature.properties) {
-            var popupContent = '<div style="font-family: Segoe UI; font-size: 11px;">' +
-                               '<b>Capa:</b> U. Anexo<br>' +
-                               '<b>ID Predio:</b> ' + feature.properties.OBJECTID + '<br>' +
-                               '<b>Control espacial:</b> ' + feature.properties.CE + '<br>' +
-                               '<b>Control temático:</b> ' + feature.properties.CT + '</div>';
-            layer.bindPopup(popupContent);
-            layer.bindTooltip('<b>ID Predio:</b> ' + feature.properties.OBJECTID, {sticky: true});
-        }
-    }
-    )(feature, layer);
-
-            layer.on({
-            });
-        };
-        var geo_json_241fbe99646dd6b814777f859c0cd5a2 = L.geoJson(null, {
-                onEachFeature: geo_json_241fbe99646dd6b814777f859c0cd5a2_onEachFeature,
-            
-                pointToLayer: geo_json_241fbe99646dd6b814777f859c0cd5a2_pointToLayer,
-            ...{
-}
-        });
-
-        function geo_json_241fbe99646dd6b814777f859c0cd5a2_add (data) {
-            geo_json_241fbe99646dd6b814777f859c0cd5a2
-                .addData(data);
-        }
-            $.ajax("https://raw.githubusercontent.com/mautamos89/girona_tfm_catastro/main/data/map_u_anexo.geojson", {dataType: 'json', async: false})
-                .done(geo_json_241fbe99646dd6b814777f859c0cd5a2_add);
-        geo_json_241fbe99646dd6b814777f859c0cd5a2.setStyle(function(feature) {return feature.properties.style;});
-
-        
-    
-            geo_json_241fbe99646dd6b814777f859c0cd5a2.addTo(marker_cluster_48c14b15de2779b73991926022d7a2a9);
-        
-    
-            var marker_cluster_4c4f4b425dc69b1d443c81096f0454f5 = L.markerClusterGroup(
-                {
-  "showCoverageOnHover": false,
-  "maxClusterRadius": 80,
-}
-            );
-        
-    
-        function geo_json_705e87379eeff3c37e041b3039e9650d_pointToLayer(feature, latlng) {
-            var opts = {
-  "stroke": true,
-  "color": "grey",
-  "weight": 3,
-  "opacity": 1.0,
-  "lineCap": "round",
-  "lineJoin": "round",
-  "dashArray": null,
-  "dashOffset": null,
-  "fill": true,
-  "fillColor": "black",
-  "fillOpacity": 0.8,
-  "fillRule": "evenodd",
-  "bubblingMouseEvents": true,
-  "radius": 6,
-};
-            
-            return new L.CircleMarker(latlng, opts)
-        }
-
-        function geo_json_705e87379eeff3c37e041b3039e9650d_onEachFeature(feature, layer) {
-            (
-    function onEachFeature(feature, layer) {
-        if (feature.properties) {
-            var popupContent = '<div style="font-family: Segoe UI; font-size: 11px;">' +
-                               '<b>Capa:</b> U. Construcción<br>' +
-                               '<b>ID Predio:</b> ' + feature.properties.OBJECTID + '<br>' +
-                               '<b>Control espacial:</b> ' + feature.properties.CE + '<br>' +
-                               '<b>Control temático:</b> ' + feature.properties.CT + '</div>';
-            layer.bindPopup(popupContent);
-            layer.bindTooltip('<b>ID Predio:</b> ' + feature.properties.OBJECTID, {sticky: true});
-        }
-    }
-    )(feature, layer);
-
-            layer.on({
-            });
-        };
-        var geo_json_705e87379eeff3c37e041b3039e9650d = L.geoJson(null, {
-                onEachFeature: geo_json_705e87379eeff3c37e041b3039e9650d_onEachFeature,
-            
-                pointToLayer: geo_json_705e87379eeff3c37e041b3039e9650d_pointToLayer,
-            ...{
-}
-        });
-
-        function geo_json_705e87379eeff3c37e041b3039e9650d_add (data) {
-            geo_json_705e87379eeff3c37e041b3039e9650d
-                .addData(data);
-        }
-            $.ajax("https://raw.githubusercontent.com/mautamos89/girona_tfm_catastro/main/data/map_u_construccion.geojson", {dataType: 'json', async: false})
-                .done(geo_json_705e87379eeff3c37e041b3039e9650d_add);
-        geo_json_705e87379eeff3c37e041b3039e9650d.setStyle(function(feature) {return feature.properties.style;});
-
-        
-    
-            geo_json_705e87379eeff3c37e041b3039e9650d.addTo(marker_cluster_4c4f4b425dc69b1d443c81096f0454f5);
-        
-    
-            var marker_cluster_d9b566bac8beec6f9bb334365a6c4b31 = L.markerClusterGroup(
-                {
-  "showCoverageOnHover": false,
-  "maxClusterRadius": 80,
-}
-            );
-        
-    
-        function geo_json_56d74b04ca2b4535dfaf13d3139b2440_pointToLayer(feature, latlng) {
-            var opts = {
-  "stroke": true,
-  "color": "brown",
-  "weight": 3,
-  "opacity": 1.0,
-  "lineCap": "round",
-  "lineJoin": "round",
-  "dashArray": null,
-  "dashOffset": null,
-  "fill": true,
-  "fillColor": "black",
-  "fillOpacity": 0.8,
-  "fillRule": "evenodd",
-  "bubblingMouseEvents": true,
-  "radius": 6,
-};
-            
-            return new L.CircleMarker(latlng, opts)
-        }
-
-        function geo_json_56d74b04ca2b4535dfaf13d3139b2440_onEachFeature(feature, layer) {
-            (
-    function onEachFeature(feature, layer) {
-        if (feature.properties) {
-            var popupContent = '<div style="font-family: Segoe UI; font-size: 11px;">' +
-                               '<b>Capa:</b> U. Manzana<br>' +
-                               '<b>ID Predio:</b> ' + feature.properties.OBJECTID + '<br>' +
-                               '<b>Control espacial:</b> ' + feature.properties.CE + '<br>' +
-                               '<b>Control temático:</b> ' + feature.properties.CT + '</div>';
-            layer.bindPopup(popupContent);
-            layer.bindTooltip('<b>ID Predio:</b> ' + feature.properties.OBJECTID, {sticky: true});
-        }
-    }
-    )(feature, layer);
-
-            layer.on({
-            });
-        };
-        var geo_json_56d74b04ca2b4535dfaf13d3139b2440 = L.geoJson(null, {
-                onEachFeature: geo_json_56d74b04ca2b4535dfaf13d3139b2440_onEachFeature,
-            
-                pointToLayer: geo_json_56d74b04ca2b4535dfaf13d3139b2440_pointToLayer,
-            ...{
-}
-        });
-
-        function geo_json_56d74b04ca2b4535dfaf13d3139b2440_add (data) {
-            geo_json_56d74b04ca2b4535dfaf13d3139b2440
-                .addData(data);
-        }
-            $.ajax("https://raw.githubusercontent.com/mautamos89/girona_tfm_catastro/main/data/map_u_manzana.geojson", {dataType: 'json', async: false})
-                .done(geo_json_56d74b04ca2b4535dfaf13d3139b2440_add);
-        geo_json_56d74b04ca2b4535dfaf13d3139b2440.setStyle(function(feature) {return feature.properties.style;});
-
-        
-    
-            geo_json_56d74b04ca2b4535dfaf13d3139b2440.addTo(marker_cluster_d9b566bac8beec6f9bb334365a6c4b31);
-        
-    
-            var marker_cluster_99a50dd70007e33a633651ae0d439c29 = L.markerClusterGroup(
-                {
-  "showCoverageOnHover": false,
-  "maxClusterRadius": 80,
-}
-            );
-        
-    
-        function geo_json_0f02e726228c1a21aade735ff9171539_pointToLayer(feature, latlng) {
-            var opts = {
-  "stroke": true,
-  "color": "green",
-  "weight": 3,
-  "opacity": 1.0,
-  "lineCap": "round",
-  "lineJoin": "round",
-  "dashArray": null,
-  "dashOffset": null,
-  "fill": true,
-  "fillColor": "black",
-  "fillOpacity": 0.8,
-  "fillRule": "evenodd",
-  "bubblingMouseEvents": true,
-  "radius": 6,
-};
-            
-            return new L.CircleMarker(latlng, opts)
-        }
-
-        function geo_json_0f02e726228c1a21aade735ff9171539_onEachFeature(feature, layer) {
-            (
-    function onEachFeature(feature, layer) {
-        if (feature.properties) {
-            var popupContent = '<div style="font-family: Segoe UI; font-size: 11px;">' +
-                               '<b>Capa:</b> U. Terreno<br>' +
-                               '<b>ID Predio:</b> ' + feature.properties.OBJECTID + '<br>' +
-                               '<b>Control espacial:</b> ' + feature.properties.CE + '<br>' +
-                               '<b>Control temático:</b> ' + feature.properties.CT + '</div>';
-            layer.bindPopup(popupContent);
-            layer.bindTooltip('<b>ID Predio:</b> ' + feature.properties.OBJECTID, {sticky: true});
-        }
-    }
-    )(feature, layer);
-
-            layer.on({
-            });
-        };
-        var geo_json_0f02e726228c1a21aade735ff9171539 = L.geoJson(null, {
-                onEachFeature: geo_json_0f02e726228c1a21aade735ff9171539_onEachFeature,
-            
-                pointToLayer: geo_json_0f02e726228c1a21aade735ff9171539_pointToLayer,
-            ...{
-}
-        });
-
-        function geo_json_0f02e726228c1a21aade735ff9171539_add (data) {
-            geo_json_0f02e726228c1a21aade735ff9171539
-                .addData(data);
-        }
-            $.ajax("https://raw.githubusercontent.com/mautamos89/girona_tfm_catastro/main/data/map_u_terreno.geojson", {dataType: 'json', async: false})
-                .done(geo_json_0f02e726228c1a21aade735ff9171539_add);
-        geo_json_0f02e726228c1a21aade735ff9171539.setStyle(function(feature) {return feature.properties.style;});
-
-        
-    
-            geo_json_0f02e726228c1a21aade735ff9171539.addTo(marker_cluster_99a50dd70007e33a633651ae0d439c29);
-        
-    
-            var marker_cluster_f4ad4ccd13f6ffa44166fc89a285e0ec = L.markerClusterGroup(
-                {
-  "showCoverageOnHover": false,
-  "maxClusterRadius": 80,
-}
-            );
-        
-    
-        function geo_json_3628bb814b0a4f02a0ca4b3a3328fa29_pointToLayer(feature, latlng) {
-            var opts = {
-  "stroke": true,
-  "color": "purple",
-  "weight": 3,
-  "opacity": 1.0,
-  "lineCap": "round",
-  "lineJoin": "round",
-  "dashArray": null,
-  "dashOffset": null,
-  "fill": true,
-  "fillColor": "black",
-  "fillOpacity": 0.8,
-  "fillRule": "evenodd",
-  "bubblingMouseEvents": true,
-  "radius": 6,
-};
-            
-            return new L.CircleMarker(latlng, opts)
-        }
-
-        function geo_json_3628bb814b0a4f02a0ca4b3a3328fa29_onEachFeature(feature, layer) {
-            (
-    function onEachFeature(feature, layer) {
-        if (feature.properties) {
-            var popupContent = '<div style="font-family: Segoe UI; font-size: 11px;">' +
-                               '<b>Capa:</b> U. Unidad<br>' +
-                               '<b>ID Predio:</b> ' + feature.properties.OBJECTID + '<br>' +
-                               '<b>Control espacial:</b> ' + feature.properties.CE + '<br>' +
-                               '<b>Control temático:</b> ' + feature.properties.CT + '</div>';
-            layer.bindPopup(popupContent);
-            layer.bindTooltip('<b>ID Predio:</b> ' + feature.properties.OBJECTID, {sticky: true});
-        }
-    }
-    )(feature, layer);
-
-            layer.on({
-            });
-        };
-        var geo_json_3628bb814b0a4f02a0ca4b3a3328fa29 = L.geoJson(null, {
-                onEachFeature: geo_json_3628bb814b0a4f02a0ca4b3a3328fa29_onEachFeature,
-            
-                pointToLayer: geo_json_3628bb814b0a4f02a0ca4b3a3328fa29_pointToLayer,
-            ...{
-}
-        });
-
-        function geo_json_3628bb814b0a4f02a0ca4b3a3328fa29_add (data) {
-            geo_json_3628bb814b0a4f02a0ca4b3a3328fa29
-                .addData(data);
-        }
-            $.ajax("https://raw.githubusercontent.com/mautamos89/girona_tfm_catastro/main/data/map_u_unidad.geojson", {dataType: 'json', async: false})
-                .done(geo_json_3628bb814b0a4f02a0ca4b3a3328fa29_add);
-        geo_json_3628bb814b0a4f02a0ca4b3a3328fa29.setStyle(function(feature) {return feature.properties.style;});
-
-        
-    
-            geo_json_3628bb814b0a4f02a0ca4b3a3328fa29.addTo(marker_cluster_f4ad4ccd13f6ffa44166fc89a285e0ec);
-        
-    
-            geo_json_e8fe83b34c4eee322b593fb11df92439.addTo(feature_group_e4df903198ba8bba5b483b395c4e96ec);
-        
-    
-            var feature_group_e4df903198ba8bba5b483b395c4e96ecsearchControl = new L.Control.Search({
-                layer: feature_group_e4df903198ba8bba5b483b395c4e96ec,
+            var feature_group_71839adf8f6a10c6965c1379d28ed143searchControl = new L.Control.Search({
+                layer: feature_group_71839adf8f6a10c6965c1379d28ed143,
                 
                 propertyName: 'barver',
                 
@@ -1086,8 +1088,8 @@ La metodología implementa un código modular en Python que sistematiza las regl
                 }
             
                 });
-                feature_group_e4df903198ba8bba5b483b395c4e96ecsearchControl.on('search:locationfound', function(e) {
-                    feature_group_e4df903198ba8bba5b483b395c4e96ec.setStyle(function(feature){
+                feature_group_71839adf8f6a10c6965c1379d28ed143searchControl.on('search:locationfound', function(e) {
+                    feature_group_71839adf8f6a10c6965c1379d28ed143.setStyle(function(feature){
                         return feature.properties.style
                     })
                     
@@ -1098,16 +1100,16 @@ La metodología implementa un código modular en Python que sistematiza las regl
                     if(e.layer._popup)
                         e.layer.openPopup();
                 })
-                feature_group_e4df903198ba8bba5b483b395c4e96ecsearchControl.on('search:collapsed', function(e) {
-                        feature_group_e4df903198ba8bba5b483b395c4e96ec.setStyle(function(feature){
+                feature_group_71839adf8f6a10c6965c1379d28ed143searchControl.on('search:collapsed', function(e) {
+                        feature_group_71839adf8f6a10c6965c1379d28ed143.setStyle(function(feature){
                             return feature.properties.style
                     });
                 });
-            map_8f8d43bdb250effbcf9a4f93d1e980b4.addControl( feature_group_e4df903198ba8bba5b483b395c4e96ecsearchControl );
+            map_e1a1c636c1ef3b4ebd3a3a18d0a47625.addControl( feature_group_71839adf8f6a10c6965c1379d28ed143searchControl );
 
         
     
-            var mouse_position_69c0ed8783fd033a73b425e662d63c3a = new L.Control.MousePosition(
+            var mouse_position_ae5544fee3232f68dc6fda38d2d4eea0 = new L.Control.MousePosition(
                 {
   "position": "bottomright",
   "separator": " | Longitud: ",
@@ -1117,19 +1119,19 @@ La metodología implementa un código modular en Python que sistematiza las regl
   "prefix": "Latitud:",
 }
             );
-            mouse_position_69c0ed8783fd033a73b425e662d63c3a.options["latFormatter"] =
+            mouse_position_ae5544fee3232f68dc6fda38d2d4eea0.options["latFormatter"] =
                 function(num) {return L.Util.formatNum(num, 3) + 'º ';};;
-            mouse_position_69c0ed8783fd033a73b425e662d63c3a.options["lngFormatter"] =
+            mouse_position_ae5544fee3232f68dc6fda38d2d4eea0.options["lngFormatter"] =
                 function(num) {return L.Util.formatNum(num, 3) + 'º ';};;
-            map_8f8d43bdb250effbcf9a4f93d1e980b4.addControl(mouse_position_69c0ed8783fd033a73b425e662d63c3a);
+            map_e1a1c636c1ef3b4ebd3a3a18d0a47625.addControl(mouse_position_ae5544fee3232f68dc6fda38d2d4eea0);
         
     
-            var tile_layer_2c95f7e3dad2ad54865515d8e69f75ab = L.tileLayer(
+            var tile_layer_c6fa1376cd43fa12ade2f5c3ed49a539 = L.tileLayer(
                 "https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png",
                 {"attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors \u0026copy; \u003ca href=\"https://carto.com/attributions\"\u003eCARTO\u003c/a\u003e", "detect_retina": false, "max_native_zoom": 20, "max_zoom": 20, "min_zoom": 0, "no_wrap": false, "opacity": 1, "subdomains": "abcd", "tms": false}
             );
-            var mini_map_a3cad42c4002f0941cbf0f2af06e1aa5 = new L.Control.MiniMap(
-                tile_layer_2c95f7e3dad2ad54865515d8e69f75ab,
+            var mini_map_f991a8312d9f8c17a63ba59e3350459f = new L.Control.MiniMap(
+                tile_layer_c6fa1376cd43fa12ade2f5c3ed49a539,
                 {
   "position": "bottomright",
   "width": 150,
@@ -1144,25 +1146,25 @@ La metodología implementa un código modular en Python que sistematiza las regl
   "minimized": false,
 }
             );
-            map_8f8d43bdb250effbcf9a4f93d1e980b4.addControl(mini_map_a3cad42c4002f0941cbf0f2af06e1aa5);
+            map_e1a1c636c1ef3b4ebd3a3a18d0a47625.addControl(mini_map_f991a8312d9f8c17a63ba59e3350459f);
         
     
         L.easyButton(
             '<span><i class="fa fa-info" aria-hidden="true"></i></span>',
             
-    function(btn, map) {
-        var macro = document.getElementById('mapinfo');
-        if (macro.style.display === 'none') {
-            macro.style.display = 'block';
-        } else {
-            macro.style.display = 'none';
+        function(btn, map) {
+            var macro = document.getElementById('mapinfo');
+            if (macro.style.display === 'none') {
+                macro.style.display = 'block';
+            } else {
+                macro.style.display = 'none';
+            }
         }
-    }
-    
-        ).addTo(map_8f8d43bdb250effbcf9a4f93d1e980b4);
+        
+        ).addTo(map_e1a1c636c1ef3b4ebd3a3a18d0a47625);
         
     
-            map_8f8d43bdb250effbcf9a4f93d1e980b4.fitBounds(
+            map_e1a1c636c1ef3b4ebd3a3a18d0a47625.fitBounds(
                 [[3.273348699081159, -76.70717575685838], [3.548502811359772, -76.4588376757588]],
                 {}
             );
@@ -1173,25 +1175,25 @@ La metodología implementa un código modular en Python que sistematiza las regl
                 null,
                 {
                     "Capa Rural" : {
-                        "Anexo" : marker_cluster_d2acb59f059db6f2e6e83e60cce3a18e,
-                        "Construcci\u00f3n" : marker_cluster_d40bb07ff3676dffc4d0e352ff12b519,
-                        "Manzana" : marker_cluster_366b78b7f6c8f17dd5039be4b6458646,
-                        "Terreno" : marker_cluster_025f0896dc069bb1c23adb4caa755f07,
-                        "Unidad" : marker_cluster_d428f2c4fb35a5282bbf001c2f5c3d33,
+                        "R. Anexo" : marker_cluster_04f054050fdf8cf9353462c8c5ee9177,
+                        "R. Construcci\u00f3n" : marker_cluster_52b96e506d32abccad7da8dce092c734,
+                        "R. Manzana" : marker_cluster_c587adb40c8467a20deca922ab74f82b,
+                        "R. Terreno" : marker_cluster_7626a7f5b52b3310a962a858cdb8147c,
+                        "R. Unidad" : marker_cluster_98385ed66bb4f9645a876f7b1f527755,
                     },
                     "Capa Urbano" : {
-                        "Anexo" : marker_cluster_48c14b15de2779b73991926022d7a2a9,
-                        "Construcci\u00f3n" : marker_cluster_4c4f4b425dc69b1d443c81096f0454f5,
-                        "Manzana" : marker_cluster_d9b566bac8beec6f9bb334365a6c4b31,
-                        "Terreno" : marker_cluster_99a50dd70007e33a633651ae0d439c29,
-                        "Unidad" : marker_cluster_f4ad4ccd13f6ffa44166fc89a285e0ec,
+                        "U. Anexo" : marker_cluster_64a57439953fefd3c8c7ecd9d6ce7305,
+                        "U. Construcci\u00f3n" : marker_cluster_a69673d4ec949ff981e7e9ed76189b57,
+                        "U. Manzana" : marker_cluster_4d34accebb9f7b75187d70e2623922bf,
+                        "U. Terreno" : marker_cluster_80f7443ba1cfa68f8c93f71342132e9e,
+                        "U. Unidad" : marker_cluster_ecf0abf5760a2ee7f98e40bbc3cdd498,
                     },
                     "Capa administrativa" : {
-                        "Divisi\u00f3n urbano-rural" : geo_json_e8fe83b34c4eee322b593fb11df92439,
+                        "Divisi\u00f3n urbano-rural" : geo_json_3c566d20ea41491e9b72fa75460164de,
                     },
                     "Mapa base" : {
-                        "CartoDB Positron" : tile_layer_986f77bbbdae615b21700dab62ef0a17,
-                        "Google H\u00edbrido" : tile_layer_780ac41ee3b4481a3a077daeb1f0f902,
+                        "CartoDB Positron" : tile_layer_94ee6d8022d87b84304c78fb6efd6380,
+                        "Google H\u00edbrido" : tile_layer_0a7314e29f0e75a9d3f6984280a1bc67,
                     },
                 },
                 {
@@ -1199,63 +1201,18 @@ La metodología implementa un código modular en Python que sistematiza las regl
   "autoZIndex": true,
   "draggable": true,
 },
-            ).addTo(map_8f8d43bdb250effbcf9a4f93d1e980b4);
-            marker_cluster_d40bb07ff3676dffc4d0e352ff12b519.remove();
-            marker_cluster_4c4f4b425dc69b1d443c81096f0454f5.remove();
-            marker_cluster_d428f2c4fb35a5282bbf001c2f5c3d33.remove();
-            marker_cluster_f4ad4ccd13f6ffa44166fc89a285e0ec.remove();
-            marker_cluster_366b78b7f6c8f17dd5039be4b6458646.remove();
-            marker_cluster_d9b566bac8beec6f9bb334365a6c4b31.remove();
-            tile_layer_780ac41ee3b4481a3a077daeb1f0f902.remove();
-            marker_cluster_99a50dd70007e33a633651ae0d439c29.remove();
-            marker_cluster_48c14b15de2779b73991926022d7a2a9.remove();
-            marker_cluster_025f0896dc069bb1c23adb4caa755f07.remove();
+            ).addTo(map_e1a1c636c1ef3b4ebd3a3a18d0a47625);
+            marker_cluster_c587adb40c8467a20deca922ab74f82b.remove();
+            marker_cluster_ecf0abf5760a2ee7f98e40bbc3cdd498.remove();
+            tile_layer_0a7314e29f0e75a9d3f6984280a1bc67.remove();
+            marker_cluster_4d34accebb9f7b75187d70e2623922bf.remove();
+            marker_cluster_64a57439953fefd3c8c7ecd9d6ce7305.remove();
+            marker_cluster_7626a7f5b52b3310a962a858cdb8147c.remove();
+            marker_cluster_52b96e506d32abccad7da8dce092c734.remove();
+            marker_cluster_a69673d4ec949ff981e7e9ed76189b57.remove();
+            marker_cluster_80f7443ba1cfa68f8c93f71342132e9e.remove();
+            marker_cluster_98385ed66bb4f9645a876f7b1f527755.remove();
 
-        
-    
-            tile_layer_986f77bbbdae615b21700dab62ef0a17.addTo(map_8f8d43bdb250effbcf9a4f93d1e980b4);
-        
-    
-            geo_json_e8fe83b34c4eee322b593fb11df92439.addTo(feature_group_e4df903198ba8bba5b483b395c4e96ec);
-        
-    
-            feature_group_e4df903198ba8bba5b483b395c4e96ec.addTo(map_8f8d43bdb250effbcf9a4f93d1e980b4);
-        
-    
-            geo_json_f7d186781c4cfd05af52af030cf0879c.addTo(marker_cluster_d2acb59f059db6f2e6e83e60cce3a18e);
-        
-    
-            marker_cluster_d2acb59f059db6f2e6e83e60cce3a18e.addTo(map_8f8d43bdb250effbcf9a4f93d1e980b4);
-        
-    
-            geo_json_05eb62574151e5a0b1175ea1219ecab6.addTo(marker_cluster_d40bb07ff3676dffc4d0e352ff12b519);
-        
-    
-            geo_json_a6a020712d18dcf138cb56f573711ac7.addTo(marker_cluster_366b78b7f6c8f17dd5039be4b6458646);
-        
-    
-            geo_json_027d8786d86a64eab821e319a488867b.addTo(marker_cluster_025f0896dc069bb1c23adb4caa755f07);
-        
-    
-            geo_json_ff1e1dc7b465efb8aebfa303d913f420.addTo(marker_cluster_d428f2c4fb35a5282bbf001c2f5c3d33);
-        
-    
-            geo_json_241fbe99646dd6b814777f859c0cd5a2.addTo(marker_cluster_48c14b15de2779b73991926022d7a2a9);
-        
-    
-            geo_json_705e87379eeff3c37e041b3039e9650d.addTo(marker_cluster_4c4f4b425dc69b1d443c81096f0454f5);
-        
-    
-            geo_json_56d74b04ca2b4535dfaf13d3139b2440.addTo(marker_cluster_d9b566bac8beec6f9bb334365a6c4b31);
-        
-    
-            geo_json_0f02e726228c1a21aade735ff9171539.addTo(marker_cluster_99a50dd70007e33a633651ae0d439c29);
-        
-    
-            geo_json_3628bb814b0a4f02a0ca4b3a3328fa29.addTo(marker_cluster_f4ad4ccd13f6ffa44166fc89a285e0ec);
-        
-    
-            geo_json_e8fe83b34c4eee322b593fb11df92439.addTo(feature_group_e4df903198ba8bba5b483b395c4e96ec);
         
 </script>
 </html>
