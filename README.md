@@ -1,5 +1,5 @@
 ## Herramienta de Control de Calidad Automatizado de Catastro
-## *Universidad de Girona*
+## *UniGIS España | Universidad de Girona*
 ## *Español*
 Esta herramienta tiene como objetivo visualizar las inconsistencias identificadas en los datos catastrales del municipio de Cali (datos a diciembre de 2025), automatizando la validación técnica bajo los estándares de la Resolución 1149/2021 del IGAC. El visualizador busca agilizar la verificación del Número Predial Nacional (NPN) y garantizar la integridad de la información geoespacial para la toma de decisiones.
 
