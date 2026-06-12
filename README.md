@@ -1,5 +1,5 @@
 ## Herramienta de Control de Calidad Automatizado de Catastro
-# Universidad de GIrona
+# Universidad de Girona
 # *Español*
 Este proyecto contiene un mapa en línea que enseña las rutas identificadas por migrantes y desplazados en Perú y Ecuador en marco del proyecto CALP. El producto y sus datos asociados son propiedad de IMPACT-REACH.
 
