@@ -1,19 +1,23 @@
 ## Herramienta de Control de Calidad Automatizado de Catastro
 ## Universidad de Girona
 ## *Español*
-Este proyecto contiene un mapa en línea que enseña las rutas identificadas por migrantes y desplazados en Perú y Ecuador en marco del proyecto CALP. El producto y sus datos asociados son propiedad de IMPACT-REACH.
+Esta herramienta tiene como objetivo visualizar las inconsistencias identificadas en los datos catastrales del municipio de Cali (datos a diciembre de 2025), automatizando la validación técnica bajo los estándares de la Resolución 1149/2021 del IGAC. El visualizador busca agilizar la verificación del Número Predial Nacional (NPN) y garantizar la integridad de la información geoespacial para la toma de decisiones.
 
-El proyecto se elaboró con Python 3, empleando la librería Leaflet sobre Folium y HTML para el diseño del mapa interactivo, Pandas y GeoPandas para el procesamiento de datos alfanuméricos y geográficos, GeoJSON y Requests para su utilización web.
+Las inconsistencias están representadas mediante una simbología de clúster de puntos sobre un mapa base, acompañada de la capa oficial político-administrativa. Al hacer clic en los elementos del mapa, se pueden consultar los atributos específicos de los errores detectados. La herramienta evalúa fallas geométricas de cobertura, jerarquía y duplicidad, además de la coherencia lógica-temática en la estructura del NPN.
 
-Nota: proyecto elaborado con fines académicos, el desarrollador no asume lo que otros realicen con el código. No se permite su comercialización.
+La metodología implementa un código modular en Python que sistematiza las reglas de validación de la normativa colombiana vigente. El estudio se diseñó como una prueba piloto para el municipio de Cali; sin embargo, al tratarse de un desarrollo basado en estándares nacionales, el algoritmo es replicable y escalable a otros municipios del país realizando los ajustes pertinentes. Este proyecto se desarrolló como Trabajo final de Máster de UniGIS-Girona.
 
-Enlace a mapa: https://mautamos89.github.io/mapa_web_calp/
+Enlace a mapa: https://mautamos89.github.io/girona_tfm_catastro/
+
+Vídeo demostrativo: https://mautamos89.github.io/mapa_web_calp/
 
 ## *English*
-This project contains an online map showing the routes identified by migrants and displaced people in Peru and Ecuador within the CALP project. The product and its associated data are the property of IMPACT-REACH.
+This tool aims to visualize the inconsistencies identified in the cadastral data of the municipality of Cali (data as of December 2025), automating technical validation under the standards of Resolution 1149/2021 of the IGAC. The visualizer seeks to streamline the verification of the National Property Number (NPN) and guarantee the integrity of geospatial information for decision-making.
 
-The project was developed with Python 3, using the Leaflet library over Folium and HTML for the design of the interactive map, Pandas and GeoPandas for the processing of alphanumeric and geographic data, GeoJSON and Requests for web use.
+Inconsistencies are represented through point cluster symbology on a basemap, accompanied by the official political-administrative layer. By clicking on the map elements, users can consult the specific attributes of the detected errors. The tool evaluates geometric coverage, hierarchy, and duplicity flaws, as well as logical-thematic consistency in the structure of the NPN.
 
-Note: project developed for academic purposes. The developer does not assume responsibility for what others do with the code. Its commercialization is prohibited.
+The methodology implements a modular Python code that systematizes the validation rules of current Colombian regulations. The study was designed as a pilot test for the municipality of Cali; however, since it is a development based on national standards, the algorithm is replicable and scalable to other municipalities in the country by making the relevant adjustments. This project was developed as a Master's Thesis for UniGIS-Girona.
 
-Map link: https://mautamos89.github.io/mapa_web_calp/
+Map link: https://mautamos89.github.io/girona_tfm_catastro/
+
+Video link: https://mautamos89.github.io/mapa_web_calp/
