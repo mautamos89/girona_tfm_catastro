@@ -9,7 +9,7 @@ La metodología implementa un código modular en Python que sistematiza las regl
 
 Enlace a mapa: https://mautamos89.github.io/girona_tfm_catastro/
 
-Vídeo demostrativo: https://youtu.be/xN_xCrBwYzs
+Vídeo demostrativo: https://youtu.be/0nS6AXK0Wto
 
 ## *English*
 This tool aims to visualize the inconsistencies identified in the cadastral data of the municipality of Cali (data as of December 2025), automating technical validation under the standards of Resolution 1149/2021 of the IGAC. The visualizer seeks to streamline the verification of the National Property Number (NPN) and guarantee the integrity of geospatial information for decision-making.
@@ -20,4 +20,4 @@ The methodology implements a modular Python code that systematizes the validatio
 
 Map link: https://mautamos89.github.io/girona_tfm_catastro/
 
-Video link: https://youtu.be/xN_xCrBwYzs
+Video link: https://youtu.be/0nS6AXK0Wto
