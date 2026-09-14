@@ -17,7 +17,7 @@
             <meta name="viewport" content="width=device-width,
                 initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
             <style>
-                #map_d4bfa57d218086cf5b68a35a82f88764 {
+                #map_1c246e0939d5a4798d481757a47a6032 {
                     position: relative;
                     width: 100.0%;
                     height: 100.0%;
@@ -84,7 +84,7 @@
 <body>
     
     
-            <div class="folium-map" id="map_d4bfa57d218086cf5b68a35a82f88764" ></div>
+            <div class="folium-map" id="map_1c246e0939d5a4798d481757a47a6032" ></div>
         
     
     <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
@@ -139,8 +139,8 @@ La metodología implementa un código modular en Python que sistematiza las regl
 <script>
     
     
-            var map_d4bfa57d218086cf5b68a35a82f88764 = L.map(
-                "map_d4bfa57d218086cf5b68a35a82f88764",
+            var map_1c246e0939d5a4798d481757a47a6032 = L.map(
+                "map_1c246e0939d5a4798d481757a47a6032",
                 {
                     center: [0.0, 0.0],
                     crs: L.CRS.EPSG3857,
@@ -152,14 +152,14 @@ La metodología implementa un código modular en Python que sistematiza las regl
 
                 }
             );
-            L.control.scale().addTo(map_d4bfa57d218086cf5b68a35a82f88764);
+            L.control.scale().addTo(map_1c246e0939d5a4798d481757a47a6032);
 
             
 
         
     
-            var tile_layer_1f8b350be38856652045393e174cce9d = L.tileLayer(
-                "https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png",
+            var tile_layer_7a4cdbd96b6e895ec551a1595dc70456 = L.tileLayer(
+                "https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png?key=cb1_3kjr_1_24db5ce277d18a114ac1787f",
                 {
   "minZoom": 11,
   "maxZoom": 20,
@@ -175,10 +175,10 @@ La metodología implementa un código modular en Python que sistematiza las regl
             );
         
     
-            tile_layer_1f8b350be38856652045393e174cce9d.addTo(map_d4bfa57d218086cf5b68a35a82f88764);
+            tile_layer_7a4cdbd96b6e895ec551a1595dc70456.addTo(map_1c246e0939d5a4798d481757a47a6032);
         
     
-            var tile_layer_9ee89b869425b077067bceb6a93fc7ef = L.tileLayer(
+            var tile_layer_97b56b067a3f12783dbf8cc236207fd5 = L.tileLayer(
                 "https://mt1.google.com/vt/lyrs=y\u0026x={x}\u0026y={y}\u0026z={z}",
                 {
   "minZoom": 11,
@@ -195,7 +195,7 @@ La metodología implementa un código modular en Python que sistematiza las regl
             );
         
     
-            var marker_cluster_c2edefa10b48d6479c3f878c1f9e4476 = L.markerClusterGroup(
+            var marker_cluster_59e28cea2874e74984f52b4dbfc053a9 = L.markerClusterGroup(
                 {
   "showCoverageOnHover": false,
   "maxClusterRadius": 80,
@@ -203,7 +203,7 @@ La metodología implementa un código modular en Python que sistematiza las regl
             );
         
     
-        function geo_json_d84d59bcc60fe51d224009904540e20a_pointToLayer(feature, latlng) {
+        function geo_json_10cc5acdc503b2f68a18a44567e3f5eb_pointToLayer(feature, latlng) {
             var opts = {
   "stroke": true,
   "color": "orange",
@@ -224,7 +224,7 @@ La metodología implementa un código modular en Python que sistematiza las regl
             return new L.CircleMarker(latlng, opts)
         }
 
-        function geo_json_d84d59bcc60fe51d224009904540e20a_onEachFeature(feature, layer) {
+        function geo_json_10cc5acdc503b2f68a18a44567e3f5eb_onEachFeature(feature, layer) {
             (
         function onEachFeature(feature, layer) {
             if (feature.properties) {
@@ -242,31 +242,31 @@ La metodología implementa un código modular en Python que sistematiza las regl
             layer.on({
             });
         };
-        var geo_json_d84d59bcc60fe51d224009904540e20a = L.geoJson(null, {
-                onEachFeature: geo_json_d84d59bcc60fe51d224009904540e20a_onEachFeature,
+        var geo_json_10cc5acdc503b2f68a18a44567e3f5eb = L.geoJson(null, {
+                onEachFeature: geo_json_10cc5acdc503b2f68a18a44567e3f5eb_onEachFeature,
             
-                pointToLayer: geo_json_d84d59bcc60fe51d224009904540e20a_pointToLayer,
+                pointToLayer: geo_json_10cc5acdc503b2f68a18a44567e3f5eb_pointToLayer,
             ...{
 }
         });
 
-        function geo_json_d84d59bcc60fe51d224009904540e20a_add (data) {
-            geo_json_d84d59bcc60fe51d224009904540e20a
+        function geo_json_10cc5acdc503b2f68a18a44567e3f5eb_add (data) {
+            geo_json_10cc5acdc503b2f68a18a44567e3f5eb
                 .addData(data);
         }
             $.ajax("https://raw.githubusercontent.com/mautamos89/girona_tfm_catastro/main/data/map_r_anexo.geojson", {dataType: 'json', async: false})
-                .done(geo_json_d84d59bcc60fe51d224009904540e20a_add);
-        geo_json_d84d59bcc60fe51d224009904540e20a.setStyle(function(feature) {return feature.properties.style;});
+                .done(geo_json_10cc5acdc503b2f68a18a44567e3f5eb_add);
+        geo_json_10cc5acdc503b2f68a18a44567e3f5eb.setStyle(function(feature) {return feature.properties.style;});
 
         
     
-            geo_json_d84d59bcc60fe51d224009904540e20a.addTo(marker_cluster_c2edefa10b48d6479c3f878c1f9e4476);
+            geo_json_10cc5acdc503b2f68a18a44567e3f5eb.addTo(marker_cluster_59e28cea2874e74984f52b4dbfc053a9);
         
     
-            marker_cluster_c2edefa10b48d6479c3f878c1f9e4476.addTo(map_d4bfa57d218086cf5b68a35a82f88764);
+            marker_cluster_59e28cea2874e74984f52b4dbfc053a9.addTo(map_1c246e0939d5a4798d481757a47a6032);
         
     
-            var marker_cluster_b66b3a3e0e94839031032ff2c9d8f865 = L.markerClusterGroup(
+            var marker_cluster_2d789f87e83b1c6f99ec14a1b8322f9b = L.markerClusterGroup(
                 {
   "showCoverageOnHover": false,
   "maxClusterRadius": 80,
@@ -274,7 +274,7 @@ La metodología implementa un código modular en Python que sistematiza las regl
             );
         
     
-        function geo_json_d2849239be8d8080ebc5271a03bef469_pointToLayer(feature, latlng) {
+        function geo_json_5a956c03b1e487c09b6b8b72a6514f71_pointToLayer(feature, latlng) {
             var opts = {
   "stroke": true,
   "color": "grey",
@@ -295,7 +295,7 @@ La metodología implementa un código modular en Python que sistematiza las regl
             return new L.CircleMarker(latlng, opts)
         }
 
-        function geo_json_d2849239be8d8080ebc5271a03bef469_onEachFeature(feature, layer) {
+        function geo_json_5a956c03b1e487c09b6b8b72a6514f71_onEachFeature(feature, layer) {
             (
         function onEachFeature(feature, layer) {
             if (feature.properties) {
@@ -313,28 +313,28 @@ La metodología implementa un código modular en Python que sistematiza las regl
             layer.on({
             });
         };
-        var geo_json_d2849239be8d8080ebc5271a03bef469 = L.geoJson(null, {
-                onEachFeature: geo_json_d2849239be8d8080ebc5271a03bef469_onEachFeature,
+        var geo_json_5a956c03b1e487c09b6b8b72a6514f71 = L.geoJson(null, {
+                onEachFeature: geo_json_5a956c03b1e487c09b6b8b72a6514f71_onEachFeature,
             
-                pointToLayer: geo_json_d2849239be8d8080ebc5271a03bef469_pointToLayer,
+                pointToLayer: geo_json_5a956c03b1e487c09b6b8b72a6514f71_pointToLayer,
             ...{
 }
         });
 
-        function geo_json_d2849239be8d8080ebc5271a03bef469_add (data) {
-            geo_json_d2849239be8d8080ebc5271a03bef469
+        function geo_json_5a956c03b1e487c09b6b8b72a6514f71_add (data) {
+            geo_json_5a956c03b1e487c09b6b8b72a6514f71
                 .addData(data);
         }
             $.ajax("https://raw.githubusercontent.com/mautamos89/girona_tfm_catastro/main/data/map_r_construccion.geojson", {dataType: 'json', async: false})
-                .done(geo_json_d2849239be8d8080ebc5271a03bef469_add);
-        geo_json_d2849239be8d8080ebc5271a03bef469.setStyle(function(feature) {return feature.properties.style;});
+                .done(geo_json_5a956c03b1e487c09b6b8b72a6514f71_add);
+        geo_json_5a956c03b1e487c09b6b8b72a6514f71.setStyle(function(feature) {return feature.properties.style;});
 
         
     
-            geo_json_d2849239be8d8080ebc5271a03bef469.addTo(marker_cluster_b66b3a3e0e94839031032ff2c9d8f865);
+            geo_json_5a956c03b1e487c09b6b8b72a6514f71.addTo(marker_cluster_2d789f87e83b1c6f99ec14a1b8322f9b);
         
     
-            var marker_cluster_9edb1f017473182f183745cc1b00e312 = L.markerClusterGroup(
+            var marker_cluster_a4729660086777c403fb90ab89d987d7 = L.markerClusterGroup(
                 {
   "showCoverageOnHover": false,
   "maxClusterRadius": 80,
@@ -342,7 +342,7 @@ La metodología implementa un código modular en Python que sistematiza las regl
             );
         
     
-        function geo_json_7829597e0d45d267bdf4c3b07247317d_pointToLayer(feature, latlng) {
+        function geo_json_daabcfd03a0acbab2301bc284348c9a6_pointToLayer(feature, latlng) {
             var opts = {
   "stroke": true,
   "color": "brown",
@@ -363,7 +363,7 @@ La metodología implementa un código modular en Python que sistematiza las regl
             return new L.CircleMarker(latlng, opts)
         }
 
-        function geo_json_7829597e0d45d267bdf4c3b07247317d_onEachFeature(feature, layer) {
+        function geo_json_daabcfd03a0acbab2301bc284348c9a6_onEachFeature(feature, layer) {
             (
         function onEachFeature(feature, layer) {
             if (feature.properties) {
@@ -381,28 +381,28 @@ La metodología implementa un código modular en Python que sistematiza las regl
             layer.on({
             });
         };
-        var geo_json_7829597e0d45d267bdf4c3b07247317d = L.geoJson(null, {
-                onEachFeature: geo_json_7829597e0d45d267bdf4c3b07247317d_onEachFeature,
+        var geo_json_daabcfd03a0acbab2301bc284348c9a6 = L.geoJson(null, {
+                onEachFeature: geo_json_daabcfd03a0acbab2301bc284348c9a6_onEachFeature,
             
-                pointToLayer: geo_json_7829597e0d45d267bdf4c3b07247317d_pointToLayer,
+                pointToLayer: geo_json_daabcfd03a0acbab2301bc284348c9a6_pointToLayer,
             ...{
 }
         });
 
-        function geo_json_7829597e0d45d267bdf4c3b07247317d_add (data) {
-            geo_json_7829597e0d45d267bdf4c3b07247317d
+        function geo_json_daabcfd03a0acbab2301bc284348c9a6_add (data) {
+            geo_json_daabcfd03a0acbab2301bc284348c9a6
                 .addData(data);
         }
             $.ajax("https://raw.githubusercontent.com/mautamos89/girona_tfm_catastro/main/data/map_r_manzana.geojson", {dataType: 'json', async: false})
-                .done(geo_json_7829597e0d45d267bdf4c3b07247317d_add);
-        geo_json_7829597e0d45d267bdf4c3b07247317d.setStyle(function(feature) {return feature.properties.style;});
+                .done(geo_json_daabcfd03a0acbab2301bc284348c9a6_add);
+        geo_json_daabcfd03a0acbab2301bc284348c9a6.setStyle(function(feature) {return feature.properties.style;});
 
         
     
-            geo_json_7829597e0d45d267bdf4c3b07247317d.addTo(marker_cluster_9edb1f017473182f183745cc1b00e312);
+            geo_json_daabcfd03a0acbab2301bc284348c9a6.addTo(marker_cluster_a4729660086777c403fb90ab89d987d7);
         
     
-            var marker_cluster_dc04c5a239dda40a66d6b7aef6b0d6af = L.markerClusterGroup(
+            var marker_cluster_f151399fdf8e03fd53be5b33a03e2a8d = L.markerClusterGroup(
                 {
   "showCoverageOnHover": false,
   "maxClusterRadius": 80,
@@ -410,7 +410,7 @@ La metodología implementa un código modular en Python que sistematiza las regl
             );
         
     
-        function geo_json_0c8d603906dd8d5527d725d9926f336d_pointToLayer(feature, latlng) {
+        function geo_json_30a4577806dcbd90e613ba210ae0ac63_pointToLayer(feature, latlng) {
             var opts = {
   "stroke": true,
   "color": "green",
@@ -431,7 +431,7 @@ La metodología implementa un código modular en Python que sistematiza las regl
             return new L.CircleMarker(latlng, opts)
         }
 
-        function geo_json_0c8d603906dd8d5527d725d9926f336d_onEachFeature(feature, layer) {
+        function geo_json_30a4577806dcbd90e613ba210ae0ac63_onEachFeature(feature, layer) {
             (
         function onEachFeature(feature, layer) {
             if (feature.properties) {
@@ -449,28 +449,28 @@ La metodología implementa un código modular en Python que sistematiza las regl
             layer.on({
             });
         };
-        var geo_json_0c8d603906dd8d5527d725d9926f336d = L.geoJson(null, {
-                onEachFeature: geo_json_0c8d603906dd8d5527d725d9926f336d_onEachFeature,
+        var geo_json_30a4577806dcbd90e613ba210ae0ac63 = L.geoJson(null, {
+                onEachFeature: geo_json_30a4577806dcbd90e613ba210ae0ac63_onEachFeature,
             
-                pointToLayer: geo_json_0c8d603906dd8d5527d725d9926f336d_pointToLayer,
+                pointToLayer: geo_json_30a4577806dcbd90e613ba210ae0ac63_pointToLayer,
             ...{
 }
         });
 
-        function geo_json_0c8d603906dd8d5527d725d9926f336d_add (data) {
-            geo_json_0c8d603906dd8d5527d725d9926f336d
+        function geo_json_30a4577806dcbd90e613ba210ae0ac63_add (data) {
+            geo_json_30a4577806dcbd90e613ba210ae0ac63
                 .addData(data);
         }
             $.ajax("https://raw.githubusercontent.com/mautamos89/girona_tfm_catastro/main/data/map_r_terreno.geojson", {dataType: 'json', async: false})
-                .done(geo_json_0c8d603906dd8d5527d725d9926f336d_add);
-        geo_json_0c8d603906dd8d5527d725d9926f336d.setStyle(function(feature) {return feature.properties.style;});
+                .done(geo_json_30a4577806dcbd90e613ba210ae0ac63_add);
+        geo_json_30a4577806dcbd90e613ba210ae0ac63.setStyle(function(feature) {return feature.properties.style;});
 
         
     
-            geo_json_0c8d603906dd8d5527d725d9926f336d.addTo(marker_cluster_dc04c5a239dda40a66d6b7aef6b0d6af);
+            geo_json_30a4577806dcbd90e613ba210ae0ac63.addTo(marker_cluster_f151399fdf8e03fd53be5b33a03e2a8d);
         
     
-            var marker_cluster_b593b1ab0ed863768dd1ed8209cc7ee3 = L.markerClusterGroup(
+            var marker_cluster_fc427184b222b9765674884622e03a0f = L.markerClusterGroup(
                 {
   "showCoverageOnHover": false,
   "maxClusterRadius": 80,
@@ -478,7 +478,7 @@ La metodología implementa un código modular en Python que sistematiza las regl
             );
         
     
-        function geo_json_5424588dd07f45eb0d398f41a4ae8b03_pointToLayer(feature, latlng) {
+        function geo_json_bbcd3b35135ee6c141dae75aac32c8a7_pointToLayer(feature, latlng) {
             var opts = {
   "stroke": true,
   "color": "purple",
@@ -499,7 +499,7 @@ La metodología implementa un código modular en Python que sistematiza las regl
             return new L.CircleMarker(latlng, opts)
         }
 
-        function geo_json_5424588dd07f45eb0d398f41a4ae8b03_onEachFeature(feature, layer) {
+        function geo_json_bbcd3b35135ee6c141dae75aac32c8a7_onEachFeature(feature, layer) {
             (
         function onEachFeature(feature, layer) {
             if (feature.properties) {
@@ -517,28 +517,28 @@ La metodología implementa un código modular en Python que sistematiza las regl
             layer.on({
             });
         };
-        var geo_json_5424588dd07f45eb0d398f41a4ae8b03 = L.geoJson(null, {
-                onEachFeature: geo_json_5424588dd07f45eb0d398f41a4ae8b03_onEachFeature,
+        var geo_json_bbcd3b35135ee6c141dae75aac32c8a7 = L.geoJson(null, {
+                onEachFeature: geo_json_bbcd3b35135ee6c141dae75aac32c8a7_onEachFeature,
             
-                pointToLayer: geo_json_5424588dd07f45eb0d398f41a4ae8b03_pointToLayer,
+                pointToLayer: geo_json_bbcd3b35135ee6c141dae75aac32c8a7_pointToLayer,
             ...{
 }
         });
 
-        function geo_json_5424588dd07f45eb0d398f41a4ae8b03_add (data) {
-            geo_json_5424588dd07f45eb0d398f41a4ae8b03
+        function geo_json_bbcd3b35135ee6c141dae75aac32c8a7_add (data) {
+            geo_json_bbcd3b35135ee6c141dae75aac32c8a7
                 .addData(data);
         }
             $.ajax("https://raw.githubusercontent.com/mautamos89/girona_tfm_catastro/main/data/map_r_unidad.geojson", {dataType: 'json', async: false})
-                .done(geo_json_5424588dd07f45eb0d398f41a4ae8b03_add);
-        geo_json_5424588dd07f45eb0d398f41a4ae8b03.setStyle(function(feature) {return feature.properties.style;});
+                .done(geo_json_bbcd3b35135ee6c141dae75aac32c8a7_add);
+        geo_json_bbcd3b35135ee6c141dae75aac32c8a7.setStyle(function(feature) {return feature.properties.style;});
 
         
     
-            geo_json_5424588dd07f45eb0d398f41a4ae8b03.addTo(marker_cluster_b593b1ab0ed863768dd1ed8209cc7ee3);
+            geo_json_bbcd3b35135ee6c141dae75aac32c8a7.addTo(marker_cluster_fc427184b222b9765674884622e03a0f);
         
     
-            var marker_cluster_e99e0fa604535bcef00ef7a8d9cca795 = L.markerClusterGroup(
+            var marker_cluster_8c5fe93a89654c631355f8d61b982ab2 = L.markerClusterGroup(
                 {
   "showCoverageOnHover": false,
   "maxClusterRadius": 80,
@@ -546,7 +546,7 @@ La metodología implementa un código modular en Python que sistematiza las regl
             );
         
     
-        function geo_json_d5aee2168ad286e4570eb5b3e990ba4e_pointToLayer(feature, latlng) {
+        function geo_json_babe876c7204dfd3f092725cce315d9f_pointToLayer(feature, latlng) {
             var opts = {
   "stroke": true,
   "color": "orange",
@@ -567,7 +567,7 @@ La metodología implementa un código modular en Python que sistematiza las regl
             return new L.CircleMarker(latlng, opts)
         }
 
-        function geo_json_d5aee2168ad286e4570eb5b3e990ba4e_onEachFeature(feature, layer) {
+        function geo_json_babe876c7204dfd3f092725cce315d9f_onEachFeature(feature, layer) {
             (
         function onEachFeature(feature, layer) {
             if (feature.properties) {
@@ -585,28 +585,28 @@ La metodología implementa un código modular en Python que sistematiza las regl
             layer.on({
             });
         };
-        var geo_json_d5aee2168ad286e4570eb5b3e990ba4e = L.geoJson(null, {
-                onEachFeature: geo_json_d5aee2168ad286e4570eb5b3e990ba4e_onEachFeature,
+        var geo_json_babe876c7204dfd3f092725cce315d9f = L.geoJson(null, {
+                onEachFeature: geo_json_babe876c7204dfd3f092725cce315d9f_onEachFeature,
             
-                pointToLayer: geo_json_d5aee2168ad286e4570eb5b3e990ba4e_pointToLayer,
+                pointToLayer: geo_json_babe876c7204dfd3f092725cce315d9f_pointToLayer,
             ...{
 }
         });
 
-        function geo_json_d5aee2168ad286e4570eb5b3e990ba4e_add (data) {
-            geo_json_d5aee2168ad286e4570eb5b3e990ba4e
+        function geo_json_babe876c7204dfd3f092725cce315d9f_add (data) {
+            geo_json_babe876c7204dfd3f092725cce315d9f
                 .addData(data);
         }
             $.ajax("https://raw.githubusercontent.com/mautamos89/girona_tfm_catastro/main/data/map_u_anexo.geojson", {dataType: 'json', async: false})
-                .done(geo_json_d5aee2168ad286e4570eb5b3e990ba4e_add);
-        geo_json_d5aee2168ad286e4570eb5b3e990ba4e.setStyle(function(feature) {return feature.properties.style;});
+                .done(geo_json_babe876c7204dfd3f092725cce315d9f_add);
+        geo_json_babe876c7204dfd3f092725cce315d9f.setStyle(function(feature) {return feature.properties.style;});
 
         
     
-            geo_json_d5aee2168ad286e4570eb5b3e990ba4e.addTo(marker_cluster_e99e0fa604535bcef00ef7a8d9cca795);
+            geo_json_babe876c7204dfd3f092725cce315d9f.addTo(marker_cluster_8c5fe93a89654c631355f8d61b982ab2);
         
     
-            var marker_cluster_950d371042cc44a568de8c16bd24d6ae = L.markerClusterGroup(
+            var marker_cluster_f11b82580612b0b1aeeb01f7aee683ed = L.markerClusterGroup(
                 {
   "showCoverageOnHover": false,
   "maxClusterRadius": 80,
@@ -614,7 +614,7 @@ La metodología implementa un código modular en Python que sistematiza las regl
             );
         
     
-        function geo_json_14b21ea9bf43a8be9dce068ea2fb9d22_pointToLayer(feature, latlng) {
+        function geo_json_f96c1b8d8d33a13e6eba99228e8be3a7_pointToLayer(feature, latlng) {
             var opts = {
   "stroke": true,
   "color": "grey",
@@ -635,7 +635,7 @@ La metodología implementa un código modular en Python que sistematiza las regl
             return new L.CircleMarker(latlng, opts)
         }
 
-        function geo_json_14b21ea9bf43a8be9dce068ea2fb9d22_onEachFeature(feature, layer) {
+        function geo_json_f96c1b8d8d33a13e6eba99228e8be3a7_onEachFeature(feature, layer) {
             (
         function onEachFeature(feature, layer) {
             if (feature.properties) {
@@ -653,28 +653,28 @@ La metodología implementa un código modular en Python que sistematiza las regl
             layer.on({
             });
         };
-        var geo_json_14b21ea9bf43a8be9dce068ea2fb9d22 = L.geoJson(null, {
-                onEachFeature: geo_json_14b21ea9bf43a8be9dce068ea2fb9d22_onEachFeature,
+        var geo_json_f96c1b8d8d33a13e6eba99228e8be3a7 = L.geoJson(null, {
+                onEachFeature: geo_json_f96c1b8d8d33a13e6eba99228e8be3a7_onEachFeature,
             
-                pointToLayer: geo_json_14b21ea9bf43a8be9dce068ea2fb9d22_pointToLayer,
+                pointToLayer: geo_json_f96c1b8d8d33a13e6eba99228e8be3a7_pointToLayer,
             ...{
 }
         });
 
-        function geo_json_14b21ea9bf43a8be9dce068ea2fb9d22_add (data) {
-            geo_json_14b21ea9bf43a8be9dce068ea2fb9d22
+        function geo_json_f96c1b8d8d33a13e6eba99228e8be3a7_add (data) {
+            geo_json_f96c1b8d8d33a13e6eba99228e8be3a7
                 .addData(data);
         }
             $.ajax("https://raw.githubusercontent.com/mautamos89/girona_tfm_catastro/main/data/map_u_construccion.geojson", {dataType: 'json', async: false})
-                .done(geo_json_14b21ea9bf43a8be9dce068ea2fb9d22_add);
-        geo_json_14b21ea9bf43a8be9dce068ea2fb9d22.setStyle(function(feature) {return feature.properties.style;});
+                .done(geo_json_f96c1b8d8d33a13e6eba99228e8be3a7_add);
+        geo_json_f96c1b8d8d33a13e6eba99228e8be3a7.setStyle(function(feature) {return feature.properties.style;});
 
         
     
-            geo_json_14b21ea9bf43a8be9dce068ea2fb9d22.addTo(marker_cluster_950d371042cc44a568de8c16bd24d6ae);
+            geo_json_f96c1b8d8d33a13e6eba99228e8be3a7.addTo(marker_cluster_f11b82580612b0b1aeeb01f7aee683ed);
         
     
-            var marker_cluster_25607fe76858028293f140b845bbc2fa = L.markerClusterGroup(
+            var marker_cluster_06e9a0097feabbaf86405ec8144a570f = L.markerClusterGroup(
                 {
   "showCoverageOnHover": false,
   "maxClusterRadius": 80,
@@ -682,7 +682,7 @@ La metodología implementa un código modular en Python que sistematiza las regl
             );
         
     
-        function geo_json_d8de05774bcb9327d881b569bf31e77b_pointToLayer(feature, latlng) {
+        function geo_json_466fecf1fd5b60480cb5438144aa2eca_pointToLayer(feature, latlng) {
             var opts = {
   "stroke": true,
   "color": "brown",
@@ -703,7 +703,7 @@ La metodología implementa un código modular en Python que sistematiza las regl
             return new L.CircleMarker(latlng, opts)
         }
 
-        function geo_json_d8de05774bcb9327d881b569bf31e77b_onEachFeature(feature, layer) {
+        function geo_json_466fecf1fd5b60480cb5438144aa2eca_onEachFeature(feature, layer) {
             (
         function onEachFeature(feature, layer) {
             if (feature.properties) {
@@ -721,28 +721,28 @@ La metodología implementa un código modular en Python que sistematiza las regl
             layer.on({
             });
         };
-        var geo_json_d8de05774bcb9327d881b569bf31e77b = L.geoJson(null, {
-                onEachFeature: geo_json_d8de05774bcb9327d881b569bf31e77b_onEachFeature,
+        var geo_json_466fecf1fd5b60480cb5438144aa2eca = L.geoJson(null, {
+                onEachFeature: geo_json_466fecf1fd5b60480cb5438144aa2eca_onEachFeature,
             
-                pointToLayer: geo_json_d8de05774bcb9327d881b569bf31e77b_pointToLayer,
+                pointToLayer: geo_json_466fecf1fd5b60480cb5438144aa2eca_pointToLayer,
             ...{
 }
         });
 
-        function geo_json_d8de05774bcb9327d881b569bf31e77b_add (data) {
-            geo_json_d8de05774bcb9327d881b569bf31e77b
+        function geo_json_466fecf1fd5b60480cb5438144aa2eca_add (data) {
+            geo_json_466fecf1fd5b60480cb5438144aa2eca
                 .addData(data);
         }
             $.ajax("https://raw.githubusercontent.com/mautamos89/girona_tfm_catastro/main/data/map_u_manzana.geojson", {dataType: 'json', async: false})
-                .done(geo_json_d8de05774bcb9327d881b569bf31e77b_add);
-        geo_json_d8de05774bcb9327d881b569bf31e77b.setStyle(function(feature) {return feature.properties.style;});
+                .done(geo_json_466fecf1fd5b60480cb5438144aa2eca_add);
+        geo_json_466fecf1fd5b60480cb5438144aa2eca.setStyle(function(feature) {return feature.properties.style;});
 
         
     
-            geo_json_d8de05774bcb9327d881b569bf31e77b.addTo(marker_cluster_25607fe76858028293f140b845bbc2fa);
+            geo_json_466fecf1fd5b60480cb5438144aa2eca.addTo(marker_cluster_06e9a0097feabbaf86405ec8144a570f);
         
     
-            var marker_cluster_8e561e767dc1a31c5a80c340390a6c6d = L.markerClusterGroup(
+            var marker_cluster_e29ec88c52f9e89a1d09f325a72f990a = L.markerClusterGroup(
                 {
   "showCoverageOnHover": false,
   "maxClusterRadius": 80,
@@ -750,7 +750,7 @@ La metodología implementa un código modular en Python que sistematiza las regl
             );
         
     
-        function geo_json_04f2650ffcd412056c161e2e022a6b96_pointToLayer(feature, latlng) {
+        function geo_json_f00907d1b4c790dceea68924b4d32dfe_pointToLayer(feature, latlng) {
             var opts = {
   "stroke": true,
   "color": "green",
@@ -771,7 +771,7 @@ La metodología implementa un código modular en Python que sistematiza las regl
             return new L.CircleMarker(latlng, opts)
         }
 
-        function geo_json_04f2650ffcd412056c161e2e022a6b96_onEachFeature(feature, layer) {
+        function geo_json_f00907d1b4c790dceea68924b4d32dfe_onEachFeature(feature, layer) {
             (
         function onEachFeature(feature, layer) {
             if (feature.properties) {
@@ -789,28 +789,28 @@ La metodología implementa un código modular en Python que sistematiza las regl
             layer.on({
             });
         };
-        var geo_json_04f2650ffcd412056c161e2e022a6b96 = L.geoJson(null, {
-                onEachFeature: geo_json_04f2650ffcd412056c161e2e022a6b96_onEachFeature,
+        var geo_json_f00907d1b4c790dceea68924b4d32dfe = L.geoJson(null, {
+                onEachFeature: geo_json_f00907d1b4c790dceea68924b4d32dfe_onEachFeature,
             
-                pointToLayer: geo_json_04f2650ffcd412056c161e2e022a6b96_pointToLayer,
+                pointToLayer: geo_json_f00907d1b4c790dceea68924b4d32dfe_pointToLayer,
             ...{
 }
         });
 
-        function geo_json_04f2650ffcd412056c161e2e022a6b96_add (data) {
-            geo_json_04f2650ffcd412056c161e2e022a6b96
+        function geo_json_f00907d1b4c790dceea68924b4d32dfe_add (data) {
+            geo_json_f00907d1b4c790dceea68924b4d32dfe
                 .addData(data);
         }
             $.ajax("https://raw.githubusercontent.com/mautamos89/girona_tfm_catastro/main/data/map_u_terreno.geojson", {dataType: 'json', async: false})
-                .done(geo_json_04f2650ffcd412056c161e2e022a6b96_add);
-        geo_json_04f2650ffcd412056c161e2e022a6b96.setStyle(function(feature) {return feature.properties.style;});
+                .done(geo_json_f00907d1b4c790dceea68924b4d32dfe_add);
+        geo_json_f00907d1b4c790dceea68924b4d32dfe.setStyle(function(feature) {return feature.properties.style;});
 
         
     
-            geo_json_04f2650ffcd412056c161e2e022a6b96.addTo(marker_cluster_8e561e767dc1a31c5a80c340390a6c6d);
+            geo_json_f00907d1b4c790dceea68924b4d32dfe.addTo(marker_cluster_e29ec88c52f9e89a1d09f325a72f990a);
         
     
-            var marker_cluster_9f00a974a6cc81ef726f7d4a343a6fc8 = L.markerClusterGroup(
+            var marker_cluster_34e0e5a0806e7743b9f8833e80aab176 = L.markerClusterGroup(
                 {
   "showCoverageOnHover": false,
   "maxClusterRadius": 80,
@@ -818,7 +818,7 @@ La metodología implementa un código modular en Python que sistematiza las regl
             );
         
     
-        function geo_json_5de6a55669f5f0d049f0075b4d07d836_pointToLayer(feature, latlng) {
+        function geo_json_a12316b1cb179ba5ac4f8a56ffbf0705_pointToLayer(feature, latlng) {
             var opts = {
   "stroke": true,
   "color": "purple",
@@ -839,7 +839,7 @@ La metodología implementa un código modular en Python que sistematiza las regl
             return new L.CircleMarker(latlng, opts)
         }
 
-        function geo_json_5de6a55669f5f0d049f0075b4d07d836_onEachFeature(feature, layer) {
+        function geo_json_a12316b1cb179ba5ac4f8a56ffbf0705_onEachFeature(feature, layer) {
             (
         function onEachFeature(feature, layer) {
             if (feature.properties) {
@@ -857,34 +857,34 @@ La metodología implementa un código modular en Python que sistematiza las regl
             layer.on({
             });
         };
-        var geo_json_5de6a55669f5f0d049f0075b4d07d836 = L.geoJson(null, {
-                onEachFeature: geo_json_5de6a55669f5f0d049f0075b4d07d836_onEachFeature,
+        var geo_json_a12316b1cb179ba5ac4f8a56ffbf0705 = L.geoJson(null, {
+                onEachFeature: geo_json_a12316b1cb179ba5ac4f8a56ffbf0705_onEachFeature,
             
-                pointToLayer: geo_json_5de6a55669f5f0d049f0075b4d07d836_pointToLayer,
+                pointToLayer: geo_json_a12316b1cb179ba5ac4f8a56ffbf0705_pointToLayer,
             ...{
 }
         });
 
-        function geo_json_5de6a55669f5f0d049f0075b4d07d836_add (data) {
-            geo_json_5de6a55669f5f0d049f0075b4d07d836
+        function geo_json_a12316b1cb179ba5ac4f8a56ffbf0705_add (data) {
+            geo_json_a12316b1cb179ba5ac4f8a56ffbf0705
                 .addData(data);
         }
             $.ajax("https://raw.githubusercontent.com/mautamos89/girona_tfm_catastro/main/data/map_u_unidad.geojson", {dataType: 'json', async: false})
-                .done(geo_json_5de6a55669f5f0d049f0075b4d07d836_add);
-        geo_json_5de6a55669f5f0d049f0075b4d07d836.setStyle(function(feature) {return feature.properties.style;});
+                .done(geo_json_a12316b1cb179ba5ac4f8a56ffbf0705_add);
+        geo_json_a12316b1cb179ba5ac4f8a56ffbf0705.setStyle(function(feature) {return feature.properties.style;});
 
         
     
-            geo_json_5de6a55669f5f0d049f0075b4d07d836.addTo(marker_cluster_9f00a974a6cc81ef726f7d4a343a6fc8);
+            geo_json_a12316b1cb179ba5ac4f8a56ffbf0705.addTo(marker_cluster_34e0e5a0806e7743b9f8833e80aab176);
         
     
-            var feature_group_2b320f9598647f0e1df166a50c456221 = L.featureGroup(
+            var feature_group_1d6acf1fac8456ab3927ec347b71bcc3 = L.featureGroup(
                 {
 }
             );
         
     
-        function geo_json_3d5ef47c1bb1f62bc8d55079ba86a3eb_styler(feature) {
+        function geo_json_0f0c58d60bf0a5c40f3bd825c4727fe9_styler(feature) {
             switch(feature.properties.OBJECTID) {
                 case 1: case 2: case 3: case 4: case 5: case 6: case 7: case 8: case 9: case 10: case 11: case 12: case 13: case 14: case 15: case 16: case 17: case 18: case 19: case 20: case 21: case 22: case 23: case 24: case 25: case 26: case 27: case 28: case 29: case 30: case 31: case 32: case 33: case 34: case 35: case 36: case 37: case 38: case 39: case 40: case 41: case 42: case 43: case 44: case 45: case 46: case 47: case 48: case 49: case 50: case 51: case 52: case 53: case 54: case 55: case 56: case 57: case 58: case 59: case 60: case 61: case 62: case 63: case 64: case 65: case 66: case 67: case 68: case 69: case 70: case 71: case 72: case 73: case 74: case 75: case 76: case 77: case 78: case 79: case 80: case 81: case 82: case 83: case 84: case 85: case 86: case 87: case 88: case 89: case 90: case 91: case 92: case 93: case 94: case 95: case 96: case 97: case 98: case 99: case 100: case 101: case 102: case 103: case 104: case 105: case 106: case 107: case 108: case 109: case 110: case 111: case 112: case 113: case 114: case 115: case 116: case 117: case 118: case 119: case 120: case 121: case 122: case 123: case 124: case 125: case 126: case 127: case 128: case 129: case 130: case 131: case 132: case 133: case 134: case 135: case 136: case 137: case 138: case 139: case 140: case 141: case 142: case 143: case 144: case 145: case 146: case 147: case 148: case 149: case 150: case 151: case 152: case 153: case 154: case 155: case 156: case 157: case 158: case 159: case 160: case 161: case 162: case 163: case 164: case 165: case 166: case 167: case 168: case 169: case 170: case 171: case 172: case 173: case 174: case 175: case 176: case 177: case 178: case 179: case 180: case 181: case 182: case 183: case 184: case 185: case 186: case 187: case 188: case 189: case 190: case 191: case 192: case 193: case 194: case 195: case 196: case 197: case 198: case 199: case 200: case 201: case 202: case 203: case 204: case 205: case 206: case 207: case 208: case 209: case 210: case 211: case 212: case 213: case 214: case 215: case 216: case 217: case 218: case 219: case 220: case 221: case 222: case 223: case 224: case 225: case 226: case 227: case 228: case 229: case 230: case 231: case 232: case 233: case 234: case 235: case 236: case 237: case 238: case 239: case 240: case 241: case 242: case 243: case 244: case 245: case 246: case 247: case 248: case 249: case 250: case 251: case 252: case 253: case 254: case 255: case 256: case 257: case 258: case 259: case 260: case 261: case 262: case 263: case 264: case 265: case 266: case 267: case 268: case 269: case 270: case 271: case 272: case 273: case 274: case 275: case 276: case 277: case 278: case 279: case 280: case 281: case 282: case 283: case 284: case 285: case 286: case 287: case 288: case 289: case 290: case 291: case 292: case 293: case 294: case 295: case 296: case 297: case 298: case 299: case 300: case 301: case 302: case 303: case 304: case 305: case 306: case 307: case 308: case 309: case 310: case 311: case 312: case 313: case 315: case 316: case 317: case 318: case 319: case 320: case 321: case 322: case 323: case 324: case 325: case 326: case 327: case 328: case 329: case 330: case 331: case 332: case 333: case 334: case 335: case 336: case 337: 
                     return {"color": "black", "fill": true, "fillColor": "#bdd7e7", "fillOpacity": 0.5, "weight": 0.2};
@@ -892,62 +892,62 @@ La metodología implementa un código modular en Python que sistematiza las regl
                     return {"color": "black", "fill": true, "fillColor": "#6baed6", "fillOpacity": 0.5, "weight": 0.2};
             }
         }
-        function geo_json_3d5ef47c1bb1f62bc8d55079ba86a3eb_highlighter(feature) {
+        function geo_json_0f0c58d60bf0a5c40f3bd825c4727fe9_highlighter(feature) {
             switch(feature.properties.OBJECTID) {
                 default:
                     return {"fillColor": "#fff998"};
             }
         }
 
-        function geo_json_3d5ef47c1bb1f62bc8d55079ba86a3eb_onEachFeature(feature, layer) {
+        function geo_json_0f0c58d60bf0a5c40f3bd825c4727fe9_onEachFeature(feature, layer) {
 
             layer.on({
                 mouseout: function(e) {
                     if(typeof e.target.setStyle === "function"){
                         if (!e.target.isPopupOpen())
-                            geo_json_3d5ef47c1bb1f62bc8d55079ba86a3eb.resetStyle(e.target);
+                            geo_json_0f0c58d60bf0a5c40f3bd825c4727fe9.resetStyle(e.target);
                     }
                 },
                 mouseover: function(e) {
                     if(typeof e.target.setStyle === "function"){
-                        const highlightStyle = geo_json_3d5ef47c1bb1f62bc8d55079ba86a3eb_highlighter(e.target.feature)
+                        const highlightStyle = geo_json_0f0c58d60bf0a5c40f3bd825c4727fe9_highlighter(e.target.feature)
                         e.target.setStyle(highlightStyle);
                     }
                 },
                 popupopen: function(e) {
                     if(typeof e.target.setStyle === "function"){
-                        const highlightStyle = geo_json_3d5ef47c1bb1f62bc8d55079ba86a3eb_highlighter(e.target.feature)
+                        const highlightStyle = geo_json_0f0c58d60bf0a5c40f3bd825c4727fe9_highlighter(e.target.feature)
                         e.target.setStyle(highlightStyle);
                         e.target.bindPopup(e.popup)
                     }
                 },
                 popupclose: function(e) {
                     if(typeof e.target.setStyle === "function"){
-                        geo_json_3d5ef47c1bb1f62bc8d55079ba86a3eb.resetStyle(e.target);
+                        geo_json_0f0c58d60bf0a5c40f3bd825c4727fe9.resetStyle(e.target);
                         e.target.unbindPopup()
                     }
                 },
             });
         };
-        var geo_json_3d5ef47c1bb1f62bc8d55079ba86a3eb = L.geoJson(null, {
+        var geo_json_0f0c58d60bf0a5c40f3bd825c4727fe9 = L.geoJson(null, {
                 smoothFactor: 1,
-                onEachFeature: geo_json_3d5ef47c1bb1f62bc8d55079ba86a3eb_onEachFeature,
+                onEachFeature: geo_json_0f0c58d60bf0a5c40f3bd825c4727fe9_onEachFeature,
             
-                style: geo_json_3d5ef47c1bb1f62bc8d55079ba86a3eb_styler,
+                style: geo_json_0f0c58d60bf0a5c40f3bd825c4727fe9_styler,
             ...{
 }
         });
 
-        function geo_json_3d5ef47c1bb1f62bc8d55079ba86a3eb_add (data) {
-            geo_json_3d5ef47c1bb1f62bc8d55079ba86a3eb
+        function geo_json_0f0c58d60bf0a5c40f3bd825c4727fe9_add (data) {
+            geo_json_0f0c58d60bf0a5c40f3bd825c4727fe9
                 .addData(data);
         }
             $.ajax("https://raw.githubusercontent.com/mautamos89/girona_tfm_catastro/main/data/cali_div_poli_admin_sf.geojson", {dataType: 'json', async: false})
-                .done(geo_json_3d5ef47c1bb1f62bc8d55079ba86a3eb_add);
+                .done(geo_json_0f0c58d60bf0a5c40f3bd825c4727fe9_add);
 
         
     
-    geo_json_3d5ef47c1bb1f62bc8d55079ba86a3eb.bindPopup(
+    geo_json_0f0c58d60bf0a5c40f3bd825c4727fe9.bindPopup(
     function(layer){
     let div = L.DomUtil.create('div');
     
@@ -982,17 +982,17 @@ La metodología implementa un código modular en Python que sistematiza las regl
 });
                      
     
-            geo_json_3d5ef47c1bb1f62bc8d55079ba86a3eb.addTo(feature_group_2b320f9598647f0e1df166a50c456221);
+            geo_json_0f0c58d60bf0a5c40f3bd825c4727fe9.addTo(feature_group_1d6acf1fac8456ab3927ec347b71bcc3);
         
     
-            feature_group_2b320f9598647f0e1df166a50c456221.addTo(map_d4bfa57d218086cf5b68a35a82f88764);
+            feature_group_1d6acf1fac8456ab3927ec347b71bcc3.addTo(map_1c246e0939d5a4798d481757a47a6032);
         
     
-            geo_json_3d5ef47c1bb1f62bc8d55079ba86a3eb.addTo(feature_group_2b320f9598647f0e1df166a50c456221);
+            geo_json_0f0c58d60bf0a5c40f3bd825c4727fe9.addTo(feature_group_1d6acf1fac8456ab3927ec347b71bcc3);
         
     
-            var feature_group_2b320f9598647f0e1df166a50c456221searchControl = new L.Control.Search({
-                layer: feature_group_2b320f9598647f0e1df166a50c456221,
+            var feature_group_1d6acf1fac8456ab3927ec347b71bcc3searchControl = new L.Control.Search({
+                layer: feature_group_1d6acf1fac8456ab3927ec347b71bcc3,
                 
                 propertyName: 'barver',
                 
@@ -1007,8 +1007,8 @@ La metodología implementa un código modular en Python que sistematiza las regl
                 }
             
                 });
-                feature_group_2b320f9598647f0e1df166a50c456221searchControl.on('search:locationfound', function(e) {
-                    feature_group_2b320f9598647f0e1df166a50c456221.setStyle(function(feature){
+                feature_group_1d6acf1fac8456ab3927ec347b71bcc3searchControl.on('search:locationfound', function(e) {
+                    feature_group_1d6acf1fac8456ab3927ec347b71bcc3.setStyle(function(feature){
                         return feature.properties.style
                     })
                     
@@ -1019,16 +1019,16 @@ La metodología implementa un código modular en Python que sistematiza las regl
                     if(e.layer._popup)
                         e.layer.openPopup();
                 })
-                feature_group_2b320f9598647f0e1df166a50c456221searchControl.on('search:collapsed', function(e) {
-                        feature_group_2b320f9598647f0e1df166a50c456221.setStyle(function(feature){
+                feature_group_1d6acf1fac8456ab3927ec347b71bcc3searchControl.on('search:collapsed', function(e) {
+                        feature_group_1d6acf1fac8456ab3927ec347b71bcc3.setStyle(function(feature){
                             return feature.properties.style
                     });
                 });
-            map_d4bfa57d218086cf5b68a35a82f88764.addControl( feature_group_2b320f9598647f0e1df166a50c456221searchControl );
+            map_1c246e0939d5a4798d481757a47a6032.addControl( feature_group_1d6acf1fac8456ab3927ec347b71bcc3searchControl );
 
         
     
-            var mouse_position_4f4f18c7b80d58fe43227e840922bb3f = new L.Control.MousePosition(
+            var mouse_position_90501f788b9ec893e0f1f5b866a87bb1 = new L.Control.MousePosition(
                 {
   "position": "bottomright",
   "separator": " | Longitud: ",
@@ -1038,19 +1038,19 @@ La metodología implementa un código modular en Python que sistematiza las regl
   "prefix": "Latitud:",
 }
             );
-            mouse_position_4f4f18c7b80d58fe43227e840922bb3f.options["latFormatter"] =
+            mouse_position_90501f788b9ec893e0f1f5b866a87bb1.options["latFormatter"] =
                 function(num) {return L.Util.formatNum(num, 3) + 'º ';};;
-            mouse_position_4f4f18c7b80d58fe43227e840922bb3f.options["lngFormatter"] =
+            mouse_position_90501f788b9ec893e0f1f5b866a87bb1.options["lngFormatter"] =
                 function(num) {return L.Util.formatNum(num, 3) + 'º ';};;
-            map_d4bfa57d218086cf5b68a35a82f88764.addControl(mouse_position_4f4f18c7b80d58fe43227e840922bb3f);
+            map_1c246e0939d5a4798d481757a47a6032.addControl(mouse_position_90501f788b9ec893e0f1f5b866a87bb1);
         
     
-            var tile_layer_711ba146e0c4c4b97fd68328f9d54514 = L.tileLayer(
-                "https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png",
-                {"attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors \u0026copy; \u003ca href=\"https://carto.com/attributions\"\u003eCARTO\u003c/a\u003e", "detect_retina": false, "max_native_zoom": 20, "max_zoom": 20, "min_zoom": 0, "no_wrap": false, "opacity": 1, "subdomains": "abcd", "tms": false}
+            var tile_layer_59effda9c0b54bea106fb070c186af86 = L.tileLayer(
+                "https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png?key=cb1_3kjr_1_24db5ce277d18a114ac1787f",
+                {"attribution": "Google \u0026copy; | Autor: \u003ca href=\"https://www.linkedin.com/in/mauricio-t-col/\" target=\"_blank\"\u003eMTM-COL\u003c/a\u003e | \u003ca href=\"mailto:mau.tamos@gmail.com\"\u003eE-Mail\u003c/a\u003e", "detect_retina": false, "max_native_zoom": 20, "max_zoom": 20, "min_zoom": 11, "no_wrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
             );
-            var mini_map_14a8a98441246f5802766df45c9c27df = new L.Control.MiniMap(
-                tile_layer_711ba146e0c4c4b97fd68328f9d54514,
+            var mini_map_0d7b8b940f95cb61c82f997b82918bb3 = new L.Control.MiniMap(
+                tile_layer_59effda9c0b54bea106fb070c186af86,
                 {
   "position": "bottomright",
   "width": 150,
@@ -1065,7 +1065,7 @@ La metodología implementa un código modular en Python que sistematiza las regl
   "minimized": false,
 }
             );
-            map_d4bfa57d218086cf5b68a35a82f88764.addControl(mini_map_14a8a98441246f5802766df45c9c27df);
+            map_1c246e0939d5a4798d481757a47a6032.addControl(mini_map_0d7b8b940f95cb61c82f997b82918bb3);
         
     
         L.easyButton(
@@ -1080,10 +1080,10 @@ La metodología implementa un código modular en Python que sistematiza las regl
             }
         }
         
-        ).addTo(map_d4bfa57d218086cf5b68a35a82f88764);
+        ).addTo(map_1c246e0939d5a4798d481757a47a6032);
         
     
-            map_d4bfa57d218086cf5b68a35a82f88764.fitBounds(
+            map_1c246e0939d5a4798d481757a47a6032.fitBounds(
                 [[3.273348699081159, -76.70717575685838], [3.548502811359772, -76.4588376757588]],
                 {}
             );
@@ -1094,25 +1094,25 @@ La metodología implementa un código modular en Python que sistematiza las regl
                 null,
                 {
                     "Capa Rural" : {
-                        "R. Anexo" : marker_cluster_c2edefa10b48d6479c3f878c1f9e4476,
-                        "R. Construcci\u00f3n" : marker_cluster_b66b3a3e0e94839031032ff2c9d8f865,
-                        "R. Manzana" : marker_cluster_9edb1f017473182f183745cc1b00e312,
-                        "R. Terreno" : marker_cluster_dc04c5a239dda40a66d6b7aef6b0d6af,
-                        "R. Unidad" : marker_cluster_b593b1ab0ed863768dd1ed8209cc7ee3,
+                        "R. Anexo" : marker_cluster_59e28cea2874e74984f52b4dbfc053a9,
+                        "R. Construcci\u00f3n" : marker_cluster_2d789f87e83b1c6f99ec14a1b8322f9b,
+                        "R. Manzana" : marker_cluster_a4729660086777c403fb90ab89d987d7,
+                        "R. Terreno" : marker_cluster_f151399fdf8e03fd53be5b33a03e2a8d,
+                        "R. Unidad" : marker_cluster_fc427184b222b9765674884622e03a0f,
                     },
                     "Capa Urbano" : {
-                        "U. Anexo" : marker_cluster_e99e0fa604535bcef00ef7a8d9cca795,
-                        "U. Construcci\u00f3n" : marker_cluster_950d371042cc44a568de8c16bd24d6ae,
-                        "U. Manzana" : marker_cluster_25607fe76858028293f140b845bbc2fa,
-                        "U. Terreno" : marker_cluster_8e561e767dc1a31c5a80c340390a6c6d,
-                        "U. Unidad" : marker_cluster_9f00a974a6cc81ef726f7d4a343a6fc8,
+                        "U. Anexo" : marker_cluster_8c5fe93a89654c631355f8d61b982ab2,
+                        "U. Construcci\u00f3n" : marker_cluster_f11b82580612b0b1aeeb01f7aee683ed,
+                        "U. Manzana" : marker_cluster_06e9a0097feabbaf86405ec8144a570f,
+                        "U. Terreno" : marker_cluster_e29ec88c52f9e89a1d09f325a72f990a,
+                        "U. Unidad" : marker_cluster_34e0e5a0806e7743b9f8833e80aab176,
                     },
                     "Capa administrativa" : {
-                        "Divisi\u00f3n urbano-rural" : geo_json_3d5ef47c1bb1f62bc8d55079ba86a3eb,
+                        "Divisi\u00f3n urbano-rural" : geo_json_0f0c58d60bf0a5c40f3bd825c4727fe9,
                     },
                     "Mapa base" : {
-                        "CartoDB Positron" : tile_layer_1f8b350be38856652045393e174cce9d,
-                        "Google H\u00edbrido" : tile_layer_9ee89b869425b077067bceb6a93fc7ef,
+                        "CartoDB Positron" : tile_layer_7a4cdbd96b6e895ec551a1595dc70456,
+                        "Google H\u00edbrido" : tile_layer_97b56b067a3f12783dbf8cc236207fd5,
                     },
                 },
                 {
@@ -1120,17 +1120,17 @@ La metodología implementa un código modular en Python que sistematiza las regl
   "autoZIndex": true,
   "draggable": true,
 },
-            ).addTo(map_d4bfa57d218086cf5b68a35a82f88764);
-            marker_cluster_9f00a974a6cc81ef726f7d4a343a6fc8.remove();
-            marker_cluster_e99e0fa604535bcef00ef7a8d9cca795.remove();
-            marker_cluster_9edb1f017473182f183745cc1b00e312.remove();
-            marker_cluster_dc04c5a239dda40a66d6b7aef6b0d6af.remove();
-            marker_cluster_b66b3a3e0e94839031032ff2c9d8f865.remove();
-            marker_cluster_8e561e767dc1a31c5a80c340390a6c6d.remove();
-            marker_cluster_b593b1ab0ed863768dd1ed8209cc7ee3.remove();
-            marker_cluster_950d371042cc44a568de8c16bd24d6ae.remove();
-            marker_cluster_25607fe76858028293f140b845bbc2fa.remove();
-            tile_layer_9ee89b869425b077067bceb6a93fc7ef.remove();
+            ).addTo(map_1c246e0939d5a4798d481757a47a6032);
+            marker_cluster_34e0e5a0806e7743b9f8833e80aab176.remove();
+            marker_cluster_2d789f87e83b1c6f99ec14a1b8322f9b.remove();
+            marker_cluster_fc427184b222b9765674884622e03a0f.remove();
+            marker_cluster_a4729660086777c403fb90ab89d987d7.remove();
+            marker_cluster_f151399fdf8e03fd53be5b33a03e2a8d.remove();
+            marker_cluster_8c5fe93a89654c631355f8d61b982ab2.remove();
+            marker_cluster_e29ec88c52f9e89a1d09f325a72f990a.remove();
+            marker_cluster_f11b82580612b0b1aeeb01f7aee683ed.remove();
+            tile_layer_97b56b067a3f12783dbf8cc236207fd5.remove();
+            marker_cluster_06e9a0097feabbaf86405ec8144a570f.remove();
 
         
 </script>
